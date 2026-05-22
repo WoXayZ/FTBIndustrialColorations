@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ftbicolor:item/spray_paint_selector"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "ftbicolor:has_color": 1.0
+      },
+      "model": "ftbicolor:item/colored_spray_paint_selector_filled"
+    }
+  ]
+}

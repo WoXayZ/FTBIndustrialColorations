@@ -1,0 +1,18 @@
+{
+  "parent": "ftbic:ftbicolor/recipes/unlock_kits",
+  "criteria": {
+    "has_spray_paint_kit": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "has_spray_paint_kit"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ftbicolor:crafting/colored_spray_paint_selector"
+    ]
+  }
+}

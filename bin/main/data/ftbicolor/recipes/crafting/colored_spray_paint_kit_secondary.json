@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ACP",
+    "GQD",
+    "RNK"
+  ],
+  "key": {
+    "A": {
+      "item": "ftbicolor:light_gray_spray_paint_can"
+    },
+    "C": {
+      "item": "ftbicolor:cyan_spray_paint_can"
+    },
+    "P": {
+      "item": "ftbicolor:purple_spray_paint_can"
+    },
+    "G": {
+      "item": "ftbicolor:green_spray_paint_can"
+    },
+    "D": {
+      "item": "ftbicolor:blue_spray_paint_can"
+    },
+    "Q": {
+      "item": "ftbic:quad_uranium_fuel_rod"
+    },
+    "R": {
+      "item": "ftbicolor:red_spray_paint_can"
+    },
+    "N": {
+      "item": "ftbicolor:brown_spray_paint_can"
+    },
+    "K": {
+      "item": "ftbic:dark_spray_paint_can"
+    }
+  },
+  "result": {
+    "item": "ftbicolor:colored_spray_paint_kit_secondary",
+    "count": 1
+  }
+}

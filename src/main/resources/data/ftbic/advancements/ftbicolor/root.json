@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "ftbicolor:red_spray_paint_can"
+    },
+    "title": {
+      "translate": "advancements.ftbic.ftbicolor.root.title"
+    },
+    "description": {
+      "translate": "advancements.ftbic.ftbicolor.root.description"
+    },
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "started": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "requirements": [
+    [
+      "started"
+    ]
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "parent": "ftbic:ftbicolor/root",
+  "display": {
+    "icon": {
+      "item": "ftbicolor:colored_spray_paint_selector"
+    },
+    "title": {
+      "translate": "advancements.ftbic.ftbicolor.so_many_colors.title"
+    },
+    "description": {
+      "translate": "advancements.ftbic.ftbicolor.so_many_colors.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "crafted_selector": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "crafted_selector"
+    ]
+  ]
+}

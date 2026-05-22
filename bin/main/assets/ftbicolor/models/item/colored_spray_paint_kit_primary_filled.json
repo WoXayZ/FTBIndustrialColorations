@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ftbicolor:item/spray_paint_kit",
+    "layer1": "ftbicolor:item/kit_inside"
+  }
+}

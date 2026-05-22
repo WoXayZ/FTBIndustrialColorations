@@ -1,0 +1,10 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "CTM",
+    "layer": "CUTOUT",
+    "textures": [
+      "ftbic:block/reinforced/green/reinforced_glass_ctm"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "color=white": {
+      "model": "ftbicolor:block/colored_reinforced_stone/white"
+    },
+    "color=orange": {
+      "model": "ftbicolor:block/colored_reinforced_stone/orange"
+    },
+    "color=magenta": {
+      "model": "ftbicolor:block/colored_reinforced_stone/magenta"
+    },
+    "color=light_blue": {
+      "model": "ftbicolor:block/colored_reinforced_stone/light_blue"
+    },
+    "color=yellow": {
+      "model": "ftbicolor:block/colored_reinforced_stone/yellow"
+    },
+    "color=lime": {
+      "model": "ftbicolor:block/colored_reinforced_stone/lime"
+    },
+    "color=pink": {
+      "model": "ftbicolor:block/colored_reinforced_stone/pink"
+    },
+    "color=gray": {
+      "model": "ftbicolor:block/colored_reinforced_stone/gray"
+    },
+    "color=light_gray": {
+      "model": "ftbicolor:block/colored_reinforced_stone/light_gray"
+    },
+    "color=cyan": {
+      "model": "ftbicolor:block/colored_reinforced_stone/cyan"
+    },
+    "color=purple": {
+      "model": "ftbicolor:block/colored_reinforced_stone/purple"
+    },
+    "color=blue": {
+      "model": "ftbicolor:block/colored_reinforced_stone/blue"
+    },
+    "color=brown": {
+      "model": "ftbicolor:block/colored_reinforced_stone/brown"
+    },
+    "color=green": {
+      "model": "ftbicolor:block/colored_reinforced_stone/green"
+    },
+    "color=red": {
+      "model": "ftbicolor:block/colored_reinforced_stone/red"
+    },
+    "color=black": {
+      "model": "ftbicolor:block/colored_reinforced_stone/black"
+    }
+  }
+}

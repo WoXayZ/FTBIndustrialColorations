@@ -1,0 +1,19 @@
+{
+  "parent": "ftbic:ftbicolor/root",
+  "criteria": {
+    "has_colored_spray_paint_can": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "has_colored_spray_paint_can"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ftbicolor:crafting/colored_spray_paint_kit_primary",
+      "ftbicolor:crafting/colored_spray_paint_kit_secondary"
+    ]
+  }
+}

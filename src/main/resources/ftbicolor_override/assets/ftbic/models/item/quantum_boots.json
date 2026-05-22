@@ -1,0 +1,104 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ftbic:item/quantum/white/quantum_boots"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "ftbicolor:color": 0.0625
+      },
+      "model": "ftbic:item/quantum/white/quantum_boots"
+    },
+    {
+      "predicate": {
+        "ftbicolor:color": 0.125
+      },
+      "model": "ftbic:item/quantum/orange/quantum_boots"
+    },
+    {
+      "predicate": {
+        "ftbicolor:color": 0.1875
+      },
+      "model": "ftbic:item/quantum/magenta/quantum_boots"
+    },
+    {
+      "predicate": {
+        "ftbicolor:color": 0.25
+      },
+      "model": "ftbic:item/quantum/light_blue/quantum_boots"
+    },
+    {
+      "predicate": {
+        "ftbicolor:color": 0.3125
+      },
+      "model": "ftbic:item/quantum/yellow/quantum_boots"
+    },
+    {
+      "predicate": {
+        "ftbicolor:color": 0.375
+      },
+      "model": "ftbic:item/quantum/lime/quantum_boots"
+    },
+    {
+      "predicate": {
+        "ftbicolor:color": 0.4375
+      },
+      "model": "ftbic:item/quantum/pink/quantum_boots"
+    },
+    {
+      "predicate": {
+        "ftbicolor:color": 0.5
+      },
+      "model": "ftbic:item/quantum/gray/quantum_boots"
+    },
+    {
+      "predicate": {
+        "ftbicolor:color": 0.5625
+      },
+      "model": "ftbic:item/quantum/light_gray/quantum_boots"
+    },
+    {
+      "predicate": {
+        "ftbicolor:color": 0.625
+      },
+      "model": "ftbic:item/quantum/cyan/quantum_boots"
+    },
+    {
+      "predicate": {
+        "ftbicolor:color": 0.6875
+      },
+      "model": "ftbic:item/quantum/purple/quantum_boots"
+    },
+    {
+      "predicate": {
+        "ftbicolor:color": 0.75
+      },
+      "model": "ftbic:item/quantum/blue/quantum_boots"
+    },
+    {
+      "predicate": {
+        "ftbicolor:color": 0.8125
+      },
+      "model": "ftbic:item/quantum/brown/quantum_boots"
+    },
+    {
+      "predicate": {
+        "ftbicolor:color": 0.875
+      },
+      "model": "ftbic:item/quantum/green/quantum_boots"
+    },
+    {
+      "predicate": {
+        "ftbicolor:color": 0.9375
+      },
+      "model": "ftbic:item/quantum/red/quantum_boots"
+    },
+    {
+      "predicate": {
+        "ftbicolor:color": 1.0
+      },
+      "model": "ftbic:item/quantum/black/quantum_boots"
+    }
+  ]
+}

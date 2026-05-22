@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "color=white": {
+      "model": "ftbicolor:block/colored_reinforced_glass/white"
+    },
+    "color=orange": {
+      "model": "ftbicolor:block/colored_reinforced_glass/orange"
+    },
+    "color=magenta": {
+      "model": "ftbicolor:block/colored_reinforced_glass/magenta"
+    },
+    "color=light_blue": {
+      "model": "ftbicolor:block/colored_reinforced_glass/light_blue"
+    },
+    "color=yellow": {
+      "model": "ftbicolor:block/colored_reinforced_glass/yellow"
+    },
+    "color=lime": {
+      "model": "ftbicolor:block/colored_reinforced_glass/lime"
+    },
+    "color=pink": {
+      "model": "ftbicolor:block/colored_reinforced_glass/pink"
+    },
+    "color=gray": {
+      "model": "ftbicolor:block/colored_reinforced_glass/gray"
+    },
+    "color=light_gray": {
+      "model": "ftbicolor:block/colored_reinforced_glass/light_gray"
+    },
+    "color=cyan": {
+      "model": "ftbicolor:block/colored_reinforced_glass/cyan"
+    },
+    "color=purple": {
+      "model": "ftbicolor:block/colored_reinforced_glass/purple"
+    },
+    "color=blue": {
+      "model": "ftbicolor:block/colored_reinforced_glass/blue"
+    },
+    "color=brown": {
+      "model": "ftbicolor:block/colored_reinforced_glass/brown"
+    },
+    "color=green": {
+      "model": "ftbicolor:block/colored_reinforced_glass/green"
+    },
+    "color=red": {
+      "model": "ftbicolor:block/colored_reinforced_glass/red"
+    },
+    "color=black": {
+      "model": "ftbicolor:block/colored_reinforced_glass/black"
+    }
+  }
+}

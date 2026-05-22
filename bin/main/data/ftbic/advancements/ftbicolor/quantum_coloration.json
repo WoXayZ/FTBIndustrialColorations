@@ -1,0 +1,27 @@
+{
+  "parent": "ftbic:ftbicolor/colorful_world",
+  "display": {
+    "icon": {
+      "item": "ftbic:quantum_chestplate"
+    },
+    "title": {
+      "translate": "advancements.ftbic.ftbicolor.quantum_coloration.title"
+    },
+    "description": {
+      "translate": "advancements.ftbic.ftbicolor.quantum_coloration.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "full_set": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "full_set"
+    ]
+  ]
+}

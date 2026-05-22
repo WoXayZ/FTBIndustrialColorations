@@ -15,9 +15,9 @@ import net.minecraftforge.resource.PathResourcePack;
 import java.io.IOException;
 import java.nio.file.Path;
 
-@Mod.EventBusSubscriber(modid = FTBIColor.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = FTBIColorConstants.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public final class FTBIColorResourcePack {
-	private static final String PACK_NAME = "ftbicolor_override";
+	private static final String PACK_NAME = FTBIColorConstants.MOD_ID + "_override";
 	private static final String PACK_ID = "builtin/" + PACK_NAME;
 
 	private FTBIColorResourcePack() {
@@ -30,7 +30,7 @@ public final class FTBIColorResourcePack {
 		}
 
 		try {
-			IModFile modFile = ModList.get().getModFileById(FTBIColor.MOD_ID).getFile();
+			IModFile modFile = ModList.get().getModFileById(FTBIColorConstants.MOD_ID).getFile();
 			Path source = modFile.findResource(PACK_NAME);
 			PathResourcePack pack = new PathResourcePack(PACK_ID, source);
 			PackMetadataSection metadata = pack.getMetadataSection(PackMetadataSection.SERIALIZER);

@@ -8,9 +8,12 @@
     "ElectricBlockMixin",
     "IronFurnaceBlockMixin",
     "NuclearReactorChamberBlockMixin",
-    "SprayPaintCanItemMixin"
+    "SprayPaintCanItemMixin",
+    "ItemMixin"
   ],
-  "client": [],
+  "client": [
+    "client.ForgeHooksClientMixin"
+  ],
   "server": [],
   "injectors": {
     "defaultRequire": 1
