@@ -1,0 +1,244 @@
+{
+  "variants": {
+    "color=white,facing=north": {
+      "model": "ftbic:block/electric/light/wind_mill"
+    },
+    "color=black,facing=north": {
+      "model": "ftbic:block/electric/dark/wind_mill"
+    },
+    "color=red,facing=north": {
+      "model": "ftbic:block/electric/red/wind_mill"
+    },
+    "color=orange,facing=north": {
+      "model": "ftbic:block/electric/orange/wind_mill"
+    },
+    "color=yellow,facing=north": {
+      "model": "ftbic:block/electric/yellow/wind_mill"
+    },
+    "color=lime,facing=north": {
+      "model": "ftbic:block/electric/lime/wind_mill"
+    },
+    "color=green,facing=north": {
+      "model": "ftbic:block/electric/green/wind_mill"
+    },
+    "color=cyan,facing=north": {
+      "model": "ftbic:block/electric/cyan/wind_mill"
+    },
+    "color=light_blue,facing=north": {
+      "model": "ftbic:block/electric/light_blue/wind_mill"
+    },
+    "color=blue,facing=north": {
+      "model": "ftbic:block/electric/blue/wind_mill"
+    },
+    "color=purple,facing=north": {
+      "model": "ftbic:block/electric/purple/wind_mill"
+    },
+    "color=magenta,facing=north": {
+      "model": "ftbic:block/electric/magenta/wind_mill"
+    },
+    "color=pink,facing=north": {
+      "model": "ftbic:block/electric/pink/wind_mill"
+    },
+    "color=brown,facing=north": {
+      "model": "ftbic:block/electric/brown/wind_mill"
+    },
+    "color=gray,facing=north": {
+      "model": "ftbic:block/electric/gray/wind_mill"
+    },
+    "color=light_gray,facing=north": {
+      "model": "ftbic:block/electric/light_gray/wind_mill"
+    },
+    "color=white,facing=south": {
+      "model": "ftbic:block/electric/light/wind_mill",
+      "y": 180
+    },
+    "color=black,facing=south": {
+      "model": "ftbic:block/electric/dark/wind_mill",
+      "y": 180
+    },
+    "color=red,facing=south": {
+      "model": "ftbic:block/electric/red/wind_mill",
+      "y": 180
+    },
+    "color=orange,facing=south": {
+      "model": "ftbic:block/electric/orange/wind_mill",
+      "y": 180
+    },
+    "color=yellow,facing=south": {
+      "model": "ftbic:block/electric/yellow/wind_mill",
+      "y": 180
+    },
+    "color=lime,facing=south": {
+      "model": "ftbic:block/electric/lime/wind_mill",
+      "y": 180
+    },
+    "color=green,facing=south": {
+      "model": "ftbic:block/electric/green/wind_mill",
+      "y": 180
+    },
+    "color=cyan,facing=south": {
+      "model": "ftbic:block/electric/cyan/wind_mill",
+      "y": 180
+    },
+    "color=light_blue,facing=south": {
+      "model": "ftbic:block/electric/light_blue/wind_mill",
+      "y": 180
+    },
+    "color=blue,facing=south": {
+      "model": "ftbic:block/electric/blue/wind_mill",
+      "y": 180
+    },
+    "color=purple,facing=south": {
+      "model": "ftbic:block/electric/purple/wind_mill",
+      "y": 180
+    },
+    "color=magenta,facing=south": {
+      "model": "ftbic:block/electric/magenta/wind_mill",
+      "y": 180
+    },
+    "color=pink,facing=south": {
+      "model": "ftbic:block/electric/pink/wind_mill",
+      "y": 180
+    },
+    "color=brown,facing=south": {
+      "model": "ftbic:block/electric/brown/wind_mill",
+      "y": 180
+    },
+    "color=gray,facing=south": {
+      "model": "ftbic:block/electric/gray/wind_mill",
+      "y": 180
+    },
+    "color=light_gray,facing=south": {
+      "model": "ftbic:block/electric/light_gray/wind_mill",
+      "y": 180
+    },
+    "color=white,facing=west": {
+      "model": "ftbic:block/electric/light/wind_mill",
+      "y": 270
+    },
+    "color=black,facing=west": {
+      "model": "ftbic:block/electric/dark/wind_mill",
+      "y": 270
+    },
+    "color=red,facing=west": {
+      "model": "ftbic:block/electric/red/wind_mill",
+      "y": 270
+    },
+    "color=orange,facing=west": {
+      "model": "ftbic:block/electric/orange/wind_mill",
+      "y": 270
+    },
+    "color=yellow,facing=west": {
+      "model": "ftbic:block/electric/yellow/wind_mill",
+      "y": 270
+    },
+    "color=lime,facing=west": {
+      "model": "ftbic:block/electric/lime/wind_mill",
+      "y": 270
+    },
+    "color=green,facing=west": {
+      "model": "ftbic:block/electric/green/wind_mill",
+      "y": 270
+    },
+    "color=cyan,facing=west": {
+      "model": "ftbic:block/electric/cyan/wind_mill",
+      "y": 270
+    },
+    "color=light_blue,facing=west": {
+      "model": "ftbic:block/electric/light_blue/wind_mill",
+      "y": 270
+    },
+    "color=blue,facing=west": {
+      "model": "ftbic:block/electric/blue/wind_mill",
+      "y": 270
+    },
+    "color=purple,facing=west": {
+      "model": "ftbic:block/electric/purple/wind_mill",
+      "y": 270
+    },
+    "color=magenta,facing=west": {
+      "model": "ftbic:block/electric/magenta/wind_mill",
+      "y": 270
+    },
+    "color=pink,facing=west": {
+      "model": "ftbic:block/electric/pink/wind_mill",
+      "y": 270
+    },
+    "color=brown,facing=west": {
+      "model": "ftbic:block/electric/brown/wind_mill",
+      "y": 270
+    },
+    "color=gray,facing=west": {
+      "model": "ftbic:block/electric/gray/wind_mill",
+      "y": 270
+    },
+    "color=light_gray,facing=west": {
+      "model": "ftbic:block/electric/light_gray/wind_mill",
+      "y": 270
+    },
+    "color=white,facing=east": {
+      "model": "ftbic:block/electric/light/wind_mill",
+      "y": 90
+    },
+    "color=black,facing=east": {
+      "model": "ftbic:block/electric/dark/wind_mill",
+      "y": 90
+    },
+    "color=red,facing=east": {
+      "model": "ftbic:block/electric/red/wind_mill",
+      "y": 90
+    },
+    "color=orange,facing=east": {
+      "model": "ftbic:block/electric/orange/wind_mill",
+      "y": 90
+    },
+    "color=yellow,facing=east": {
+      "model": "ftbic:block/electric/yellow/wind_mill",
+      "y": 90
+    },
+    "color=lime,facing=east": {
+      "model": "ftbic:block/electric/lime/wind_mill",
+      "y": 90
+    },
+    "color=green,facing=east": {
+      "model": "ftbic:block/electric/green/wind_mill",
+      "y": 90
+    },
+    "color=cyan,facing=east": {
+      "model": "ftbic:block/electric/cyan/wind_mill",
+      "y": 90
+    },
+    "color=light_blue,facing=east": {
+      "model": "ftbic:block/electric/light_blue/wind_mill",
+      "y": 90
+    },
+    "color=blue,facing=east": {
+      "model": "ftbic:block/electric/blue/wind_mill",
+      "y": 90
+    },
+    "color=purple,facing=east": {
+      "model": "ftbic:block/electric/purple/wind_mill",
+      "y": 90
+    },
+    "color=magenta,facing=east": {
+      "model": "ftbic:block/electric/magenta/wind_mill",
+      "y": 90
+    },
+    "color=pink,facing=east": {
+      "model": "ftbic:block/electric/pink/wind_mill",
+      "y": 90
+    },
+    "color=brown,facing=east": {
+      "model": "ftbic:block/electric/brown/wind_mill",
+      "y": 90
+    },
+    "color=gray,facing=east": {
+      "model": "ftbic:block/electric/gray/wind_mill",
+      "y": 90
+    },
+    "color=light_gray,facing=east": {
+      "model": "ftbic:block/electric/light_gray/wind_mill",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "side": "ftbic:block/electric/green/iron_furnace_side",
+    "front": "ftbic:block/electric/green/iron_furnace_front_off",
+    "top": "ftbic:block/electric/green/iron_furnace_top"
+  }
+}

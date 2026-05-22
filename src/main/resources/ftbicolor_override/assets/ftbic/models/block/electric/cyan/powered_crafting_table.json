@@ -1,0 +1,9 @@
+{
+  "parent": "ftbic:block/orientable_2d",
+  "textures": {
+    "side": "ftbic:block/electric/cyan/basic_side",
+    "front": "ftbic:block/electric/cyan/basic_side",
+    "top": "ftbic:block/electric/cyan/powered_crafting_table_top",
+    "bottom": "ftbic:block/electric/cyan/basic_bottom"
+  }
+}

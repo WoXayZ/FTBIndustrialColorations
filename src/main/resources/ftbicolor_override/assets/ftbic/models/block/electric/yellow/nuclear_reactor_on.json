@@ -1,0 +1,9 @@
+{
+  "parent": "ftbic:block/orientable_2d",
+  "textures": {
+    "side": "ftbic:block/electric/yellow/advanced_side",
+    "front": "ftbic:block/electric/yellow/nuclear_reactor_front_on",
+    "top": "ftbic:block/electric/yellow/nuclear_reactor_top",
+    "bottom": "ftbic:block/electric/yellow/advanced_bottom"
+  }
+}

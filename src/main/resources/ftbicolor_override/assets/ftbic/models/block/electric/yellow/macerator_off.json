@@ -1,0 +1,9 @@
+{
+  "parent": "ftbic:block/orientable_2d",
+  "textures": {
+    "side": "ftbic:block/electric/yellow/basic_side",
+    "front": "ftbic:block/electric/yellow/macerator_front",
+    "top": "ftbic:block/electric/yellow/macerator_top_off",
+    "bottom": "ftbic:block/electric/yellow/basic_bottom"
+  }
+}

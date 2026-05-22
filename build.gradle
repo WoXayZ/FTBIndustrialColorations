@@ -1,0 +1,101 @@
+plugins {
+	id "dev.architectury.loom" version "0.12.0-SNAPSHOT"
+}
+
+sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = 17
+
+def ENV = System.getenv()
+version = "${minecraft_version}-${mod_version}"
+archivesBaseName = project.archives_base_name
+group = project.maven_group
+
+loom {
+	silentMojangMappingsLicense()
+
+	forge {
+		mixinConfigs = [
+				"ftbicolor.mixins.json"
+		]
+	}
+}
+
+repositories {
+	maven {
+		url "https://maven.saps.dev/minecraft"
+		content {
+			includeGroup "dev.ftb.mods"
+			includeGroup "dev.latvian.mods"
+		}
+	}
+	maven {
+		name = 'ParchmentMC'
+		url = 'https://maven.parchmentmc.org'
+	}
+	maven {
+		url "https://www.cursemaven.com"
+		content { includeGroup "curse.maven" }
+	}
+	mavenCentral()
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+
+	mappings loom.layered() {
+		officialMojangMappings()
+		parchment("org.parchmentmc.data:parchment-1.18.2:2022.07.03")
+	}
+
+	forge "net.minecraftforge:forge:${project.minecraft_version}-${project.forge_version}"
+
+	modImplementation("curse.maven:ftb-industrial-contraptions-forge-539097:${rootProject.ftbic_curse_file_id}") { transitive = false }
+
+	modRuntimeOnly("curse.maven:architectury-api-419699:${rootProject.architectury_curse_file_id}") { transitive = false }
+	modRuntimeOnly("curse.maven:ftb-library-forge-404465:${rootProject.ftblibrary_curse_file_id}") { transitive = false }
+}
+
+processResources {
+	inputs.property "mod_version", project.mod_version
+
+	filesMatching("META-INF/mods.toml") {
+		expand "version": project.mod_version,
+				"mcversion": project.minecraft_version,
+				"forgeversion": project.forge_version,
+				"forgeshortversion": project.forge_version.split('\\.')[0]
+	}
+}
+
+compileJava {
+	options.encoding = "UTF-8"
+}
+
+java {
+	withSourcesJar()
+}
+
+jar {
+	manifest {
+		attributes([
+				"Specification-Title"     : project.mod_id,
+				"Specification-Vendor"    : project.mod_author,
+				"Specification-Version"   : "1",
+				"Implementation-Title"    : project.name,
+				"Implementation-Version"  : version,
+				"Implementation-Vendor"   : project.mod_author,
+				"Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+		])
+	}
+}
+
+def releaseJarName = "${archivesBaseName}-${minecraft_version}-${mod_version}.jar"
+
+tasks.register("copyReleaseJar", Copy) {
+	dependsOn remapJar
+	from remapJar.archiveFile
+	into layout.projectDirectory.dir("release")
+	rename { releaseJarName }
+}
+
+tasks.register("release") {
+	dependsOn clean, copyReleaseJar
+}

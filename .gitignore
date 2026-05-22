@@ -1,0 +1,10 @@
+.gradle/
+build/
+release/
+out/
+.idea/
+*.iml
+classes/
+run/
+.architectury-transformer/
+remappedSrc/

@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "color=white": {
+      "model": "ftbic:block/electric/light/powered_crafting_table"
+    },
+    "color=black": {
+      "model": "ftbic:block/electric/dark/powered_crafting_table"
+    },
+    "color=red": {
+      "model": "ftbic:block/electric/red/powered_crafting_table"
+    },
+    "color=orange": {
+      "model": "ftbic:block/electric/orange/powered_crafting_table"
+    },
+    "color=yellow": {
+      "model": "ftbic:block/electric/yellow/powered_crafting_table"
+    },
+    "color=lime": {
+      "model": "ftbic:block/electric/lime/powered_crafting_table"
+    },
+    "color=green": {
+      "model": "ftbic:block/electric/green/powered_crafting_table"
+    },
+    "color=cyan": {
+      "model": "ftbic:block/electric/cyan/powered_crafting_table"
+    },
+    "color=light_blue": {
+      "model": "ftbic:block/electric/light_blue/powered_crafting_table"
+    },
+    "color=blue": {
+      "model": "ftbic:block/electric/blue/powered_crafting_table"
+    },
+    "color=purple": {
+      "model": "ftbic:block/electric/purple/powered_crafting_table"
+    },
+    "color=magenta": {
+      "model": "ftbic:block/electric/magenta/powered_crafting_table"
+    },
+    "color=pink": {
+      "model": "ftbic:block/electric/pink/powered_crafting_table"
+    },
+    "color=brown": {
+      "model": "ftbic:block/electric/brown/powered_crafting_table"
+    },
+    "color=gray": {
+      "model": "ftbic:block/electric/gray/powered_crafting_table"
+    },
+    "color=light_gray": {
+      "model": "ftbic:block/electric/light_gray/powered_crafting_table"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "ftbic:block/orientable_2d",
+  "textures": {
+    "side": "ftbic:block/electric/blue/advanced_side",
+    "front": "ftbic:block/electric/blue/advanced_compressor_front_on",
+    "top": "ftbic:block/electric/blue/advanced_compressor_top",
+    "bottom": "ftbic:block/electric/blue/advanced_bottom"
+  }
+}

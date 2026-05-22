@@ -1,0 +1,9 @@
+{
+  "parent": "ftbic:block/orientable_2d",
+  "textures": {
+    "side": "ftbic:block/electric/red/basic_side",
+    "front": "ftbic:block/electric/red/powered_furnace_front_on",
+    "top": "ftbic:block/electric/red/basic_top",
+    "bottom": "ftbic:block/electric/red/basic_bottom"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "color=white": {
+      "model": "ftbic:block/electric/light/nuclear_reactor_chamber"
+    },
+    "color=orange": {
+      "model": "ftbic:block/electric/orange/nuclear_reactor_chamber"
+    },
+    "color=magenta": {
+      "model": "ftbic:block/electric/magenta/nuclear_reactor_chamber"
+    },
+    "color=light_blue": {
+      "model": "ftbic:block/electric/light_blue/nuclear_reactor_chamber"
+    },
+    "color=yellow": {
+      "model": "ftbic:block/electric/yellow/nuclear_reactor_chamber"
+    },
+    "color=lime": {
+      "model": "ftbic:block/electric/lime/nuclear_reactor_chamber"
+    },
+    "color=pink": {
+      "model": "ftbic:block/electric/pink/nuclear_reactor_chamber"
+    },
+    "color=gray": {
+      "model": "ftbic:block/electric/gray/nuclear_reactor_chamber"
+    },
+    "color=light_gray": {
+      "model": "ftbic:block/electric/light_gray/nuclear_reactor_chamber"
+    },
+    "color=cyan": {
+      "model": "ftbic:block/electric/cyan/nuclear_reactor_chamber"
+    },
+    "color=purple": {
+      "model": "ftbic:block/electric/purple/nuclear_reactor_chamber"
+    },
+    "color=blue": {
+      "model": "ftbic:block/electric/blue/nuclear_reactor_chamber"
+    },
+    "color=brown": {
+      "model": "ftbic:block/electric/brown/nuclear_reactor_chamber"
+    },
+    "color=green": {
+      "model": "ftbic:block/electric/green/nuclear_reactor_chamber"
+    },
+    "color=red": {
+      "model": "ftbic:block/electric/red/nuclear_reactor_chamber"
+    },
+    "color=black": {
+      "model": "ftbic:block/electric/dark/nuclear_reactor_chamber"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "ftbic:block/electric/purple/nuclear_reactor_top",
+    "bottom": "ftbic:block/electric/purple/advanced_bottom",
+    "side": "ftbic:block/electric/purple/advanced_side"
+  }
+}

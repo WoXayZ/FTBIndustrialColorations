@@ -1,0 +1,9 @@
+{
+  "parent": "ftbic:block/orientable_2d",
+  "textures": {
+    "side": "ftbic:block/electric/yellow/basic_side",
+    "front": "ftbic:block/electric/yellow/centrifuge_front_on",
+    "top": "ftbic:block/electric/yellow/centrifuge_top",
+    "bottom": "ftbic:block/electric/yellow/basic_bottom"
+  }
+}

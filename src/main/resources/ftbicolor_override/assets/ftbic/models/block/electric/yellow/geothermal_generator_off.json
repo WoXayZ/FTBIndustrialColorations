@@ -1,0 +1,9 @@
+{
+  "parent": "ftbic:block/orientable_2d",
+  "textures": {
+    "side": "ftbic:block/electric/yellow/basic_side",
+    "front": "ftbic:block/electric/yellow/geothermal_generator_front_off",
+    "top": "ftbic:block/electric/yellow/basic_top",
+    "bottom": "ftbic:block/electric/yellow/basic_bottom"
+  }
+}

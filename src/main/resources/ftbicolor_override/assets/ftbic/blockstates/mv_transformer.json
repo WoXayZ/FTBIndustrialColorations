@@ -1,0 +1,372 @@
+{
+  "variants": {
+    "color=white,facing=down": {
+      "model": "ftbic:block/electric/light/mv_transformer",
+      "x": 90
+    },
+    "color=black,facing=down": {
+      "model": "ftbic:block/electric/dark/mv_transformer",
+      "x": 90
+    },
+    "color=red,facing=down": {
+      "model": "ftbic:block/electric/red/mv_transformer",
+      "x": 90
+    },
+    "color=orange,facing=down": {
+      "model": "ftbic:block/electric/orange/mv_transformer",
+      "x": 90
+    },
+    "color=yellow,facing=down": {
+      "model": "ftbic:block/electric/yellow/mv_transformer",
+      "x": 90
+    },
+    "color=lime,facing=down": {
+      "model": "ftbic:block/electric/lime/mv_transformer",
+      "x": 90
+    },
+    "color=green,facing=down": {
+      "model": "ftbic:block/electric/green/mv_transformer",
+      "x": 90
+    },
+    "color=cyan,facing=down": {
+      "model": "ftbic:block/electric/cyan/mv_transformer",
+      "x": 90
+    },
+    "color=light_blue,facing=down": {
+      "model": "ftbic:block/electric/light_blue/mv_transformer",
+      "x": 90
+    },
+    "color=blue,facing=down": {
+      "model": "ftbic:block/electric/blue/mv_transformer",
+      "x": 90
+    },
+    "color=purple,facing=down": {
+      "model": "ftbic:block/electric/purple/mv_transformer",
+      "x": 90
+    },
+    "color=magenta,facing=down": {
+      "model": "ftbic:block/electric/magenta/mv_transformer",
+      "x": 90
+    },
+    "color=pink,facing=down": {
+      "model": "ftbic:block/electric/pink/mv_transformer",
+      "x": 90
+    },
+    "color=brown,facing=down": {
+      "model": "ftbic:block/electric/brown/mv_transformer",
+      "x": 90
+    },
+    "color=gray,facing=down": {
+      "model": "ftbic:block/electric/gray/mv_transformer",
+      "x": 90
+    },
+    "color=light_gray,facing=down": {
+      "model": "ftbic:block/electric/light_gray/mv_transformer",
+      "x": 90
+    },
+    "color=white,facing=up": {
+      "model": "ftbic:block/electric/light/mv_transformer",
+      "x": 270
+    },
+    "color=black,facing=up": {
+      "model": "ftbic:block/electric/dark/mv_transformer",
+      "x": 270
+    },
+    "color=red,facing=up": {
+      "model": "ftbic:block/electric/red/mv_transformer",
+      "x": 270
+    },
+    "color=orange,facing=up": {
+      "model": "ftbic:block/electric/orange/mv_transformer",
+      "x": 270
+    },
+    "color=yellow,facing=up": {
+      "model": "ftbic:block/electric/yellow/mv_transformer",
+      "x": 270
+    },
+    "color=lime,facing=up": {
+      "model": "ftbic:block/electric/lime/mv_transformer",
+      "x": 270
+    },
+    "color=green,facing=up": {
+      "model": "ftbic:block/electric/green/mv_transformer",
+      "x": 270
+    },
+    "color=cyan,facing=up": {
+      "model": "ftbic:block/electric/cyan/mv_transformer",
+      "x": 270
+    },
+    "color=light_blue,facing=up": {
+      "model": "ftbic:block/electric/light_blue/mv_transformer",
+      "x": 270
+    },
+    "color=blue,facing=up": {
+      "model": "ftbic:block/electric/blue/mv_transformer",
+      "x": 270
+    },
+    "color=purple,facing=up": {
+      "model": "ftbic:block/electric/purple/mv_transformer",
+      "x": 270
+    },
+    "color=magenta,facing=up": {
+      "model": "ftbic:block/electric/magenta/mv_transformer",
+      "x": 270
+    },
+    "color=pink,facing=up": {
+      "model": "ftbic:block/electric/pink/mv_transformer",
+      "x": 270
+    },
+    "color=brown,facing=up": {
+      "model": "ftbic:block/electric/brown/mv_transformer",
+      "x": 270
+    },
+    "color=gray,facing=up": {
+      "model": "ftbic:block/electric/gray/mv_transformer",
+      "x": 270
+    },
+    "color=light_gray,facing=up": {
+      "model": "ftbic:block/electric/light_gray/mv_transformer",
+      "x": 270
+    },
+    "color=white,facing=north": {
+      "model": "ftbic:block/electric/light/mv_transformer"
+    },
+    "color=black,facing=north": {
+      "model": "ftbic:block/electric/dark/mv_transformer"
+    },
+    "color=red,facing=north": {
+      "model": "ftbic:block/electric/red/mv_transformer"
+    },
+    "color=orange,facing=north": {
+      "model": "ftbic:block/electric/orange/mv_transformer"
+    },
+    "color=yellow,facing=north": {
+      "model": "ftbic:block/electric/yellow/mv_transformer"
+    },
+    "color=lime,facing=north": {
+      "model": "ftbic:block/electric/lime/mv_transformer"
+    },
+    "color=green,facing=north": {
+      "model": "ftbic:block/electric/green/mv_transformer"
+    },
+    "color=cyan,facing=north": {
+      "model": "ftbic:block/electric/cyan/mv_transformer"
+    },
+    "color=light_blue,facing=north": {
+      "model": "ftbic:block/electric/light_blue/mv_transformer"
+    },
+    "color=blue,facing=north": {
+      "model": "ftbic:block/electric/blue/mv_transformer"
+    },
+    "color=purple,facing=north": {
+      "model": "ftbic:block/electric/purple/mv_transformer"
+    },
+    "color=magenta,facing=north": {
+      "model": "ftbic:block/electric/magenta/mv_transformer"
+    },
+    "color=pink,facing=north": {
+      "model": "ftbic:block/electric/pink/mv_transformer"
+    },
+    "color=brown,facing=north": {
+      "model": "ftbic:block/electric/brown/mv_transformer"
+    },
+    "color=gray,facing=north": {
+      "model": "ftbic:block/electric/gray/mv_transformer"
+    },
+    "color=light_gray,facing=north": {
+      "model": "ftbic:block/electric/light_gray/mv_transformer"
+    },
+    "color=white,facing=south": {
+      "model": "ftbic:block/electric/light/mv_transformer",
+      "y": 180
+    },
+    "color=black,facing=south": {
+      "model": "ftbic:block/electric/dark/mv_transformer",
+      "y": 180
+    },
+    "color=red,facing=south": {
+      "model": "ftbic:block/electric/red/mv_transformer",
+      "y": 180
+    },
+    "color=orange,facing=south": {
+      "model": "ftbic:block/electric/orange/mv_transformer",
+      "y": 180
+    },
+    "color=yellow,facing=south": {
+      "model": "ftbic:block/electric/yellow/mv_transformer",
+      "y": 180
+    },
+    "color=lime,facing=south": {
+      "model": "ftbic:block/electric/lime/mv_transformer",
+      "y": 180
+    },
+    "color=green,facing=south": {
+      "model": "ftbic:block/electric/green/mv_transformer",
+      "y": 180
+    },
+    "color=cyan,facing=south": {
+      "model": "ftbic:block/electric/cyan/mv_transformer",
+      "y": 180
+    },
+    "color=light_blue,facing=south": {
+      "model": "ftbic:block/electric/light_blue/mv_transformer",
+      "y": 180
+    },
+    "color=blue,facing=south": {
+      "model": "ftbic:block/electric/blue/mv_transformer",
+      "y": 180
+    },
+    "color=purple,facing=south": {
+      "model": "ftbic:block/electric/purple/mv_transformer",
+      "y": 180
+    },
+    "color=magenta,facing=south": {
+      "model": "ftbic:block/electric/magenta/mv_transformer",
+      "y": 180
+    },
+    "color=pink,facing=south": {
+      "model": "ftbic:block/electric/pink/mv_transformer",
+      "y": 180
+    },
+    "color=brown,facing=south": {
+      "model": "ftbic:block/electric/brown/mv_transformer",
+      "y": 180
+    },
+    "color=gray,facing=south": {
+      "model": "ftbic:block/electric/gray/mv_transformer",
+      "y": 180
+    },
+    "color=light_gray,facing=south": {
+      "model": "ftbic:block/electric/light_gray/mv_transformer",
+      "y": 180
+    },
+    "color=white,facing=west": {
+      "model": "ftbic:block/electric/light/mv_transformer",
+      "y": 270
+    },
+    "color=black,facing=west": {
+      "model": "ftbic:block/electric/dark/mv_transformer",
+      "y": 270
+    },
+    "color=red,facing=west": {
+      "model": "ftbic:block/electric/red/mv_transformer",
+      "y": 270
+    },
+    "color=orange,facing=west": {
+      "model": "ftbic:block/electric/orange/mv_transformer",
+      "y": 270
+    },
+    "color=yellow,facing=west": {
+      "model": "ftbic:block/electric/yellow/mv_transformer",
+      "y": 270
+    },
+    "color=lime,facing=west": {
+      "model": "ftbic:block/electric/lime/mv_transformer",
+      "y": 270
+    },
+    "color=green,facing=west": {
+      "model": "ftbic:block/electric/green/mv_transformer",
+      "y": 270
+    },
+    "color=cyan,facing=west": {
+      "model": "ftbic:block/electric/cyan/mv_transformer",
+      "y": 270
+    },
+    "color=light_blue,facing=west": {
+      "model": "ftbic:block/electric/light_blue/mv_transformer",
+      "y": 270
+    },
+    "color=blue,facing=west": {
+      "model": "ftbic:block/electric/blue/mv_transformer",
+      "y": 270
+    },
+    "color=purple,facing=west": {
+      "model": "ftbic:block/electric/purple/mv_transformer",
+      "y": 270
+    },
+    "color=magenta,facing=west": {
+      "model": "ftbic:block/electric/magenta/mv_transformer",
+      "y": 270
+    },
+    "color=pink,facing=west": {
+      "model": "ftbic:block/electric/pink/mv_transformer",
+      "y": 270
+    },
+    "color=brown,facing=west": {
+      "model": "ftbic:block/electric/brown/mv_transformer",
+      "y": 270
+    },
+    "color=gray,facing=west": {
+      "model": "ftbic:block/electric/gray/mv_transformer",
+      "y": 270
+    },
+    "color=light_gray,facing=west": {
+      "model": "ftbic:block/electric/light_gray/mv_transformer",
+      "y": 270
+    },
+    "color=white,facing=east": {
+      "model": "ftbic:block/electric/light/mv_transformer",
+      "y": 90
+    },
+    "color=black,facing=east": {
+      "model": "ftbic:block/electric/dark/mv_transformer",
+      "y": 90
+    },
+    "color=red,facing=east": {
+      "model": "ftbic:block/electric/red/mv_transformer",
+      "y": 90
+    },
+    "color=orange,facing=east": {
+      "model": "ftbic:block/electric/orange/mv_transformer",
+      "y": 90
+    },
+    "color=yellow,facing=east": {
+      "model": "ftbic:block/electric/yellow/mv_transformer",
+      "y": 90
+    },
+    "color=lime,facing=east": {
+      "model": "ftbic:block/electric/lime/mv_transformer",
+      "y": 90
+    },
+    "color=green,facing=east": {
+      "model": "ftbic:block/electric/green/mv_transformer",
+      "y": 90
+    },
+    "color=cyan,facing=east": {
+      "model": "ftbic:block/electric/cyan/mv_transformer",
+      "y": 90
+    },
+    "color=light_blue,facing=east": {
+      "model": "ftbic:block/electric/light_blue/mv_transformer",
+      "y": 90
+    },
+    "color=blue,facing=east": {
+      "model": "ftbic:block/electric/blue/mv_transformer",
+      "y": 90
+    },
+    "color=purple,facing=east": {
+      "model": "ftbic:block/electric/purple/mv_transformer",
+      "y": 90
+    },
+    "color=magenta,facing=east": {
+      "model": "ftbic:block/electric/magenta/mv_transformer",
+      "y": 90
+    },
+    "color=pink,facing=east": {
+      "model": "ftbic:block/electric/pink/mv_transformer",
+      "y": 90
+    },
+    "color=brown,facing=east": {
+      "model": "ftbic:block/electric/brown/mv_transformer",
+      "y": 90
+    },
+    "color=gray,facing=east": {
+      "model": "ftbic:block/electric/gray/mv_transformer",
+      "y": 90
+    },
+    "color=light_gray,facing=east": {
+      "model": "ftbic:block/electric/light_gray/mv_transformer",
+      "y": 90
+    }
+  }
+}
