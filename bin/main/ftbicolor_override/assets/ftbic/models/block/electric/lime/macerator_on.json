@@ -1,0 +1,9 @@
+{
+  "parent": "ftbic:block/orientable_2d",
+  "textures": {
+    "side": "ftbic:block/electric/lime/basic_side",
+    "front": "ftbic:block/electric/lime/macerator_front",
+    "top": "ftbic:block/electric/lime/macerator_top_on",
+    "bottom": "ftbic:block/electric/lime/basic_bottom"
+  }
+}

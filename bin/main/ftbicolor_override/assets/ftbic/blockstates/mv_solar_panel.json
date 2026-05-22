@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "color=white": {
+      "model": "ftbic:block/electric/light/mv_solar_panel"
+    },
+    "color=black": {
+      "model": "ftbic:block/electric/dark/mv_solar_panel"
+    },
+    "color=red": {
+      "model": "ftbic:block/electric/red/mv_solar_panel"
+    },
+    "color=orange": {
+      "model": "ftbic:block/electric/orange/mv_solar_panel"
+    },
+    "color=yellow": {
+      "model": "ftbic:block/electric/yellow/mv_solar_panel"
+    },
+    "color=lime": {
+      "model": "ftbic:block/electric/lime/mv_solar_panel"
+    },
+    "color=green": {
+      "model": "ftbic:block/electric/green/mv_solar_panel"
+    },
+    "color=cyan": {
+      "model": "ftbic:block/electric/cyan/mv_solar_panel"
+    },
+    "color=light_blue": {
+      "model": "ftbic:block/electric/light_blue/mv_solar_panel"
+    },
+    "color=blue": {
+      "model": "ftbic:block/electric/blue/mv_solar_panel"
+    },
+    "color=purple": {
+      "model": "ftbic:block/electric/purple/mv_solar_panel"
+    },
+    "color=magenta": {
+      "model": "ftbic:block/electric/magenta/mv_solar_panel"
+    },
+    "color=pink": {
+      "model": "ftbic:block/electric/pink/mv_solar_panel"
+    },
+    "color=brown": {
+      "model": "ftbic:block/electric/brown/mv_solar_panel"
+    },
+    "color=gray": {
+      "model": "ftbic:block/electric/gray/mv_solar_panel"
+    },
+    "color=light_gray": {
+      "model": "ftbic:block/electric/light_gray/mv_solar_panel"
+    }
+  }
+}

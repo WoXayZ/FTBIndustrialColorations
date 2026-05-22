@@ -1,0 +1,19 @@
+{
+  "item.ftbic.spray_paint_can.tooltip": "Clic droit sur une machine pour changer son thème",
+  "item.ftbicolor.red_spray_paint_can": "Bombe de peinture (Rouge)",
+  "item.ftbicolor.orange_spray_paint_can": "Bombe de peinture (Orange)",
+  "item.ftbicolor.yellow_spray_paint_can": "Bombe de peinture (Jaune)",
+  "item.ftbicolor.lime_spray_paint_can": "Bombe de peinture (Vert clair)",
+  "item.ftbicolor.green_spray_paint_can": "Bombe de peinture (Vert)",
+  "item.ftbicolor.cyan_spray_paint_can": "Bombe de peinture (Cyan)",
+  "item.ftbicolor.light_blue_spray_paint_can": "Bombe de peinture (Bleu clair)",
+  "item.ftbicolor.blue_spray_paint_can": "Bombe de peinture (Bleu)",
+  "item.ftbicolor.purple_spray_paint_can": "Bombe de peinture (Violet)",
+  "item.ftbicolor.magenta_spray_paint_can": "Bombe de peinture (Magenta)",
+  "item.ftbicolor.pink_spray_paint_can": "Bombe de peinture (Rose)",
+  "item.ftbicolor.brown_spray_paint_can": "Bombe de peinture (Marron)",
+  "item.ftbicolor.gray_spray_paint_can": "Bombe de peinture (Gris)",
+  "item.ftbicolor.light_gray_spray_paint_can": "Bombe de peinture (Gris clair)",
+  "block.ftbicolor.colored_machine_block": "Bloc de machine peint",
+  "block.ftbicolor.colored_advanced_machine_block": "Bloc de machine avancée peint"
+}

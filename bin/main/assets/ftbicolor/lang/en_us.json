@@ -1,0 +1,19 @@
+{
+  "item.ftbic.spray_paint_can.tooltip": "Right-click on a machine to change its theme",
+  "item.ftbicolor.red_spray_paint_can": "Spray Paint Can (Red)",
+  "item.ftbicolor.orange_spray_paint_can": "Spray Paint Can (Orange)",
+  "item.ftbicolor.yellow_spray_paint_can": "Spray Paint Can (Yellow)",
+  "item.ftbicolor.lime_spray_paint_can": "Spray Paint Can (Lime)",
+  "item.ftbicolor.green_spray_paint_can": "Spray Paint Can (Green)",
+  "item.ftbicolor.cyan_spray_paint_can": "Spray Paint Can (Cyan)",
+  "item.ftbicolor.light_blue_spray_paint_can": "Spray Paint Can (Light Blue)",
+  "item.ftbicolor.blue_spray_paint_can": "Spray Paint Can (Blue)",
+  "item.ftbicolor.purple_spray_paint_can": "Spray Paint Can (Purple)",
+  "item.ftbicolor.magenta_spray_paint_can": "Spray Paint Can (Magenta)",
+  "item.ftbicolor.pink_spray_paint_can": "Spray Paint Can (Pink)",
+  "item.ftbicolor.brown_spray_paint_can": "Spray Paint Can (Brown)",
+  "item.ftbicolor.gray_spray_paint_can": "Spray Paint Can (Gray)",
+  "item.ftbicolor.light_gray_spray_paint_can": "Spray Paint Can (Light Gray)",
+  "block.ftbicolor.colored_machine_block": "Painted Machine Block",
+  "block.ftbicolor.colored_advanced_machine_block": "Painted Advanced Machine Block"
+}

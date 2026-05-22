@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ftbicolor:item/light_blue_spray_paint_can"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "ftbic:block/orientable_2d",
+  "textures": {
+    "side": "ftbic:block/electric/magenta/basic_side",
+    "front": "ftbic:block/electric/magenta/canning_machine_front_off",
+    "top": "ftbic:block/electric/magenta/basic_top",
+    "bottom": "ftbic:block/electric/magenta/basic_bottom"
+  }
+}

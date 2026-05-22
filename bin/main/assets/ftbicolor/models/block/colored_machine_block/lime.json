@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ftbic:block/electric/lime/basic_side",
+    "top": "ftbic:block/electric/lime/basic_top",
+    "bottom": "ftbic:block/electric/lime/basic_bottom"
+  }
+}

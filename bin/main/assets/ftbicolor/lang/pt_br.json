@@ -1,0 +1,19 @@
+{
+  "item.ftbic.spray_paint_can.tooltip": "Clique-direito na maquina para mudar a sua temática",
+  "item.ftbicolor.red_spray_paint_can": "Lata de spray de pintura (Vermelho)",
+  "item.ftbicolor.orange_spray_paint_can": "Lata de spray de pintura (Laranja)",
+  "item.ftbicolor.yellow_spray_paint_can": "Lata de spray de pintura (Amarelo)",
+  "item.ftbicolor.lime_spray_paint_can": "Lata de spray de pintura (Verde-limão)",
+  "item.ftbicolor.green_spray_paint_can": "Lata de spray de pintura (Verde)",
+  "item.ftbicolor.cyan_spray_paint_can": "Lata de spray de pintura (Ciano)",
+  "item.ftbicolor.light_blue_spray_paint_can": "Lata de spray de pintura (Azul-claro)",
+  "item.ftbicolor.blue_spray_paint_can": "Lata de spray de pintura (Azul)",
+  "item.ftbicolor.purple_spray_paint_can": "Lata de spray de pintura (Roxo)",
+  "item.ftbicolor.magenta_spray_paint_can": "Lata de spray de pintura (Magenta)",
+  "item.ftbicolor.pink_spray_paint_can": "Lata de spray de pintura (Rosa)",
+  "item.ftbicolor.brown_spray_paint_can": "Lata de spray de pintura (Marrom)",
+  "item.ftbicolor.gray_spray_paint_can": "Lata de spray de pintura (Cinza)",
+  "item.ftbicolor.light_gray_spray_paint_can": "Lata de spray de pintura (Cinza-claro)",
+  "block.ftbicolor.colored_machine_block": "Bloco de máquina pintado",
+  "block.ftbicolor.colored_advanced_machine_block": "Bloco de máquina avançada pintado"
+}

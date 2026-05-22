@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "color=white": {
+      "model": "ftbicolor:block/colored_machine_block/white"
+    },
+    "color=orange": {
+      "model": "ftbicolor:block/colored_machine_block/orange"
+    },
+    "color=magenta": {
+      "model": "ftbicolor:block/colored_machine_block/magenta"
+    },
+    "color=light_blue": {
+      "model": "ftbicolor:block/colored_machine_block/light_blue"
+    },
+    "color=yellow": {
+      "model": "ftbicolor:block/colored_machine_block/yellow"
+    },
+    "color=lime": {
+      "model": "ftbicolor:block/colored_machine_block/lime"
+    },
+    "color=pink": {
+      "model": "ftbicolor:block/colored_machine_block/pink"
+    },
+    "color=gray": {
+      "model": "ftbicolor:block/colored_machine_block/gray"
+    },
+    "color=light_gray": {
+      "model": "ftbicolor:block/colored_machine_block/light_gray"
+    },
+    "color=cyan": {
+      "model": "ftbicolor:block/colored_machine_block/cyan"
+    },
+    "color=purple": {
+      "model": "ftbicolor:block/colored_machine_block/purple"
+    },
+    "color=blue": {
+      "model": "ftbicolor:block/colored_machine_block/blue"
+    },
+    "color=brown": {
+      "model": "ftbicolor:block/colored_machine_block/brown"
+    },
+    "color=green": {
+      "model": "ftbicolor:block/colored_machine_block/green"
+    },
+    "color=red": {
+      "model": "ftbicolor:block/colored_machine_block/red"
+    },
+    "color=black": {
+      "model": "ftbicolor:block/colored_machine_block/black"
+    }
+  }
+}

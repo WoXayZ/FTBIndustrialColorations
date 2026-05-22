@@ -1,0 +1,19 @@
+{
+  "item.ftbic.spray_paint_can.tooltip": "Щелкните ПКМ по машине, чтобы изменить ее тему",
+  "item.ftbicolor.red_spray_paint_can": "Баллончик с аэрозольной краской (красный)",
+  "item.ftbicolor.orange_spray_paint_can": "Баллончик с аэрозольной краской (оранжевый)",
+  "item.ftbicolor.yellow_spray_paint_can": "Баллончик с аэрозольной краской (жёлтый)",
+  "item.ftbicolor.lime_spray_paint_can": "Баллончик с аэрозольной краской (лаймовый)",
+  "item.ftbicolor.green_spray_paint_can": "Баллончик с аэрозольной краской (зелёный)",
+  "item.ftbicolor.cyan_spray_paint_can": "Баллончик с аэрозольной краской (бирюзовый)",
+  "item.ftbicolor.light_blue_spray_paint_can": "Баллончик с аэрозольной краской (голубой)",
+  "item.ftbicolor.blue_spray_paint_can": "Баллончик с аэрозольной краской (синий)",
+  "item.ftbicolor.purple_spray_paint_can": "Баллончик с аэрозольной краской (фиолетовый)",
+  "item.ftbicolor.magenta_spray_paint_can": "Баллончик с аэрозольной краской (пурпурный)",
+  "item.ftbicolor.pink_spray_paint_can": "Баллончик с аэрозольной краской (розовый)",
+  "item.ftbicolor.brown_spray_paint_can": "Баллончик с аэрозольной краской (коричневый)",
+  "item.ftbicolor.gray_spray_paint_can": "Баллончик с аэрозольной краской (серый)",
+  "item.ftbicolor.light_gray_spray_paint_can": "Баллончик с аэрозольной краской (светло-серый)",
+  "block.ftbicolor.colored_machine_block": "Окрашенный блок машины",
+  "block.ftbicolor.colored_advanced_machine_block": "Окрашенный блок продвинутой машины"
+}

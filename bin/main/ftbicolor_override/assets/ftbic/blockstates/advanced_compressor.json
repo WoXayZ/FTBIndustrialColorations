@@ -1,0 +1,484 @@
+{
+  "variants": {
+    "active=false,color=white,facing=north": {
+      "model": "ftbic:block/electric/light/advanced_compressor_off"
+    },
+    "active=false,color=black,facing=north": {
+      "model": "ftbic:block/electric/dark/advanced_compressor_off"
+    },
+    "active=false,color=red,facing=north": {
+      "model": "ftbic:block/electric/red/advanced_compressor_off"
+    },
+    "active=false,color=orange,facing=north": {
+      "model": "ftbic:block/electric/orange/advanced_compressor_off"
+    },
+    "active=false,color=yellow,facing=north": {
+      "model": "ftbic:block/electric/yellow/advanced_compressor_off"
+    },
+    "active=false,color=lime,facing=north": {
+      "model": "ftbic:block/electric/lime/advanced_compressor_off"
+    },
+    "active=false,color=green,facing=north": {
+      "model": "ftbic:block/electric/green/advanced_compressor_off"
+    },
+    "active=false,color=cyan,facing=north": {
+      "model": "ftbic:block/electric/cyan/advanced_compressor_off"
+    },
+    "active=false,color=light_blue,facing=north": {
+      "model": "ftbic:block/electric/light_blue/advanced_compressor_off"
+    },
+    "active=false,color=blue,facing=north": {
+      "model": "ftbic:block/electric/blue/advanced_compressor_off"
+    },
+    "active=false,color=purple,facing=north": {
+      "model": "ftbic:block/electric/purple/advanced_compressor_off"
+    },
+    "active=false,color=magenta,facing=north": {
+      "model": "ftbic:block/electric/magenta/advanced_compressor_off"
+    },
+    "active=false,color=pink,facing=north": {
+      "model": "ftbic:block/electric/pink/advanced_compressor_off"
+    },
+    "active=false,color=brown,facing=north": {
+      "model": "ftbic:block/electric/brown/advanced_compressor_off"
+    },
+    "active=false,color=gray,facing=north": {
+      "model": "ftbic:block/electric/gray/advanced_compressor_off"
+    },
+    "active=false,color=light_gray,facing=north": {
+      "model": "ftbic:block/electric/light_gray/advanced_compressor_off"
+    },
+    "active=true,color=white,facing=north": {
+      "model": "ftbic:block/electric/light/advanced_compressor_on"
+    },
+    "active=true,color=black,facing=north": {
+      "model": "ftbic:block/electric/dark/advanced_compressor_on"
+    },
+    "active=true,color=red,facing=north": {
+      "model": "ftbic:block/electric/red/advanced_compressor_on"
+    },
+    "active=true,color=orange,facing=north": {
+      "model": "ftbic:block/electric/orange/advanced_compressor_on"
+    },
+    "active=true,color=yellow,facing=north": {
+      "model": "ftbic:block/electric/yellow/advanced_compressor_on"
+    },
+    "active=true,color=lime,facing=north": {
+      "model": "ftbic:block/electric/lime/advanced_compressor_on"
+    },
+    "active=true,color=green,facing=north": {
+      "model": "ftbic:block/electric/green/advanced_compressor_on"
+    },
+    "active=true,color=cyan,facing=north": {
+      "model": "ftbic:block/electric/cyan/advanced_compressor_on"
+    },
+    "active=true,color=light_blue,facing=north": {
+      "model": "ftbic:block/electric/light_blue/advanced_compressor_on"
+    },
+    "active=true,color=blue,facing=north": {
+      "model": "ftbic:block/electric/blue/advanced_compressor_on"
+    },
+    "active=true,color=purple,facing=north": {
+      "model": "ftbic:block/electric/purple/advanced_compressor_on"
+    },
+    "active=true,color=magenta,facing=north": {
+      "model": "ftbic:block/electric/magenta/advanced_compressor_on"
+    },
+    "active=true,color=pink,facing=north": {
+      "model": "ftbic:block/electric/pink/advanced_compressor_on"
+    },
+    "active=true,color=brown,facing=north": {
+      "model": "ftbic:block/electric/brown/advanced_compressor_on"
+    },
+    "active=true,color=gray,facing=north": {
+      "model": "ftbic:block/electric/gray/advanced_compressor_on"
+    },
+    "active=true,color=light_gray,facing=north": {
+      "model": "ftbic:block/electric/light_gray/advanced_compressor_on"
+    },
+    "active=false,color=white,facing=south": {
+      "model": "ftbic:block/electric/light/advanced_compressor_off",
+      "y": 180
+    },
+    "active=false,color=black,facing=south": {
+      "model": "ftbic:block/electric/dark/advanced_compressor_off",
+      "y": 180
+    },
+    "active=false,color=red,facing=south": {
+      "model": "ftbic:block/electric/red/advanced_compressor_off",
+      "y": 180
+    },
+    "active=false,color=orange,facing=south": {
+      "model": "ftbic:block/electric/orange/advanced_compressor_off",
+      "y": 180
+    },
+    "active=false,color=yellow,facing=south": {
+      "model": "ftbic:block/electric/yellow/advanced_compressor_off",
+      "y": 180
+    },
+    "active=false,color=lime,facing=south": {
+      "model": "ftbic:block/electric/lime/advanced_compressor_off",
+      "y": 180
+    },
+    "active=false,color=green,facing=south": {
+      "model": "ftbic:block/electric/green/advanced_compressor_off",
+      "y": 180
+    },
+    "active=false,color=cyan,facing=south": {
+      "model": "ftbic:block/electric/cyan/advanced_compressor_off",
+      "y": 180
+    },
+    "active=false,color=light_blue,facing=south": {
+      "model": "ftbic:block/electric/light_blue/advanced_compressor_off",
+      "y": 180
+    },
+    "active=false,color=blue,facing=south": {
+      "model": "ftbic:block/electric/blue/advanced_compressor_off",
+      "y": 180
+    },
+    "active=false,color=purple,facing=south": {
+      "model": "ftbic:block/electric/purple/advanced_compressor_off",
+      "y": 180
+    },
+    "active=false,color=magenta,facing=south": {
+      "model": "ftbic:block/electric/magenta/advanced_compressor_off",
+      "y": 180
+    },
+    "active=false,color=pink,facing=south": {
+      "model": "ftbic:block/electric/pink/advanced_compressor_off",
+      "y": 180
+    },
+    "active=false,color=brown,facing=south": {
+      "model": "ftbic:block/electric/brown/advanced_compressor_off",
+      "y": 180
+    },
+    "active=false,color=gray,facing=south": {
+      "model": "ftbic:block/electric/gray/advanced_compressor_off",
+      "y": 180
+    },
+    "active=false,color=light_gray,facing=south": {
+      "model": "ftbic:block/electric/light_gray/advanced_compressor_off",
+      "y": 180
+    },
+    "active=true,color=white,facing=south": {
+      "model": "ftbic:block/electric/light/advanced_compressor_on",
+      "y": 180
+    },
+    "active=true,color=black,facing=south": {
+      "model": "ftbic:block/electric/dark/advanced_compressor_on",
+      "y": 180
+    },
+    "active=true,color=red,facing=south": {
+      "model": "ftbic:block/electric/red/advanced_compressor_on",
+      "y": 180
+    },
+    "active=true,color=orange,facing=south": {
+      "model": "ftbic:block/electric/orange/advanced_compressor_on",
+      "y": 180
+    },
+    "active=true,color=yellow,facing=south": {
+      "model": "ftbic:block/electric/yellow/advanced_compressor_on",
+      "y": 180
+    },
+    "active=true,color=lime,facing=south": {
+      "model": "ftbic:block/electric/lime/advanced_compressor_on",
+      "y": 180
+    },
+    "active=true,color=green,facing=south": {
+      "model": "ftbic:block/electric/green/advanced_compressor_on",
+      "y": 180
+    },
+    "active=true,color=cyan,facing=south": {
+      "model": "ftbic:block/electric/cyan/advanced_compressor_on",
+      "y": 180
+    },
+    "active=true,color=light_blue,facing=south": {
+      "model": "ftbic:block/electric/light_blue/advanced_compressor_on",
+      "y": 180
+    },
+    "active=true,color=blue,facing=south": {
+      "model": "ftbic:block/electric/blue/advanced_compressor_on",
+      "y": 180
+    },
+    "active=true,color=purple,facing=south": {
+      "model": "ftbic:block/electric/purple/advanced_compressor_on",
+      "y": 180
+    },
+    "active=true,color=magenta,facing=south": {
+      "model": "ftbic:block/electric/magenta/advanced_compressor_on",
+      "y": 180
+    },
+    "active=true,color=pink,facing=south": {
+      "model": "ftbic:block/electric/pink/advanced_compressor_on",
+      "y": 180
+    },
+    "active=true,color=brown,facing=south": {
+      "model": "ftbic:block/electric/brown/advanced_compressor_on",
+      "y": 180
+    },
+    "active=true,color=gray,facing=south": {
+      "model": "ftbic:block/electric/gray/advanced_compressor_on",
+      "y": 180
+    },
+    "active=true,color=light_gray,facing=south": {
+      "model": "ftbic:block/electric/light_gray/advanced_compressor_on",
+      "y": 180
+    },
+    "active=false,color=white,facing=west": {
+      "model": "ftbic:block/electric/light/advanced_compressor_off",
+      "y": 270
+    },
+    "active=false,color=black,facing=west": {
+      "model": "ftbic:block/electric/dark/advanced_compressor_off",
+      "y": 270
+    },
+    "active=false,color=red,facing=west": {
+      "model": "ftbic:block/electric/red/advanced_compressor_off",
+      "y": 270
+    },
+    "active=false,color=orange,facing=west": {
+      "model": "ftbic:block/electric/orange/advanced_compressor_off",
+      "y": 270
+    },
+    "active=false,color=yellow,facing=west": {
+      "model": "ftbic:block/electric/yellow/advanced_compressor_off",
+      "y": 270
+    },
+    "active=false,color=lime,facing=west": {
+      "model": "ftbic:block/electric/lime/advanced_compressor_off",
+      "y": 270
+    },
+    "active=false,color=green,facing=west": {
+      "model": "ftbic:block/electric/green/advanced_compressor_off",
+      "y": 270
+    },
+    "active=false,color=cyan,facing=west": {
+      "model": "ftbic:block/electric/cyan/advanced_compressor_off",
+      "y": 270
+    },
+    "active=false,color=light_blue,facing=west": {
+      "model": "ftbic:block/electric/light_blue/advanced_compressor_off",
+      "y": 270
+    },
+    "active=false,color=blue,facing=west": {
+      "model": "ftbic:block/electric/blue/advanced_compressor_off",
+      "y": 270
+    },
+    "active=false,color=purple,facing=west": {
+      "model": "ftbic:block/electric/purple/advanced_compressor_off",
+      "y": 270
+    },
+    "active=false,color=magenta,facing=west": {
+      "model": "ftbic:block/electric/magenta/advanced_compressor_off",
+      "y": 270
+    },
+    "active=false,color=pink,facing=west": {
+      "model": "ftbic:block/electric/pink/advanced_compressor_off",
+      "y": 270
+    },
+    "active=false,color=brown,facing=west": {
+      "model": "ftbic:block/electric/brown/advanced_compressor_off",
+      "y": 270
+    },
+    "active=false,color=gray,facing=west": {
+      "model": "ftbic:block/electric/gray/advanced_compressor_off",
+      "y": 270
+    },
+    "active=false,color=light_gray,facing=west": {
+      "model": "ftbic:block/electric/light_gray/advanced_compressor_off",
+      "y": 270
+    },
+    "active=true,color=white,facing=west": {
+      "model": "ftbic:block/electric/light/advanced_compressor_on",
+      "y": 270
+    },
+    "active=true,color=black,facing=west": {
+      "model": "ftbic:block/electric/dark/advanced_compressor_on",
+      "y": 270
+    },
+    "active=true,color=red,facing=west": {
+      "model": "ftbic:block/electric/red/advanced_compressor_on",
+      "y": 270
+    },
+    "active=true,color=orange,facing=west": {
+      "model": "ftbic:block/electric/orange/advanced_compressor_on",
+      "y": 270
+    },
+    "active=true,color=yellow,facing=west": {
+      "model": "ftbic:block/electric/yellow/advanced_compressor_on",
+      "y": 270
+    },
+    "active=true,color=lime,facing=west": {
+      "model": "ftbic:block/electric/lime/advanced_compressor_on",
+      "y": 270
+    },
+    "active=true,color=green,facing=west": {
+      "model": "ftbic:block/electric/green/advanced_compressor_on",
+      "y": 270
+    },
+    "active=true,color=cyan,facing=west": {
+      "model": "ftbic:block/electric/cyan/advanced_compressor_on",
+      "y": 270
+    },
+    "active=true,color=light_blue,facing=west": {
+      "model": "ftbic:block/electric/light_blue/advanced_compressor_on",
+      "y": 270
+    },
+    "active=true,color=blue,facing=west": {
+      "model": "ftbic:block/electric/blue/advanced_compressor_on",
+      "y": 270
+    },
+    "active=true,color=purple,facing=west": {
+      "model": "ftbic:block/electric/purple/advanced_compressor_on",
+      "y": 270
+    },
+    "active=true,color=magenta,facing=west": {
+      "model": "ftbic:block/electric/magenta/advanced_compressor_on",
+      "y": 270
+    },
+    "active=true,color=pink,facing=west": {
+      "model": "ftbic:block/electric/pink/advanced_compressor_on",
+      "y": 270
+    },
+    "active=true,color=brown,facing=west": {
+      "model": "ftbic:block/electric/brown/advanced_compressor_on",
+      "y": 270
+    },
+    "active=true,color=gray,facing=west": {
+      "model": "ftbic:block/electric/gray/advanced_compressor_on",
+      "y": 270
+    },
+    "active=true,color=light_gray,facing=west": {
+      "model": "ftbic:block/electric/light_gray/advanced_compressor_on",
+      "y": 270
+    },
+    "active=false,color=white,facing=east": {
+      "model": "ftbic:block/electric/light/advanced_compressor_off",
+      "y": 90
+    },
+    "active=false,color=black,facing=east": {
+      "model": "ftbic:block/electric/dark/advanced_compressor_off",
+      "y": 90
+    },
+    "active=false,color=red,facing=east": {
+      "model": "ftbic:block/electric/red/advanced_compressor_off",
+      "y": 90
+    },
+    "active=false,color=orange,facing=east": {
+      "model": "ftbic:block/electric/orange/advanced_compressor_off",
+      "y": 90
+    },
+    "active=false,color=yellow,facing=east": {
+      "model": "ftbic:block/electric/yellow/advanced_compressor_off",
+      "y": 90
+    },
+    "active=false,color=lime,facing=east": {
+      "model": "ftbic:block/electric/lime/advanced_compressor_off",
+      "y": 90
+    },
+    "active=false,color=green,facing=east": {
+      "model": "ftbic:block/electric/green/advanced_compressor_off",
+      "y": 90
+    },
+    "active=false,color=cyan,facing=east": {
+      "model": "ftbic:block/electric/cyan/advanced_compressor_off",
+      "y": 90
+    },
+    "active=false,color=light_blue,facing=east": {
+      "model": "ftbic:block/electric/light_blue/advanced_compressor_off",
+      "y": 90
+    },
+    "active=false,color=blue,facing=east": {
+      "model": "ftbic:block/electric/blue/advanced_compressor_off",
+      "y": 90
+    },
+    "active=false,color=purple,facing=east": {
+      "model": "ftbic:block/electric/purple/advanced_compressor_off",
+      "y": 90
+    },
+    "active=false,color=magenta,facing=east": {
+      "model": "ftbic:block/electric/magenta/advanced_compressor_off",
+      "y": 90
+    },
+    "active=false,color=pink,facing=east": {
+      "model": "ftbic:block/electric/pink/advanced_compressor_off",
+      "y": 90
+    },
+    "active=false,color=brown,facing=east": {
+      "model": "ftbic:block/electric/brown/advanced_compressor_off",
+      "y": 90
+    },
+    "active=false,color=gray,facing=east": {
+      "model": "ftbic:block/electric/gray/advanced_compressor_off",
+      "y": 90
+    },
+    "active=false,color=light_gray,facing=east": {
+      "model": "ftbic:block/electric/light_gray/advanced_compressor_off",
+      "y": 90
+    },
+    "active=true,color=white,facing=east": {
+      "model": "ftbic:block/electric/light/advanced_compressor_on",
+      "y": 90
+    },
+    "active=true,color=black,facing=east": {
+      "model": "ftbic:block/electric/dark/advanced_compressor_on",
+      "y": 90
+    },
+    "active=true,color=red,facing=east": {
+      "model": "ftbic:block/electric/red/advanced_compressor_on",
+      "y": 90
+    },
+    "active=true,color=orange,facing=east": {
+      "model": "ftbic:block/electric/orange/advanced_compressor_on",
+      "y": 90
+    },
+    "active=true,color=yellow,facing=east": {
+      "model": "ftbic:block/electric/yellow/advanced_compressor_on",
+      "y": 90
+    },
+    "active=true,color=lime,facing=east": {
+      "model": "ftbic:block/electric/lime/advanced_compressor_on",
+      "y": 90
+    },
+    "active=true,color=green,facing=east": {
+      "model": "ftbic:block/electric/green/advanced_compressor_on",
+      "y": 90
+    },
+    "active=true,color=cyan,facing=east": {
+      "model": "ftbic:block/electric/cyan/advanced_compressor_on",
+      "y": 90
+    },
+    "active=true,color=light_blue,facing=east": {
+      "model": "ftbic:block/electric/light_blue/advanced_compressor_on",
+      "y": 90
+    },
+    "active=true,color=blue,facing=east": {
+      "model": "ftbic:block/electric/blue/advanced_compressor_on",
+      "y": 90
+    },
+    "active=true,color=purple,facing=east": {
+      "model": "ftbic:block/electric/purple/advanced_compressor_on",
+      "y": 90
+    },
+    "active=true,color=magenta,facing=east": {
+      "model": "ftbic:block/electric/magenta/advanced_compressor_on",
+      "y": 90
+    },
+    "active=true,color=pink,facing=east": {
+      "model": "ftbic:block/electric/pink/advanced_compressor_on",
+      "y": 90
+    },
+    "active=true,color=brown,facing=east": {
+      "model": "ftbic:block/electric/brown/advanced_compressor_on",
+      "y": 90
+    },
+    "active=true,color=gray,facing=east": {
+      "model": "ftbic:block/electric/gray/advanced_compressor_on",
+      "y": 90
+    },
+    "active=true,color=light_gray,facing=east": {
+      "model": "ftbic:block/electric/light_gray/advanced_compressor_on",
+      "y": 90
+    }
+  }
+}

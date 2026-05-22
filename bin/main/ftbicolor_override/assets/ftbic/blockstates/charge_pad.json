@@ -1,0 +1,100 @@
+{
+  "variants": {
+    "active=false,color=white": {
+      "model": "ftbic:block/electric/light/charge_pad_off"
+    },
+    "active=false,color=black": {
+      "model": "ftbic:block/electric/dark/charge_pad_off"
+    },
+    "active=false,color=red": {
+      "model": "ftbic:block/electric/red/charge_pad_off"
+    },
+    "active=false,color=orange": {
+      "model": "ftbic:block/electric/orange/charge_pad_off"
+    },
+    "active=false,color=yellow": {
+      "model": "ftbic:block/electric/yellow/charge_pad_off"
+    },
+    "active=false,color=lime": {
+      "model": "ftbic:block/electric/lime/charge_pad_off"
+    },
+    "active=false,color=green": {
+      "model": "ftbic:block/electric/green/charge_pad_off"
+    },
+    "active=false,color=cyan": {
+      "model": "ftbic:block/electric/cyan/charge_pad_off"
+    },
+    "active=false,color=light_blue": {
+      "model": "ftbic:block/electric/light_blue/charge_pad_off"
+    },
+    "active=false,color=blue": {
+      "model": "ftbic:block/electric/blue/charge_pad_off"
+    },
+    "active=false,color=purple": {
+      "model": "ftbic:block/electric/purple/charge_pad_off"
+    },
+    "active=false,color=magenta": {
+      "model": "ftbic:block/electric/magenta/charge_pad_off"
+    },
+    "active=false,color=pink": {
+      "model": "ftbic:block/electric/pink/charge_pad_off"
+    },
+    "active=false,color=brown": {
+      "model": "ftbic:block/electric/brown/charge_pad_off"
+    },
+    "active=false,color=gray": {
+      "model": "ftbic:block/electric/gray/charge_pad_off"
+    },
+    "active=false,color=light_gray": {
+      "model": "ftbic:block/electric/light_gray/charge_pad_off"
+    },
+    "active=true,color=white": {
+      "model": "ftbic:block/electric/light/charge_pad_on"
+    },
+    "active=true,color=black": {
+      "model": "ftbic:block/electric/dark/charge_pad_on"
+    },
+    "active=true,color=red": {
+      "model": "ftbic:block/electric/red/charge_pad_on"
+    },
+    "active=true,color=orange": {
+      "model": "ftbic:block/electric/orange/charge_pad_on"
+    },
+    "active=true,color=yellow": {
+      "model": "ftbic:block/electric/yellow/charge_pad_on"
+    },
+    "active=true,color=lime": {
+      "model": "ftbic:block/electric/lime/charge_pad_on"
+    },
+    "active=true,color=green": {
+      "model": "ftbic:block/electric/green/charge_pad_on"
+    },
+    "active=true,color=cyan": {
+      "model": "ftbic:block/electric/cyan/charge_pad_on"
+    },
+    "active=true,color=light_blue": {
+      "model": "ftbic:block/electric/light_blue/charge_pad_on"
+    },
+    "active=true,color=blue": {
+      "model": "ftbic:block/electric/blue/charge_pad_on"
+    },
+    "active=true,color=purple": {
+      "model": "ftbic:block/electric/purple/charge_pad_on"
+    },
+    "active=true,color=magenta": {
+      "model": "ftbic:block/electric/magenta/charge_pad_on"
+    },
+    "active=true,color=pink": {
+      "model": "ftbic:block/electric/pink/charge_pad_on"
+    },
+    "active=true,color=brown": {
+      "model": "ftbic:block/electric/brown/charge_pad_on"
+    },
+    "active=true,color=gray": {
+      "model": "ftbic:block/electric/gray/charge_pad_on"
+    },
+    "active=true,color=light_gray": {
+      "model": "ftbic:block/electric/light_gray/charge_pad_on"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "ftbic:canning",
+  "inputItems": [
+    {
+      "ingredient": {
+        "type": "forge:nbt",
+        "item": "ftbic:fluid_cell",
+        "count": 1,
+        "nbt": "{Fluid:\"minecraft:water\"}"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "tag": "forge:dyes/cyan"
+      },
+      "count": 1
+    }
+  ],
+  "outputItems": [
+    {
+      "item": "ftbicolor:cyan_spray_paint_can"
+    }
+  ]
+}
