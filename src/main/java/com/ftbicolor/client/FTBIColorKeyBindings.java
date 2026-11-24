@@ -1,15 +1,17 @@
 package com.ftbicolor.client;
 
+import com.ftbicolor.FTBIColorConstants;
 import com.mojang.blaze3d.platform.InputConstants;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
-import net.minecraft.client.gui.screens.Screen;
-import net.minecraftforge.client.settings.KeyConflictContext;
-import net.minecraftforge.client.settings.KeyModifier;
+import net.minecraft.client.Minecraft;
+import net.minecraft.resources.Identifier;
+import net.neoforged.neoforge.client.settings.KeyConflictContext;
+import net.neoforged.neoforge.client.settings.KeyModifier;
 import org.lwjgl.glfw.GLFW;
 
 public final class FTBIColorKeyBindings {
-	public static final String CATEGORY = "key.categories.ftbicolor";
+	public static final KeyMapping.Category CATEGORY = KeyMapping.Category.register(
+			Identifier.fromNamespaceAndPath(FTBIColorConstants.MOD_ID, "main"));
 
 	public static final KeyMapping SPRAY_PAINT_WHEEL = new KeyMapping(
 			"key.ftbicolor.spray_paint_wheel",
@@ -47,7 +49,7 @@ public final class FTBIColorKeyBindings {
 				return true;
 			}
 
-			return Screen.hasControlDown() && leftShiftDown();
+			return controlDown() && leftShiftDown();
 		}
 
 		@Override
@@ -66,8 +68,13 @@ public final class FTBIColorKeyBindings {
 		}
 
 		private static boolean leftShiftDown() {
-			long window = Minecraft.getInstance().getWindow().getWindow();
-			return InputConstants.isKeyDown(window, GLFW.GLFW_KEY_LEFT_SHIFT);
+			return InputConstants.isKeyDown(Minecraft.getInstance().getWindow(), GLFW.GLFW_KEY_LEFT_SHIFT);
+		}
+
+		private static boolean controlDown() {
+			long window = Minecraft.getInstance().getWindow().handle();
+			return org.lwjgl.glfw.GLFW.glfwGetKey(window, GLFW.GLFW_KEY_LEFT_CONTROL) == GLFW.GLFW_PRESS
+					|| org.lwjgl.glfw.GLFW.glfwGetKey(window, GLFW.GLFW_KEY_RIGHT_CONTROL) == GLFW.GLFW_PRESS;
 		}
 	}
 }

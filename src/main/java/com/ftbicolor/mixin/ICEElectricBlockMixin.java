@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(targets = "com.jjyp.ftbicec.block.ICEElectricBlock")
+@Mixin(targets = "com.jjyp.ftbicec.machine.ExpansionGeneratorBlock")
 public abstract class ICEElectricBlockMixin {
 	@Inject(method = "createBlockStateDefinition", at = @At("HEAD"))
 	private void ftbicolor$addColorProperty(StateDefinition.Builder<Block, BlockState> builder, CallbackInfo ci) {

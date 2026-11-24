@@ -1,0 +1,67 @@
+modLoader = "javafml"
+loaderVersion = "[${neoforge_loader_version},)"
+license = "MIT"
+issueTrackerURL = "https://github.com/WoXayZ/FTBIndustrialColorations/issues"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${version}"
+displayName = "FTB Industrial Colorations"
+authors = "WoXayZ"
+description = '''
+Adds the other 14 dye colors to FTB Industrial Contraptions spray paint.
+Recolors machine casings without touching their details, and paints Quantum Armor.
+Includes spray paint kits, a selector, and advancements.
+'''
+
+[[mixins]]
+config = "ftbicolor.mixins.json"
+
+[[dependencies.${mod_id}]]
+modId = "neoforge"
+type = "required"
+versionRange = "${neoforge_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "ftbic"
+type = "required"
+versionRange = "[1,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "curios"
+type = "optional"
+versionRange = "[1,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "ftbicec"
+type = "optional"
+versionRange = "[1,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "ftbiceg"
+type = "optional"
+versionRange = "[1,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "zapsconverter"
+type = "optional"
+versionRange = "[1,)"
+ordering = "AFTER"
+side = "BOTH"

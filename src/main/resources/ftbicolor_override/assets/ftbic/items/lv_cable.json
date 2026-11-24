@@ -1,0 +1,124 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "ftbicolor:picked_color",
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "ftbic:item/lv_cable"
+    },
+    "entries": [
+      {
+        "threshold": 0,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/cable/white/lv_cable"
+        }
+      },
+      {
+        "threshold": 1,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/cable/orange/lv_cable"
+        }
+      },
+      {
+        "threshold": 2,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/cable/magenta/lv_cable"
+        }
+      },
+      {
+        "threshold": 3,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/cable/light_blue/lv_cable"
+        }
+      },
+      {
+        "threshold": 4,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/cable/yellow/lv_cable"
+        }
+      },
+      {
+        "threshold": 5,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/cable/lime/lv_cable"
+        }
+      },
+      {
+        "threshold": 6,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/cable/pink/lv_cable"
+        }
+      },
+      {
+        "threshold": 7,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/cable/gray/lv_cable"
+        }
+      },
+      {
+        "threshold": 8,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/cable/light_gray/lv_cable"
+        }
+      },
+      {
+        "threshold": 9,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/cable/cyan/lv_cable"
+        }
+      },
+      {
+        "threshold": 10,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/cable/purple/lv_cable"
+        }
+      },
+      {
+        "threshold": 11,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/cable/blue/lv_cable"
+        }
+      },
+      {
+        "threshold": 12,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/cable/brown/lv_cable"
+        }
+      },
+      {
+        "threshold": 13,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/cable/green/lv_cable"
+        }
+      },
+      {
+        "threshold": 14,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/cable/red/lv_cable"
+        }
+      },
+      {
+        "threshold": 15,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/cable/black/lv_cable"
+        }
+      }
+    ]
+  }
+}

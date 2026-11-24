@@ -1,0 +1,24 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "minecraft:has_component",
+    "component": "ftbicolor:selected_color",
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "ftbicolor:item/colored_spray_paint_selector"
+    },
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "ftbicolor:item/colored_spray_paint_selector_filled",
+      "tints": [
+        {
+          "type": "minecraft:constant",
+          "value": -1
+        },
+        {
+          "type": "ftbicolor:selected_color"
+        }
+      ]
+    }
+  }
+}

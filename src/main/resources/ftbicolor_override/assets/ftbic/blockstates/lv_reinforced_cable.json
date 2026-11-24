@@ -1,0 +1,156 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "painted": "false"
+      },
+      "apply": {
+        "model": "ftbic:block/reinforced_cable/native/lv_reinforced_cable"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "white"
+      },
+      "apply": {
+        "model": "ftbic:block/reinforced_cable/white/lv_reinforced_cable"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "orange"
+      },
+      "apply": {
+        "model": "ftbic:block/reinforced_cable/orange/lv_reinforced_cable"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "magenta"
+      },
+      "apply": {
+        "model": "ftbic:block/reinforced_cable/magenta/lv_reinforced_cable"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "light_blue"
+      },
+      "apply": {
+        "model": "ftbic:block/reinforced_cable/light_blue/lv_reinforced_cable"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "yellow"
+      },
+      "apply": {
+        "model": "ftbic:block/reinforced_cable/yellow/lv_reinforced_cable"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "lime"
+      },
+      "apply": {
+        "model": "ftbic:block/reinforced_cable/lime/lv_reinforced_cable"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "pink"
+      },
+      "apply": {
+        "model": "ftbic:block/reinforced_cable/pink/lv_reinforced_cable"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "gray"
+      },
+      "apply": {
+        "model": "ftbic:block/reinforced_cable/gray/lv_reinforced_cable"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "light_gray"
+      },
+      "apply": {
+        "model": "ftbic:block/reinforced_cable/light_gray/lv_reinforced_cable"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "cyan"
+      },
+      "apply": {
+        "model": "ftbic:block/reinforced_cable/cyan/lv_reinforced_cable"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "purple"
+      },
+      "apply": {
+        "model": "ftbic:block/reinforced_cable/purple/lv_reinforced_cable"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "blue"
+      },
+      "apply": {
+        "model": "ftbic:block/reinforced_cable/blue/lv_reinforced_cable"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "brown"
+      },
+      "apply": {
+        "model": "ftbic:block/reinforced_cable/brown/lv_reinforced_cable"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "green"
+      },
+      "apply": {
+        "model": "ftbic:block/reinforced_cable/green/lv_reinforced_cable"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "red"
+      },
+      "apply": {
+        "model": "ftbic:block/reinforced_cable/red/lv_reinforced_cable"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "black"
+      },
+      "apply": {
+        "model": "ftbic:block/reinforced_cable/black/lv_reinforced_cable"
+      }
+    }
+  ]
+}

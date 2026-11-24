@@ -28,6 +28,6 @@ public final class FTBIColorSounds {
 	}
 
 	private static float pitch(Level level) {
-		return 2.6F + (level.random.nextFloat() - level.random.nextFloat()) * 0.8F;
+		return 2.6F + (level.getRandom().nextFloat() - level.getRandom().nextFloat()) * 0.8F;
 	}
 }

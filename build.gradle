@@ -1,38 +1,55 @@
 plugins {
-	id "dev.architectury.loom" version "1.1-SNAPSHOT"
+	id 'java-library'
+	id 'net.neoforged.moddev' version '2.0.141'
 }
 
-sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = 17
-
-def ENV = System.getenv()
 version = "${minecraft_version}-${mod_version}"
-archivesBaseName = project.archives_base_name
-group = project.maven_group
+group = maven_group
+base {
+	archivesName = archives_base_name
+}
 
-loom {
-	silentMojangMappingsLicense()
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
 
-	forge {
-		mixinConfigs = [
-				"ftbicolor.mixins.json"
-		]
+neoForge {
+	version = neoforge_version
+
+	runs {
+		client {
+			client()
+			gameDirectory = project.file('run')
+		}
+		server {
+			server()
+			gameDirectory = project.file('run')
+		}
+	}
+
+	mods {
+		"${mod_id}" {
+			sourceSet sourceSets.main
+		}
 	}
 }
 
 repositories {
+	mavenCentral()
 	maven {
-		url "https://maven.saps.dev/minecraft"
+		name = "FTB"
+		url = "https://maven.ftb.dev/releases"
+	}
+	maven {
+		name = "FTB Snapshots"
+		url = "https://maven.ftb.dev/snapshots"
+	}
+	maven {
+		url = "https://maven.saps.dev/minecraft"
 		content {
 			includeGroup "dev.ftb.mods"
-			includeGroup "dev.latvian.mods"
 		}
 	}
 	maven {
-		name = 'ParchmentMC'
-		url = 'https://maven.parchmentmc.org'
-	}
-	maven {
-		url "https://www.cursemaven.com"
+		url = "https://www.cursemaven.com"
 		content { includeGroup "curse.maven" }
 	}
 	maven {
@@ -42,81 +59,62 @@ repositories {
 	}
 	maven {
 		name = "BlameJared"
-		url = "https://maven.blamejared.com"
+		url = "https://maven.blamejared.com/"
 		content { includeGroup "mezz.jei" }
 	}
-	mavenCentral()
+	maven {
+		name = "Applied Energistics"
+		url = "https://maven.appliedenergistics.org/releases"
+		content { includeGroup "org.appliedenergistics" }
+	}
 }
 
 dependencies {
-	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation 'dev.ftb.mods:ftb-industrial-contraptions'
+	implementation "dev.ftb.mods:ftb-materials:${ftb_materials_version}"
 
-	mappings loom.layered() {
-		officialMojangMappings()
-		parchment("org.parchmentmc.data:parchment-1.19.2:2022.11.27@zip")
-	}
+	compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
+	runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
 
-	forge "net.minecraftforge:forge:${project.minecraft_version}-${project.forge_version}"
+	runtimeOnly "curse.maven:jade-324717:${jade_curse_file_id}"
+	runtimeOnly "org.appliedenergistics:guideme:${guideme_version}"
 
-	modImplementation("curse.maven:ftb-industrial-contraptions-forge-539097:${rootProject.ftbic_curse_file_id}") { transitive = false }
+	compileOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}:api"
+	runtimeOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}"
 
-	modRuntimeOnly("curse.maven:architectury-api-419699:${rootProject.architectury_curse_file_id}") { transitive = false }
-	modRuntimeOnly("curse.maven:ftb-library-forge-404465:${rootProject.ftblibrary_curse_file_id}") { transitive = false }
-	modCompileOnly("curse.maven:industrial-contraptions-expansion-core-857669:${rootProject.ice_core_curse_file_id}") { transitive = false }
-	modRuntimeOnly("curse.maven:industrial-contraptions-expansion-core-857669:${rootProject.ice_core_curse_file_id}") { transitive = false }
-	modCompileOnly("curse.maven:ic-expansion-generators-857250:${rootProject.iceg_curse_file_id}") { transitive = false }
-	modRuntimeOnly("curse.maven:ic-expansion-generators-857250:${rootProject.iceg_curse_file_id}") { transitive = false }
-	modCompileOnly("curse.maven:zaps-converter-849935:${rootProject.zaps_curse_file_id}") { transitive = false }
-	modRuntimeOnly("curse.maven:zaps-converter-849935:${rootProject.zaps_curse_file_id}") { transitive = false }
-
-	modRuntimeOnly("curse.maven:jei-238222:${rootProject.jei_curse_file_id}") { transitive = false }
-
-	modCompileOnly "top.theillusivec4.curios:curios-forge:${project.curios_version}"
-	modRuntimeOnly "top.theillusivec4.curios:curios-forge:${project.curios_version}"
+	compileOnly("curse.maven:industrial-contraptions-expansion-core-857669:${ice_core_curse_file_id}") { transitive = false }
+	runtimeOnly("curse.maven:industrial-contraptions-expansion-core-857669:${ice_core_curse_file_id}") { transitive = false }
+	compileOnly("curse.maven:ic-expansion-generators-857250:${iceg_curse_file_id}") { transitive = false }
+	runtimeOnly("curse.maven:ic-expansion-generators-857250:${iceg_curse_file_id}") { transitive = false }
+	runtimeOnly files("../nstut-lib/neoforge-26.1.2/build/libs/nstutlib-neoforge-26.1.2-0.8.1.jar")
 }
 
-processResources {
-	inputs.property "mod_version", project.mod_version
-
-	filesMatching("META-INF/mods.toml") {
-		expand "version": project.mod_version,
-				"mcversion": project.minecraft_version,
-				"forgeversion": project.forge_version,
-				"forgeshortversion": project.forge_version.split('\\.')[0]
-	}
-}
-
-compileJava {
-	options.encoding = "UTF-8"
-}
-
-java {
-	withSourcesJar()
-}
-
-jar {
-	manifest {
-		attributes([
-				"Specification-Title"     : project.mod_id,
-				"Specification-Vendor"    : project.mod_author,
-				"Specification-Version"   : "1",
-				"Implementation-Title"    : project.name,
-				"Implementation-Version"  : version,
-				"Implementation-Vendor"   : project.mod_author,
-				"Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
-		])
+tasks.withType(ProcessResources).configureEach {
+	var replaceProperties = [
+			mod_id                  : mod_id,
+			version                 : mod_version,
+			minecraft_version       : minecraft_version,
+			minecraft_version_range : minecraft_version_range,
+			neoforge_version        : neoforge_version,
+			neoforge_version_range  : neoforge_version_range,
+			neoforge_loader_version : neoforge_loader_version,
+			ftb_materials_version_range : ftb_materials_version_range,
+	]
+	inputs.properties replaceProperties
+	filesMatching(['META-INF/neoforge.mods.toml']) {
+		expand replaceProperties
 	}
 }
 
-def releaseJarName = "${archivesBaseName}-${minecraft_version}-${mod_version}.jar"
+tasks.withType(JavaCompile).configureEach {
+	options.encoding = 'UTF-8'
+}
+
+def releaseJarName = "${archives_base_name}-${minecraft_version}-${mod_version}.jar"
 
 tasks.register("copyReleaseJar", Copy) {
-	dependsOn remapJar
-	from remapJar.archiveFile
+	dependsOn jar
+	from jar.archiveFile
 	into layout.projectDirectory.dir("release")
 	rename { releaseJarName }
-}
-
-tasks.register("release") {
-	dependsOn clean, copyReleaseJar
 }

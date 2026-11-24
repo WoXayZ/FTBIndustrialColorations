@@ -1,0 +1,124 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "ftbicolor:picked_color",
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "ftbicec:block/firebricks"
+    },
+    "entries": [
+      {
+        "threshold": 0,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicec:block/firebricks/white"
+        }
+      },
+      {
+        "threshold": 1,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicec:block/firebricks/orange"
+        }
+      },
+      {
+        "threshold": 2,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicec:block/firebricks/magenta"
+        }
+      },
+      {
+        "threshold": 3,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicec:block/firebricks/light_blue"
+        }
+      },
+      {
+        "threshold": 4,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicec:block/firebricks/yellow"
+        }
+      },
+      {
+        "threshold": 5,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicec:block/firebricks/lime"
+        }
+      },
+      {
+        "threshold": 6,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicec:block/firebricks/pink"
+        }
+      },
+      {
+        "threshold": 7,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicec:block/firebricks"
+        }
+      },
+      {
+        "threshold": 8,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicec:block/firebricks/light_gray"
+        }
+      },
+      {
+        "threshold": 9,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicec:block/firebricks/cyan"
+        }
+      },
+      {
+        "threshold": 10,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicec:block/firebricks/purple"
+        }
+      },
+      {
+        "threshold": 11,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicec:block/firebricks/blue"
+        }
+      },
+      {
+        "threshold": 12,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicec:block/firebricks/brown"
+        }
+      },
+      {
+        "threshold": 13,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicec:block/firebricks/green"
+        }
+      },
+      {
+        "threshold": 14,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicec:block/firebricks/red"
+        }
+      },
+      {
+        "threshold": 15,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicec:block/firebricks/black"
+        }
+      }
+    ]
+  }
+}

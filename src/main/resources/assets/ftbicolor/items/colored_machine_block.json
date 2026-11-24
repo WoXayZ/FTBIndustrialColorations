@@ -1,0 +1,124 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "ftbicolor:picked_color",
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "ftbicolor:block/colored_machine_block/white"
+    },
+    "entries": [
+      {
+        "threshold": 0,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicolor:block/colored_machine_block/white"
+        }
+      },
+      {
+        "threshold": 1,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicolor:block/colored_machine_block/orange"
+        }
+      },
+      {
+        "threshold": 2,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicolor:block/colored_machine_block/magenta"
+        }
+      },
+      {
+        "threshold": 3,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicolor:block/colored_machine_block/light_blue"
+        }
+      },
+      {
+        "threshold": 4,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicolor:block/colored_machine_block/yellow"
+        }
+      },
+      {
+        "threshold": 5,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicolor:block/colored_machine_block/lime"
+        }
+      },
+      {
+        "threshold": 6,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicolor:block/colored_machine_block/pink"
+        }
+      },
+      {
+        "threshold": 7,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicolor:block/colored_machine_block/gray"
+        }
+      },
+      {
+        "threshold": 8,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicolor:block/colored_machine_block/light_gray"
+        }
+      },
+      {
+        "threshold": 9,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicolor:block/colored_machine_block/cyan"
+        }
+      },
+      {
+        "threshold": 10,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicolor:block/colored_machine_block/purple"
+        }
+      },
+      {
+        "threshold": 11,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicolor:block/colored_machine_block/blue"
+        }
+      },
+      {
+        "threshold": 12,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicolor:block/colored_machine_block/brown"
+        }
+      },
+      {
+        "threshold": 13,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicolor:block/colored_machine_block/green"
+        }
+      },
+      {
+        "threshold": 14,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicolor:block/colored_machine_block/red"
+        }
+      },
+      {
+        "threshold": 15,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbicolor:block/colored_machine_block/black"
+        }
+      }
+    ]
+  }
+}

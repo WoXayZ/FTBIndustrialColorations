@@ -1,8 +1,7 @@
 package com.ftbicolor.block;
 
 import com.ftbicolor.FTBIColor;
-import com.ftbicolor.FTBIColorPick;
-import net.minecraft.nbt.CompoundTag;
+import com.ftbicolor.platform.FTBIColorComponents;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -25,15 +24,13 @@ public final class FTBIColorBlockStates {
 		return state.setValue(FTBIColor.COLOR, color);
 	}
 
-	public static final String ITEM_COLOR_TAG = "ftbicolor_color";
-
 	public static ItemStack originalStack(Supplier<? extends Block> original) {
 		Item item = original.get().asItem();
 		return item == null ? ItemStack.EMPTY : new ItemStack(item);
 	}
 
-	public static ItemStack ctrlPickedStack(ItemStack stack, BlockState state) {
-		return FTBIColorPick.isCtrlPick() ? withPickedColor(stack, state) : stack;
+	public static ItemStack ctrlPickedStack(ItemStack stack, BlockState state, boolean includeData) {
+		return includeData ? withPickedColor(stack, state) : stack;
 	}
 
 	public static ItemStack withPickedColor(ItemStack stack, BlockState state) {
@@ -47,16 +44,16 @@ public final class FTBIColorBlockStates {
 		if (sameColor && samePaint) {
 			return stack;
 		}
-		stack.getOrCreateTag().putString(ITEM_COLOR_TAG, state.getValue(FTBIColor.COLOR).getSerializedName());
+		stack.set(FTBIColorComponents.PICKED_COLOR.get(), state.getValue(FTBIColor.COLOR).getSerializedName());
 		return stack;
 	}
 
 	@Nullable
 	public static DyeColor pickedColor(ItemStack stack) {
-		CompoundTag tag = stack.getTag();
-		if (tag == null || !tag.contains(ITEM_COLOR_TAG)) {
+		String name = stack.get(FTBIColorComponents.PICKED_COLOR.get());
+		if (name == null) {
 			return null;
 		}
-		return DyeColor.byName(tag.getString(ITEM_COLOR_TAG), null);
+		return DyeColor.byName(name, null);
 	}
 }

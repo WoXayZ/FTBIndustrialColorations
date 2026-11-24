@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "ftbicec:block/large_blast_furnace/yellow_off",
+    "side": "ftbicec:block/firebricks/yellow",
+    "top": "ftbicec:block/firebricks/yellow"
+  }
+}

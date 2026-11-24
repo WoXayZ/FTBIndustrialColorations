@@ -1,0 +1,124 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "ftbicolor:armor_color",
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "ftbic:item/quantum_boots"
+    },
+    "entries": [
+      {
+        "threshold": 0,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/quantum/white/quantum_boots"
+        }
+      },
+      {
+        "threshold": 1,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/quantum/orange/quantum_boots"
+        }
+      },
+      {
+        "threshold": 2,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/quantum/magenta/quantum_boots"
+        }
+      },
+      {
+        "threshold": 3,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/quantum/light_blue/quantum_boots"
+        }
+      },
+      {
+        "threshold": 4,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/quantum/yellow/quantum_boots"
+        }
+      },
+      {
+        "threshold": 5,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/quantum/lime/quantum_boots"
+        }
+      },
+      {
+        "threshold": 6,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/quantum/pink/quantum_boots"
+        }
+      },
+      {
+        "threshold": 7,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/quantum/gray/quantum_boots"
+        }
+      },
+      {
+        "threshold": 8,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/quantum/light_gray/quantum_boots"
+        }
+      },
+      {
+        "threshold": 9,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/quantum/cyan/quantum_boots"
+        }
+      },
+      {
+        "threshold": 10,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/quantum/purple/quantum_boots"
+        }
+      },
+      {
+        "threshold": 11,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/quantum/blue/quantum_boots"
+        }
+      },
+      {
+        "threshold": 12,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/quantum/brown/quantum_boots"
+        }
+      },
+      {
+        "threshold": 13,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/quantum/green/quantum_boots"
+        }
+      },
+      {
+        "threshold": 14,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/quantum/red/quantum_boots"
+        }
+      },
+      {
+        "threshold": 15,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:item/quantum/black/quantum_boots"
+        }
+      }
+    ]
+  }
+}

@@ -5,6 +5,7 @@ import dev.ftb.mods.ftbic.block.ElectricBlock;
 import dev.ftb.mods.ftbic.block.ElectricBlockInstance;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(ElectricBlock.class)
 public abstract class ElectricBlockMixin extends Block {
 	private ElectricBlockMixin() {
-		super(Properties.of(net.minecraft.world.level.material.Material.METAL));
+		super(Properties.of());
 	}
 
 	@Inject(method = "createBlockStateDefinition", at = @At("HEAD"))
@@ -24,7 +25,7 @@ public abstract class ElectricBlockMixin extends Block {
 	}
 
 	@Inject(method = "<init>", at = @At("RETURN"))
-	private void ftbicolor$setDefaultColor(ElectricBlockInstance instance, CallbackInfo ci) {
+	private void ftbicolor$setDefaultColor(ElectricBlockInstance instance, BlockBehaviour.Properties props, CallbackInfo ci) {
 		this.registerDefaultState(FTBIColorBlockStates.withColor(this.defaultBlockState(), DyeColor.WHITE));
 	}
 }

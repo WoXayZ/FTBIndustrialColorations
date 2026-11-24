@@ -1,0 +1,124 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "ftbicolor:picked_color",
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "ftbic:block/electric/light/lv_rectifier"
+    },
+    "entries": [
+      {
+        "threshold": 0,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:block/electric/light/lv_rectifier"
+        }
+      },
+      {
+        "threshold": 1,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:block/electric/orange/lv_rectifier"
+        }
+      },
+      {
+        "threshold": 2,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:block/electric/magenta/lv_rectifier"
+        }
+      },
+      {
+        "threshold": 3,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:block/electric/light_blue/lv_rectifier"
+        }
+      },
+      {
+        "threshold": 4,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:block/electric/yellow/lv_rectifier"
+        }
+      },
+      {
+        "threshold": 5,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:block/electric/lime/lv_rectifier"
+        }
+      },
+      {
+        "threshold": 6,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:block/electric/pink/lv_rectifier"
+        }
+      },
+      {
+        "threshold": 7,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:block/electric/gray/lv_rectifier"
+        }
+      },
+      {
+        "threshold": 8,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:block/electric/light_gray/lv_rectifier"
+        }
+      },
+      {
+        "threshold": 9,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:block/electric/cyan/lv_rectifier"
+        }
+      },
+      {
+        "threshold": 10,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:block/electric/purple/lv_rectifier"
+        }
+      },
+      {
+        "threshold": 11,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:block/electric/blue/lv_rectifier"
+        }
+      },
+      {
+        "threshold": 12,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:block/electric/brown/lv_rectifier"
+        }
+      },
+      {
+        "threshold": 13,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:block/electric/green/lv_rectifier"
+        }
+      },
+      {
+        "threshold": 14,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:block/electric/red/lv_rectifier"
+        }
+      },
+      {
+        "threshold": 15,
+        "model": {
+          "type": "minecraft:model",
+          "model": "ftbic:block/electric/dark/lv_rectifier"
+        }
+      }
+    ]
+  }
+}

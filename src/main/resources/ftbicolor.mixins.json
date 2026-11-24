@@ -3,8 +3,7 @@
   "minVersion": "0.8",
   "package": "com.ftbicolor.mixin",
   "plugin": "com.ftbicolor.mixin.FTBIColorMixinPlugin",
-  "compatibilityLevel": "JAVA_17",
-  "refmap": "ftbicolor-refmap.json",
+  "compatibilityLevel": "JAVA_21",
   "mixins": [
     "ElectricBlockMixin",
     "IronFurnaceBlockMixin",
@@ -17,14 +16,17 @@
     "BlockMixin",
     "BlockItemMixin",
     "ICEElectricBlockMixin",
+    "ICECRegistriesMixin",
+    "LargeBlastFurnaceBlockMixin",
+    "BurntReinforcedCableBlockMixin",
     "ZapsConverterBlockMixin"
   ],
   "client": [
     "client.MinecraftMixin",
-    "client.ForgeHooksClientMixin",
-    "client.DiggingBlockRendererMixin"
+    "client.EquipmentLayerRendererMixin",
+    "client.DiggingBeamRenderStateMixin",
+    "client.DiggingBeamRendererMixin"
   ],
-  "server": [],
   "injectors": {
     "defaultRequire": 1
   }

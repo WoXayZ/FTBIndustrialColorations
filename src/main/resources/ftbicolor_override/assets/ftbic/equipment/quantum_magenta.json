@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "ftbic:quantum_magenta"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "ftbic:quantum_magenta"
+      }
+    ]
+  }
+}

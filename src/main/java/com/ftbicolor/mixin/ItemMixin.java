@@ -15,8 +15,8 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.Level;
-import net.minecraftforge.fml.ModList;
+import net.minecraft.world.item.component.TooltipDisplay;
+import net.neoforged.fml.ModList;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -24,7 +24,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import javax.annotation.Nullable;
-import java.util.List;
+import java.util.function.Consumer;
 
 @Mixin(Item.class)
 public abstract class ItemMixin {
@@ -50,12 +50,12 @@ public abstract class ItemMixin {
 	}
 
 	@Inject(method = "appendHoverText", at = @At("RETURN"))
-	private void ftbicolor$pickedColorTooltip(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag, CallbackInfo ci) {
+	private void ftbicolor$pickedColorTooltip(ItemStack stack, Item.TooltipContext context, TooltipDisplay display, Consumer<Component> tooltip, TooltipFlag flag, CallbackInfo ci) {
 		DyeColor color = FTBIColorBlockStates.pickedColor(stack);
 		if (color == null) {
 			return;
 		}
 		Component name = FTBIColorText.translatable("color.minecraft." + color.getName()).withStyle(FTBIColorDye.chatFormatting(color));
-		tooltip.add(FTBIColorText.translatable("item.ftbicolor.picked_color", name).withStyle(ChatFormatting.DARK_GRAY));
+		tooltip.accept(FTBIColorText.translatable("item.ftbicolor.picked_color", name).withStyle(ChatFormatting.DARK_GRAY));
 	}
 }

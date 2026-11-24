@@ -23,7 +23,7 @@ public final class FTBIColorSprayPaintActions {
 			return InteractionResult.PASS;
 		}
 
-		return InteractionResult.sidedSuccess(context.getLevel().isClientSide());
+		return context.getLevel().isClientSide() ? InteractionResult.SUCCESS : InteractionResult.CONSUME;
 	}
 
 	public static boolean consumeVanillaCan(UseOnContext context, boolean dark) {

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PDS"
+  ],
+  "key": {
+    "P": "ftbicolor:colored_spray_paint_kit_primary",
+    "D": "ftbic:dual_uranium_fuel_rod",
+    "S": "ftbicolor:colored_spray_paint_kit_secondary"
+  },
+  "result": {
+    "id": "ftbicolor:colored_spray_paint_selector",
+    "count": 1
+  }
+}

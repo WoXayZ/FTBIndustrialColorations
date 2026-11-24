@@ -2,14 +2,14 @@ package com.ftbicolor.advancement;
 
 import com.ftbicolor.FTBIColorConstants;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
-import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.entity.living.LivingEquipmentChangeEvent;
+import net.neoforged.neoforge.event.entity.player.ItemEntityPickupEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 
-@Mod.EventBusSubscriber(modid = FTBIColorConstants.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@EventBusSubscriber(modid = FTBIColorConstants.MOD_ID)
 public final class FTBIColorAdvancementHandler {
 	private FTBIColorAdvancementHandler() {
 	}
@@ -29,19 +29,19 @@ public final class FTBIColorAdvancementHandler {
 	}
 
 	@SubscribeEvent
-	public static void onItemPickup(EntityItemPickupEvent event) {
-		if (event.getEntity() instanceof ServerPlayer player) {
+	public static void onItemPickup(ItemEntityPickupEvent.Post event) {
+		if (event.getPlayer() instanceof ServerPlayer player) {
 			FTBIColorAdvancements.checkRecipeUnlocks(player);
 		}
 	}
 
 	@SubscribeEvent
-	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		if (event.phase != TickEvent.Phase.END || event.player.level.isClientSide()) {
+	public static void onPlayerTick(PlayerTickEvent.Post event) {
+		if (event.getEntity().level().isClientSide()) {
 			return;
 		}
 
-		if (event.player.tickCount % 10 != 0 || !(event.player instanceof ServerPlayer player)) {
+		if (event.getEntity().tickCount % 10 != 0 || !(event.getEntity() instanceof ServerPlayer player)) {
 			return;
 		}
 

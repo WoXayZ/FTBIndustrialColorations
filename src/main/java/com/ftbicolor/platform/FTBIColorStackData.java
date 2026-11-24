@@ -1,6 +1,7 @@
 package com.ftbicolor.platform;
 
-import net.minecraft.nbt.CompoundTag;
+import com.ftbicolor.FTBIColorConstants;
+import net.minecraft.core.component.DataComponentType;
 import net.minecraft.world.item.ItemStack;
 
 public final class FTBIColorStackData {
@@ -8,53 +9,70 @@ public final class FTBIColorStackData {
 	}
 
 	public static boolean has(ItemStack stack, String key) {
-		if (!stack.hasTag()) {
-			return false;
-		}
-
-		CompoundTag tag = stack.getTag();
-		return tag != null && tag.contains(key);
+		DataComponentType<?> type = type(key);
+		return type != null && stack.has(type);
 	}
 
 	public static int getInt(ItemStack stack, String key, int fallback) {
-		if (!has(stack, key)) {
+		DataComponentType<Integer> type = intType(key);
+		if (type == null || !stack.has(type)) {
 			return fallback;
 		}
-
-		CompoundTag tag = stack.getTag();
-		return tag == null ? fallback : tag.getInt(key);
+		Integer value = stack.get(type);
+		return value == null ? fallback : value;
 	}
 
 	public static void putInt(ItemStack stack, String key, int value) {
-		stack.getOrCreateTag().putInt(key, value);
+		DataComponentType<Integer> type = intType(key);
+		if (type != null) {
+			stack.set(type, value);
+		}
 	}
 
 	public static boolean getBoolean(ItemStack stack, String key, boolean fallback) {
-		if (!has(stack, key)) {
+		DataComponentType<Boolean> type = booleanType(key);
+		if (type == null || !stack.has(type)) {
 			return fallback;
 		}
-
-		CompoundTag tag = stack.getTag();
-		return tag == null ? fallback : tag.getBoolean(key);
+		Boolean value = stack.get(type);
+		return value == null ? fallback : value;
 	}
 
 	public static void putBoolean(ItemStack stack, String key, boolean value) {
-		stack.getOrCreateTag().putBoolean(key, value);
+		DataComponentType<Boolean> type = booleanType(key);
+		if (type != null) {
+			stack.set(type, value);
+		}
 	}
 
 	public static void remove(ItemStack stack, String key) {
-		if (!stack.hasTag()) {
-			return;
+		DataComponentType<?> type = type(key);
+		if (type != null) {
+			stack.remove(type);
 		}
+	}
 
-		CompoundTag tag = stack.getTag();
-		if (tag == null) {
-			return;
+	private static DataComponentType<?> type(String key) {
+		if (FTBIColorConstants.ARMOR_COLOR_NBT.equals(key) || FTBIColorConstants.SPRAY_KIT_SELECTED_COLOR_NBT.equals(key)) {
+			return intType(key);
 		}
+		return booleanType(key);
+	}
 
-		tag.remove(key);
-		if (tag.isEmpty()) {
-			stack.setTag(null);
+	private static DataComponentType<Integer> intType(String key) {
+		if (FTBIColorConstants.ARMOR_COLOR_NBT.equals(key)) {
+			return FTBIColorComponents.ARMOR_COLOR.get();
 		}
+		if (FTBIColorConstants.SPRAY_KIT_SELECTED_COLOR_NBT.equals(key)) {
+			return FTBIColorComponents.SELECTED_COLOR.get();
+		}
+		return null;
+	}
+
+	private static DataComponentType<Boolean> booleanType(String key) {
+		if (FTBIColorConstants.SPRAY_KIT_CURIO_ACTIVE_NBT.equals(key)) {
+			return FTBIColorComponents.CURIO_ACTIVE.get();
+		}
+		return null;
 	}
 }

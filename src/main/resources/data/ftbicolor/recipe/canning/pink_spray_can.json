@@ -1,0 +1,21 @@
+{
+  "type": "ftbic:canning",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "ftbic:fluid_cell",
+        "fluid": "minecraft:water"
+      }
+    },
+    {
+      "ingredient": "#c:dyes/pink"
+    }
+  ],
+  "outputs": [
+    {
+      "item": {
+        "id": "ftbicolor:pink_spray_paint_can"
+      }
+    }
+  ]
+}

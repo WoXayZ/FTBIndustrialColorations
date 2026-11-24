@@ -30,7 +30,7 @@ public final class FTBIColorArmorPainter {
 			return false;
 		}
 
-		Level level = player.level;
+		Level level = player.level();
 		if (!FTBIColorArmorUtil.setColor(armorStack, color)) {
 			return true;
 		}

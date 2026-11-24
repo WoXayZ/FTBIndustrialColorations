@@ -3,19 +3,22 @@ package com.ftbicolor.advancement;
 import com.ftbicolor.FTBIColorConstants;
 import com.ftbicolor.item.FTBIColorArmorUtil;
 import com.ftbicolor.item.FTBIColorItems;
-import net.minecraft.advancements.Advancement;
+import com.ftbicolor.platform.FTBIColorAttachments;
+import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.advancements.AdvancementProgress;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Recipe;
-import net.minecraftforge.registries.ForgeRegistries;
 
 public final class FTBIColorAdvancements {
-	private static final ResourceLocation[] KIT_RECIPE_IDS = {
+	private static final Identifier[] KIT_RECIPE_IDS = {
 			FTBIColorConstants.RECIPE_KIT_PRIMARY,
 			FTBIColorConstants.RECIPE_KIT_SECONDARY,
 	};
@@ -80,11 +83,11 @@ public final class FTBIColorAdvancements {
 	}
 
 	private static long getUsedMask(Player player) {
-		return player.getPersistentData().getLong(FTBIColorConstants.PLAYER_USED_SPRAY_CANS_NBT);
+		return player.getData(FTBIColorAttachments.USED_SPRAY_CANS.get());
 	}
 
 	private static void setUsedMask(Player player, long mask) {
-		player.getPersistentData().putLong(FTBIColorConstants.PLAYER_USED_SPRAY_CANS_NBT, mask);
+		player.setData(FTBIColorAttachments.USED_SPRAY_CANS.get(), mask);
 	}
 
 	private static boolean canUnlockKitRecipes(Player player) {
@@ -96,7 +99,8 @@ public final class FTBIColorAdvancements {
 			return true;
 		}
 
-		for (ItemStack stack : player.getInventory().items) {
+		for (int slot = 0; slot < player.getInventory().getContainerSize(); slot++) {
+			ItemStack stack = player.getInventory().getItem(slot);
 			if (isColoredSprayPaintCan(stack)) {
 				return true;
 			}
@@ -106,8 +110,8 @@ public final class FTBIColorAdvancements {
 	}
 
 	private static boolean hasFtbicBaseSprayPaintCan(Player player) {
-		Item light = ForgeRegistries.ITEMS.getValue(FTBIColorConstants.FTBIC_LIGHT_SPRAY_CAN);
-		Item dark = ForgeRegistries.ITEMS.getValue(FTBIColorConstants.FTBIC_DARK_SPRAY_CAN);
+		Item light = BuiltInRegistries.ITEM.getValue(FTBIColorConstants.FTBIC_LIGHT_SPRAY_CAN);
+		Item dark = BuiltInRegistries.ITEM.getValue(FTBIColorConstants.FTBIC_DARK_SPRAY_CAN);
 		return (light != null && hasItem(player, light)) || (dark != null && hasItem(player, dark));
 	}
 
@@ -121,8 +125,8 @@ public final class FTBIColorAdvancements {
 			return true;
 		}
 
-		for (ItemStack stack : player.getInventory().items) {
-			if (stack.is(item)) {
+		for (int slot = 0; slot < player.getInventory().getContainerSize(); slot++) {
+			if (player.getInventory().getItem(slot).is(item)) {
 				return true;
 			}
 		}
@@ -135,14 +139,14 @@ public final class FTBIColorAdvancements {
 			return false;
 		}
 
-		ResourceLocation id = ForgeRegistries.ITEMS.getKey(stack.getItem());
+		Identifier id = BuiltInRegistries.ITEM.getKey(stack.getItem());
 		return id != null
 				&& FTBIColorConstants.MOD_ID.equals(id.getNamespace())
 				&& id.getPath().endsWith("_spray_paint_can");
 	}
 
-	private static boolean isAdvancementDone(ServerPlayer player, ResourceLocation advancementId) {
-		Advancement advancement = player.getServer().getAdvancements().getAdvancement(advancementId);
+	private static boolean isAdvancementDone(ServerPlayer player, Identifier advancementId) {
+		AdvancementHolder advancement = player.level().getServer().getAdvancements().get(advancementId);
 		if (advancement == null) {
 			return false;
 		}
@@ -151,19 +155,16 @@ public final class FTBIColorAdvancements {
 		return progress.isDone();
 	}
 
-	private static void grantRecipes(ServerPlayer player, ResourceLocation... recipeIds) {
-		var manager = player.getServer().getRecipeManager();
-		java.util.List<Recipe<?>> recipes = new java.util.ArrayList<>();
-		for (ResourceLocation id : recipeIds) {
-			manager.byKey(id).ifPresent(recipes::add);
+	private static void grantRecipes(ServerPlayer player, Identifier... recipeIds) {
+		java.util.List<ResourceKey<Recipe<?>>> recipes = new java.util.ArrayList<>();
+		for (Identifier id : recipeIds) {
+			recipes.add(ResourceKey.create(Registries.RECIPE, id));
 		}
-		if (!recipes.isEmpty()) {
-			player.awardRecipes(recipes);
-		}
+		player.awardRecipesByKey(recipes);
 	}
 
-	private static void award(ServerPlayer player, ResourceLocation advancementId, String criterion) {
-		Advancement advancement = player.getServer().getAdvancements().getAdvancement(advancementId);
+	private static void award(ServerPlayer player, Identifier advancementId, String criterion) {
+		AdvancementHolder advancement = player.level().getServer().getAdvancements().get(advancementId);
 		if (advancement == null) {
 			return;
 		}

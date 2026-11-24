@@ -2,11 +2,11 @@ package com.ftbicolor.item;
 
 import com.ftbicolor.FTBIColorConstants;
 import com.ftbicolor.platform.FTBIColorStackData;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 public final class FTBIColorArmorUtil {
 	private FTBIColorArmorUtil() {
@@ -17,12 +17,12 @@ public final class FTBIColorArmorUtil {
 			return false;
 		}
 
-		ResourceLocation id = ForgeRegistries.ITEMS.getKey(stack.getItem());
+		Identifier id = BuiltInRegistries.ITEM.getKey(stack.getItem());
 		if (id == null) {
 			return false;
 		}
 
-		for (ResourceLocation quantumId : FTBIColorConstants.QUANTUM_ARMOR_ITEMS) {
+		for (Identifier quantumId : FTBIColorConstants.QUANTUM_ARMOR_ITEMS) {
 			if (id.equals(quantumId)) {
 				return true;
 			}

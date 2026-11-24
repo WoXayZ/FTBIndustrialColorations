@@ -1,0 +1,8 @@
+{
+  "order": 200,
+  "size": 1,
+  "icon": "curios:slot/empty_paint_can",
+  "add_cosmetic": false,
+  "render_toggle": true,
+  "validators": ["curios:tag"]
+}

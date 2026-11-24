@@ -1,40 +1,46 @@
 package com.ftbicolor.network;
 
+import com.ftbicolor.FTBIColorConstants;
 import com.ftbicolor.item.FTBIColorKitSource;
 import com.ftbicolor.item.FTBIColorSprayPaintKitItem;
 import com.ftbicolor.item.FTBIColorSprayPaintKitType;
 import com.ftbicolor.item.FTBIColorSprayPaintKitUtil;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.network.NetworkEvent;
+import net.neoforged.neoforge.network.handling.IPayloadContext;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.function.Supplier;
+public record FTBIColorSetSprayPaintKitColorPacket(int source, FTBIColorSprayPaintKitType kitType, int colorId) implements CustomPacketPayload {
+	public static final Type<FTBIColorSetSprayPaintKitColorPacket> TYPE =
+			new Type<>(Identifier.fromNamespaceAndPath(FTBIColorConstants.MOD_ID, "set_spray_paint_kit_color"));
 
-public final class FTBIColorSetSprayPaintKitColorPacket {
-	private final int source;
-	private final FTBIColorSprayPaintKitType kitType;
-	private final int colorId;
+	public static final StreamCodec<FriendlyByteBuf, FTBIColorSetSprayPaintKitColorPacket> STREAM_CODEC = StreamCodec.of(
+			(buf, packet) -> {
+				buf.writeByte(packet.source);
+				buf.writeEnum(packet.kitType);
+				buf.writeVarInt(packet.colorId);
+			},
+			buf -> new FTBIColorSetSprayPaintKitColorPacket(buf.readByte(), buf.readEnum(FTBIColorSprayPaintKitType.class), buf.readVarInt())
+	);
 
-	public FTBIColorSetSprayPaintKitColorPacket(int source, FTBIColorSprayPaintKitType kitType, int colorId) {
-		this.source = source;
-		this.kitType = kitType;
-		this.colorId = colorId;
+	@Override
+	public Type<? extends CustomPacketPayload> type() {
+		return TYPE;
 	}
 
-	public static void encode(FTBIColorSetSprayPaintKitColorPacket packet, FriendlyByteBuf buf) {
-		buf.writeByte(packet.source);
-		buf.writeEnum(packet.kitType);
-		buf.writeVarInt(packet.colorId);
-	}
-
-	public static FTBIColorSetSprayPaintKitColorPacket decode(FriendlyByteBuf buf) {
-		int source = buf.readByte();
-		FTBIColorSprayPaintKitType kitType = buf.readEnum(FTBIColorSprayPaintKitType.class);
-		int colorId = buf.readVarInt();
-		return new FTBIColorSetSprayPaintKitColorPacket(source, kitType, colorId);
+	public static void handle(FTBIColorSetSprayPaintKitColorPacket packet, IPayloadContext context) {
+		context.enqueueWork(() -> {
+			Player player = context.player();
+			if (player instanceof ServerPlayer serverPlayer) {
+				packet.apply(serverPlayer);
+			}
+		});
 	}
 
 	public void apply(ServerPlayer player) {
@@ -48,20 +54,9 @@ public final class FTBIColorSetSprayPaintKitColorPacket {
 		FTBIColorKitSource.save(player, source, stack);
 	}
 
-	public static void handle(FTBIColorSetSprayPaintKitColorPacket packet, Supplier<NetworkEvent.Context> contextSupplier) {
-		NetworkEvent.Context context = contextSupplier.get();
-		context.enqueueWork(() -> {
-			ServerPlayer player = context.getSender();
-			if (player != null) {
-				packet.apply(player);
-			}
-		});
-		context.setPacketHandled(true);
-	}
-
 	public static void send(int source, FTBIColorSprayPaintKitType kitType, @Nullable DyeColor color) {
 		int colorId = color == null ? -1 : color.getId();
-		FTBIColorNetwork.CHANNEL.sendToServer(new FTBIColorSetSprayPaintKitColorPacket(source, kitType, colorId));
+		FTBIColorNetwork.sendToServer(new FTBIColorSetSprayPaintKitColorPacket(source, kitType, colorId));
 	}
 
 	public static void sendDeselect(int source, FTBIColorSprayPaintKitType kitType) {

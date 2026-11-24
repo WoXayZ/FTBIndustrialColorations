@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(IronFurnaceBlock.class)
 public abstract class IronFurnaceBlockMixin extends FurnaceBlock {
 	private IronFurnaceBlockMixin() {
-		super(Properties.of(net.minecraft.world.level.material.Material.METAL));
+		super(Properties.of());
 	}
 
 	@Override
@@ -25,7 +25,7 @@ public abstract class IronFurnaceBlockMixin extends FurnaceBlock {
 	}
 
 	@Inject(method = "<init>", at = @At("RETURN"))
-	private void ftbicolor$setDefaultColor(CallbackInfo ci) {
+	private void ftbicolor$setDefaultColor(net.minecraft.world.level.block.state.BlockBehaviour.Properties props, CallbackInfo ci) {
 		this.registerDefaultState(FTBIColorBlockStates.withColor(this.defaultBlockState(), DyeColor.WHITE));
 	}
 }

@@ -1,7 +1,6 @@
 package com.ftbicolor.platform;
 
 import net.minecraft.ChatFormatting;
-import net.minecraft.util.Mth;
 import net.minecraft.world.item.DyeColor;
 
 public final class FTBIColorDye {
@@ -13,11 +12,7 @@ public final class FTBIColorDye {
 	}
 
 	public static int opaqueRgb(DyeColor color) {
-		float[] channels = color.getTextureDiffuseColors();
-		int r = Mth.clamp((int) (channels[0] * 255.0F), 0, 255);
-		int g = Mth.clamp((int) (channels[1] * 255.0F), 0, 255);
-		int b = Mth.clamp((int) (channels[2] * 255.0F), 0, 255);
-		return 0xFF000000 | (r << 16) | (g << 8) | b;
+		return color.getTextureDiffuseColor();
 	}
 
 	public static ChatFormatting chatFormatting(DyeColor color) {

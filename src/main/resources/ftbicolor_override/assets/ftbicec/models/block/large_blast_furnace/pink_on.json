@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "ftbicec:block/large_blast_furnace/pink_on",
+    "side": "ftbicec:block/firebricks/pink",
+    "top": "ftbicec:block/firebricks/pink"
+  }
+}

@@ -1,24 +1,17 @@
 package com.ftbicolor;
 
-import com.ftbicolor.platform.FTBIColorText;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.packs.PackType;
-import net.minecraft.server.packs.metadata.pack.PackMetadataSection;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
-import net.minecraftforge.event.AddPackFindersEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModList;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.forgespi.locating.IModFile;
-import net.minecraftforge.resource.PathPackResources;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.AddPackFindersEvent;
 
-import java.io.IOException;
-import java.nio.file.Path;
-
-@Mod.EventBusSubscriber(modid = FTBIColorConstants.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = FTBIColorConstants.MOD_ID)
 public final class FTBIColorResourcePack {
 	private static final String PACK_NAME = FTBIColorConstants.MOD_ID + "_override";
-	private static final String PACK_ID = "builtin/" + PACK_NAME;
 
 	private FTBIColorResourcePack() {
 	}
@@ -29,30 +22,13 @@ public final class FTBIColorResourcePack {
 			return;
 		}
 
-		try {
-			IModFile modFile = ModList.get().getModFileById(FTBIColorConstants.MOD_ID).getFile();
-			Path source = modFile.findResource(PACK_NAME);
-			PathPackResources pack = new PathPackResources(PACK_ID, source);
-			PackMetadataSection metadata = pack.getMetadataSection(PackMetadataSection.SERIALIZER);
-
-			if (metadata == null) {
-				return;
-			}
-
-			event.addRepositorySource((packConsumer, packConstructor) ->
-					packConsumer.accept(packConstructor.create(
-							PACK_ID,
-							FTBIColorText.literal("FTB Industrial Colorations Overrides"),
-							true,
-							() -> pack,
-							metadata,
-							Pack.Position.TOP,
-							PackSource.BUILT_IN,
-							false
-					))
-			);
-		} catch (IOException ex) {
-			throw new RuntimeException("Failed to register ftbicolor override resource pack", ex);
-		}
+		event.addPackFinders(
+				Identifier.fromNamespaceAndPath(FTBIColorConstants.MOD_ID, PACK_NAME),
+				PackType.CLIENT_RESOURCES,
+				Component.literal("FTB Industrial Colorations"),
+				PackSource.BUILT_IN,
+				true,
+				Pack.Position.TOP
+		);
 	}
 }

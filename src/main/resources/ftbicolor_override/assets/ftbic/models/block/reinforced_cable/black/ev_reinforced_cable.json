@@ -1,0 +1,7 @@
+{
+  "parent": "ftbic:block/reinforced_cable_base",
+  "textures": {
+    "stone": "ftbic:block/reinforced/black/reinforced_stone",
+    "center": "ftbic:block/ev_cable"
+  }
+}

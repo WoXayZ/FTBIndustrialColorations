@@ -6,7 +6,6 @@ import com.ftbicolor.item.FTBIColorSprayPaintCanItem;
 import com.ftbicolor.item.FTBIColorSprayPaintKitColor;
 import com.ftbicolor.item.FTBIColorSprayPaintKitItem;
 import dev.ftb.mods.ftbic.item.SprayPaintCanItem;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -15,49 +14,38 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.InterModComms;
-import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
-import net.minecraftforge.common.MinecraftForge;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import top.theillusivec4.curios.api.CuriosApi;
 import top.theillusivec4.curios.api.SlotResult;
-import top.theillusivec4.curios.api.SlotTypeMessage;
-import top.theillusivec4.curios.api.event.CurioEquipEvent;
-
-import java.util.Optional;
+import top.theillusivec4.curios.api.event.CurioCanEquipEvent;
+import top.theillusivec4.curios.api.type.capability.ICuriosItemHandler;
 
 public final class FTBIColorCurios {
 	private FTBIColorCurios() {
 	}
 
 	public static void init(IEventBus modBus) {
-		modBus.addListener(FTBIColorCurios::enqueue);
-		MinecraftForge.EVENT_BUS.register(FTBIColorCurios.class);
-	}
-
-	private static void enqueue(InterModEnqueueEvent event) {
-		InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder(FTBIColorConstants.CURIOS_SLOT)
-				.icon(new ResourceLocation(CuriosApi.MODID, "slot/empty_paint_can"))
-				.size(1)
-				.build());
+		NeoForge.EVENT_BUS.register(FTBIColorCurios.class);
 	}
 
 	@SubscribeEvent
-	public static void onEquip(CurioEquipEvent event) {
+	public static void onEquip(CurioCanEquipEvent event) {
 		if (!FTBIColorConstants.CURIOS_SLOT.equals(event.getSlotContext().identifier())) {
 			return;
 		}
 
-		if (!(event.getStack().getItem() instanceof FTBIColorSprayPaintKitItem)) {
-			event.setResult(Event.Result.DENY);
-		}
+		event.setEquipResult(event.getStack().getItem() instanceof FTBIColorSprayPaintKitItem);
 	}
 
 	@SubscribeEvent
 	public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
+		paintFromCurio(event);
+	}
+
+	private static void paintFromCurio(PlayerInteractEvent.RightClickBlock event) {
 		ItemStack held = event.getItemStack();
 		if (held.getItem() instanceof FTBIColorSprayPaintKitItem
 				|| held.getItem() instanceof FTBIColorSprayPaintCanItem
@@ -103,26 +91,23 @@ public final class FTBIColorCurios {
 	}
 
 	public static ItemStack findKit(LivingEntity entity) {
-		Optional<SlotResult> preferred = CuriosApi.getCuriosHelper().findCurio(entity, FTBIColorConstants.CURIOS_SLOT, 0);
-		if (preferred.isPresent() && preferred.get().stack().getItem() instanceof FTBIColorSprayPaintKitItem) {
-			return preferred.get().stack();
+		ICuriosItemHandler handler = CuriosApi.getCuriosInventoryOrNull(entity);
+		if (handler == null) {
+			return ItemStack.EMPTY;
 		}
 
-		return CuriosApi.getCuriosHelper()
-				.findFirstCurio(entity, stack -> stack.getItem() instanceof FTBIColorSprayPaintKitItem)
+		return handler.findFirstCurio(stack -> stack.getItem() instanceof FTBIColorSprayPaintKitItem)
 				.map(SlotResult::stack)
 				.orElse(ItemStack.EMPTY);
 	}
 
 	public static void save(LivingEntity entity, ItemStack stack) {
-		Optional<SlotResult> found = CuriosApi.getCuriosHelper().findFirstCurio(entity, candidate -> candidate == stack);
-		if (found.isEmpty()) {
-			found = CuriosApi.getCuriosHelper().findCurio(entity, FTBIColorConstants.CURIOS_SLOT, 0)
-					.filter(result -> result.stack().getItem() instanceof FTBIColorSprayPaintKitItem);
+		ICuriosItemHandler handler = CuriosApi.getCuriosInventoryOrNull(entity);
+		if (handler == null) {
+			return;
 		}
 
-		found.ifPresent(result -> CuriosApi.getCuriosHelper().setEquippedCurio(
-				entity,
+		handler.findFirstCurio(candidate -> candidate == stack).ifPresent(result -> handler.setEquippedCurio(
 				result.slotContext().identifier(),
 				result.slotContext().index(),
 				stack

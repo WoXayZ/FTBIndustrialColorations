@@ -7,14 +7,14 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.Event;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
-@Mod.EventBusSubscriber(modid = FTBIColorConstants.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@EventBusSubscriber(modid = FTBIColorConstants.MOD_ID, value = Dist.CLIENT)
 public final class FTBIColorSprayPaintWheelHandler {
 	private static boolean wheelKeyWasDown;
 	private static boolean persistentKeyWasDown;
@@ -24,11 +24,7 @@ public final class FTBIColorSprayPaintWheelHandler {
 	}
 
 	@SubscribeEvent
-	public static void onClientTick(TickEvent.ClientTickEvent event) {
-		if (event.phase != TickEvent.Phase.END) {
-			return;
-		}
-
+	public static void onClientTick(ClientTickEvent.Post event) {
 		Minecraft minecraft = Minecraft.getInstance();
 		if (minecraft.player == null) {
 			return;
@@ -83,7 +79,7 @@ public final class FTBIColorSprayPaintWheelHandler {
 	}
 
 	private static void tryOpenWheel(Player player, Event event) {
-		if (!player.level.isClientSide() || !FTBIColorKeyBindings.SPRAY_PAINT_WHEEL_PERSISTENT.isDown()) {
+		if (!player.level().isClientSide() || !FTBIColorKeyBindings.SPRAY_PAINT_WHEEL_PERSISTENT.isDown()) {
 			return;
 		}
 
@@ -93,9 +89,12 @@ public final class FTBIColorSprayPaintWheelHandler {
 			return;
 		}
 
-		if (event instanceof PlayerInteractEvent interactEvent) {
-			interactEvent.setCanceled(true);
-			interactEvent.setCancellationResult(InteractionResult.SUCCESS);
+		if (event instanceof PlayerInteractEvent.RightClickBlock click) {
+			click.setCanceled(true);
+			click.setCancellationResult(InteractionResult.SUCCESS);
+		} else if (event instanceof PlayerInteractEvent.RightClickItem click) {
+			click.setCanceled(true);
+			click.setCancellationResult(InteractionResult.SUCCESS);
 		}
 
 		if (!(Minecraft.getInstance().screen instanceof FTBIColorSprayPaintWheelScreen)) {

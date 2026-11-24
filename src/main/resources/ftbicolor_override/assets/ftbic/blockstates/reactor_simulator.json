@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "color=white": {
+      "model": "ftbic:block/electric/light/reactor_simulator"
+    },
+    "color=orange": {
+      "model": "ftbic:block/electric/orange/reactor_simulator"
+    },
+    "color=magenta": {
+      "model": "ftbic:block/electric/magenta/reactor_simulator"
+    },
+    "color=light_blue": {
+      "model": "ftbic:block/electric/light_blue/reactor_simulator"
+    },
+    "color=yellow": {
+      "model": "ftbic:block/electric/yellow/reactor_simulator"
+    },
+    "color=lime": {
+      "model": "ftbic:block/electric/lime/reactor_simulator"
+    },
+    "color=pink": {
+      "model": "ftbic:block/electric/pink/reactor_simulator"
+    },
+    "color=gray": {
+      "model": "ftbic:block/electric/gray/reactor_simulator"
+    },
+    "color=light_gray": {
+      "model": "ftbic:block/electric/light_gray/reactor_simulator"
+    },
+    "color=cyan": {
+      "model": "ftbic:block/electric/cyan/reactor_simulator"
+    },
+    "color=purple": {
+      "model": "ftbic:block/electric/purple/reactor_simulator"
+    },
+    "color=blue": {
+      "model": "ftbic:block/electric/blue/reactor_simulator"
+    },
+    "color=brown": {
+      "model": "ftbic:block/electric/brown/reactor_simulator"
+    },
+    "color=green": {
+      "model": "ftbic:block/electric/green/reactor_simulator"
+    },
+    "color=red": {
+      "model": "ftbic:block/electric/red/reactor_simulator"
+    },
+    "color=black": {
+      "model": "ftbic:block/electric/dark/reactor_simulator"
+    }
+  }
+}

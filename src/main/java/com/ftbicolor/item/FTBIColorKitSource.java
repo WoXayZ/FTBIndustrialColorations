@@ -4,7 +4,7 @@ import com.ftbicolor.compat.FTBIColorCurios;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.fml.ModList;
+import net.neoforged.fml.ModList;
 
 public final class FTBIColorKitSource {
 	public static final int MAIN_HAND = 0;

@@ -1,7 +1,7 @@
 package com.ftbicolor.mixin;
 
 import com.ftbicolor.FTBIColorConstants;
-import net.minecraftforge.fml.loading.LoadingModList;
+import net.neoforged.fml.loading.LoadingModList;
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
@@ -21,7 +21,9 @@ public class FTBIColorMixinPlugin implements IMixinConfigPlugin {
 
 	@Override
 	public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-		if (mixinClassName.endsWith("ICEElectricBlockMixin")) {
+		if (mixinClassName.endsWith("ICEElectricBlockMixin")
+				|| mixinClassName.endsWith("ICECRegistriesMixin")
+				|| mixinClassName.endsWith("LargeBlastFurnaceBlockMixin")) {
 			return isModLoaded(FTBIColorConstants.ICEC_MOD_ID);
 		}
 		if (mixinClassName.endsWith("ZapsConverterBlockMixin")) {

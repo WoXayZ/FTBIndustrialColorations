@@ -1,0 +1,21 @@
+{
+  "type": "ftbic:canning",
+  "inputs": [
+    {
+      "ingredient": {
+        "neoforge:ingredient_type": "ftbic:fluid_cell",
+        "fluid": "minecraft:water"
+      }
+    },
+    {
+      "ingredient": "#c:dyes/light_gray"
+    }
+  ],
+  "outputs": [
+    {
+      "item": {
+        "id": "ftbicolor:light_gray_spray_paint_can"
+      }
+    }
+  ]
+}

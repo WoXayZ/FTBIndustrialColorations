@@ -3,11 +3,11 @@ package com.ftbicolor.client;
 import com.ftbicolor.item.FTBIColorSprayPaintKitType;
 import com.ftbicolor.network.FTBIColorSetSprayPaintKitColorPacket;
 import com.ftbicolor.platform.FTBIColorText;
-import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.client.renderer.GameRenderer;
+import net.minecraft.client.input.KeyEvent;
+import net.minecraft.client.input.MouseButtonEvent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Player;
@@ -20,7 +20,6 @@ public class FTBIColorSprayPaintWheelScreen extends Screen {
 	private static final int INNER_RADIUS = 36;
 	private static final int OUTER_RADIUS = 110;
 
-	private final Player player;
 	private final int source;
 	private final FTBIColorSprayPaintKitType kitType;
 	private final List<DyeColor> colors;
@@ -31,7 +30,6 @@ public class FTBIColorSprayPaintWheelScreen extends Screen {
 
 	public FTBIColorSprayPaintWheelScreen(Player player, int source, FTBIColorSprayPaintKitType kitType, boolean holdMode) {
 		super(FTBIColorText.empty());
-		this.player = player;
 		this.source = source;
 		this.kitType = kitType;
 		this.colors = kitType.colors();
@@ -61,86 +59,72 @@ public class FTBIColorSprayPaintWheelScreen extends Screen {
 	}
 
 	@Override
-	public void render(PoseStack poseStack, int mouseX, int mouseY, float partialTick) {
-		renderBackground(poseStack);
+	public void extractRenderState(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float partialTick) {
 		hoveredIndex = segmentAt(mouseX, mouseY);
-
 		int centerX = width / 2;
 		int centerY = height / 2;
 		float segmentAngle = (float) (Math.PI * 2.0 / colors.size());
 		float startAngle = (float) (-Math.PI / 2.0 - segmentAngle / 2.0);
-
 		for (int i = 0; i < colors.size(); i++) {
 			float a0 = startAngle + segmentAngle * i;
 			float a1 = a0 + segmentAngle;
-			int rgb = dyeRgb(colors.get(i));
+			int rgb = colors.get(i).getTextureDiffuseColor() & 0xFFFFFF;
 			int alpha = i == hoveredIndex ? 220 : 160;
-			int color = (alpha << 24) | (rgb & 0xFFFFFF);
-			fillSegment(poseStack, centerX, centerY, INNER_RADIUS, OUTER_RADIUS, a0, a1, color);
-
+			fillSegment(graphics, centerX, centerY, a0, a1, (alpha << 24) | rgb);
 			if (i == hoveredIndex) {
-				fillSegment(poseStack, centerX, centerY, INNER_RADIUS, OUTER_RADIUS, a0, a1, 0x55FFFFFF);
+				fillSegment(graphics, centerX, centerY, a0, a1, 0x55FFFFFF);
 			}
 		}
 
-		if (hoveredIndex >= 0) {
-			Component label = FTBIColorText.translatable("color.minecraft." + colors.get(hoveredIndex).getName());
-			drawCenteredString(poseStack, font, label, centerX, centerY - 4, 0xFFFFFF);
-		} else {
-			drawCenteredString(
-					poseStack,
-					font,
-					FTBIColorText.translatable("screen.ftbicolor.spray_paint_wheel.title"),
-					centerX,
-					centerY - 4,
-					0xAAAAAA
-			);
-		}
-
-		super.render(poseStack, mouseX, mouseY, partialTick);
+		Component label = hoveredIndex >= 0
+				? FTBIColorText.translatable("color.minecraft." + colors.get(hoveredIndex).getName())
+				: FTBIColorText.translatable("screen.ftbicolor.spray_paint_wheel.title");
+		int textWidth = font.width(label);
+		graphics.text(font, label, centerX - textWidth / 2, centerY - 4, hoveredIndex >= 0 ? 0xFFFFFFFF : 0xFFAAAAAA, true);
+		super.extractRenderState(graphics, mouseX, mouseY, partialTick);
 	}
 
 	@Override
-	public boolean mouseClicked(double mouseX, double mouseY, int button) {
-		if (button == 0) {
-			int index = segmentAt((int) mouseX, (int) mouseY);
+	public boolean mouseClicked(MouseButtonEvent event, boolean doubleClick) {
+		if (event.button() == 0) {
+			int index = segmentAt((int) event.x(), (int) event.y());
 			if (index >= 0) {
 				selectColor(colors.get(index));
 				return true;
 			}
 
-			if (isCenter(mouseX, mouseY)) {
+			if (isCenter(event.x(), event.y())) {
 				FTBIColorSetSprayPaintKitColorPacket.sendDeselect(source, kitType);
 				Minecraft.getInstance().setScreen(null);
 				return true;
 			}
 		}
 
-		return super.mouseClicked(mouseX, mouseY, button);
+		return super.mouseClicked(event, doubleClick);
 	}
 
 	@Override
-	public boolean keyReleased(int keyCode, int scanCode, int modifiers) {
-		if (holdMode && FTBIColorKeyBindings.SPRAY_PAINT_WHEEL.matches(keyCode, scanCode)) {
+	public boolean keyReleased(KeyEvent event) {
+		if (holdMode && FTBIColorKeyBindings.SPRAY_PAINT_WHEEL.matches(event)) {
 			confirmOrCloseFromKey();
 			return true;
 		}
 
-		return super.keyReleased(keyCode, scanCode, modifiers);
+		return super.keyReleased(event);
 	}
 
 	@Override
-	public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
-		if (holdMode && FTBIColorKeyBindings.SPRAY_PAINT_WHEEL.matches(keyCode, scanCode)) {
+	public boolean keyPressed(KeyEvent event) {
+		if (holdMode && FTBIColorKeyBindings.SPRAY_PAINT_WHEEL.matches(event)) {
 			return true;
 		}
 
-		if (keyCode == GLFW.GLFW_KEY_ESCAPE) {
+		if (event.key() == GLFW.GLFW_KEY_ESCAPE) {
 			Minecraft.getInstance().setScreen(null);
 			return true;
 		}
 
-		return super.keyPressed(keyCode, scanCode, modifiers);
+		return super.keyPressed(event);
 	}
 
 	private void selectColor(DyeColor color) {
@@ -154,13 +138,26 @@ public class FTBIColorSprayPaintWheelScreen extends Screen {
 		return dx * dx + dy * dy < (double) INNER_RADIUS * INNER_RADIUS;
 	}
 
+	private void fillSegment(GuiGraphicsExtractor graphics, int centerX, int centerY, float startAngle, float endAngle, int color) {
+		graphics.submitGuiElementRenderState(new FTBIColorWheelSegment(
+				graphics.pose(),
+				graphics.peekScissorStack(),
+				centerX,
+				centerY,
+				INNER_RADIUS,
+				OUTER_RADIUS,
+				startAngle,
+				endAngle,
+				color
+		));
+	}
+
 	private int segmentAt(int mouseX, int mouseY) {
 		int centerX = width / 2;
 		int centerY = height / 2;
 		double dx = mouseX - centerX;
 		double dy = mouseY - centerY;
 		double distance = Math.sqrt(dx * dx + dy * dy);
-
 		if (distance < INNER_RADIUS || distance > OUTER_RADIUS) {
 			return -1;
 		}
@@ -168,7 +165,6 @@ public class FTBIColorSprayPaintWheelScreen extends Screen {
 		float segmentAngle = (float) (Math.PI * 2.0 / colors.size());
 		float startAngle = (float) (-Math.PI / 2.0 - segmentAngle / 2.0);
 		double relative = Math.atan2(dy, dx) - startAngle;
-
 		while (relative < 0.0) {
 			relative += Math.PI * 2.0;
 		}
@@ -178,51 +174,5 @@ public class FTBIColorSprayPaintWheelScreen extends Screen {
 
 		int index = (int) (relative / segmentAngle);
 		return Mth.clamp(index, 0, colors.size() - 1);
-	}
-
-	private static int dyeRgb(DyeColor color) {
-		float[] channels = color.getTextureDiffuseColors();
-		int r = Mth.clamp((int) (channels[0] * 255.0F), 0, 255);
-		int g = Mth.clamp((int) (channels[1] * 255.0F), 0, 255);
-		int b = Mth.clamp((int) (channels[2] * 255.0F), 0, 255);
-		return (r << 16) | (g << 8) | b;
-	}
-
-	private static void fillSegment(
-			PoseStack poseStack,
-			int centerX,
-			int centerY,
-			int innerRadius,
-			int outerRadius,
-			float startAngle,
-			float endAngle,
-			int color
-	) {
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		RenderSystem.setShader(GameRenderer::getPositionColorShader);
-
-		int segments = 24;
-		float step = (endAngle - startAngle) / segments;
-		PoseStack.Pose pose = poseStack.last();
-		com.mojang.blaze3d.vertex.Tesselator tesselator = com.mojang.blaze3d.vertex.Tesselator.getInstance();
-		com.mojang.blaze3d.vertex.BufferBuilder buffer = tesselator.getBuilder();
-		buffer.begin(com.mojang.blaze3d.vertex.VertexFormat.Mode.TRIANGLE_STRIP, com.mojang.blaze3d.vertex.DefaultVertexFormat.POSITION_COLOR);
-
-		float a = ((color >> 24) & 0xFF) / 255.0F;
-		float r = ((color >> 16) & 0xFF) / 255.0F;
-		float g = ((color >> 8) & 0xFF) / 255.0F;
-		float b = (color & 0xFF) / 255.0F;
-
-		for (int i = 0; i <= segments; i++) {
-			float angle = startAngle + step * i;
-			float cos = Mth.cos(angle);
-			float sin = Mth.sin(angle);
-			buffer.vertex(pose.pose(), centerX + cos * outerRadius, centerY + sin * outerRadius, 0.0F).color(r, g, b, a).endVertex();
-			buffer.vertex(pose.pose(), centerX + cos * innerRadius, centerY + sin * innerRadius, 0.0F).color(r, g, b, a).endVertex();
-		}
-
-		tesselator.end();
-		RenderSystem.disableBlend();
 	}
 }

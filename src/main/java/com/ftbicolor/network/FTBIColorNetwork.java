@@ -1,27 +1,27 @@
 package com.ftbicolor.network;
 
 import com.ftbicolor.FTBIColorConstants;
-import net.minecraftforge.network.NetworkRegistry;
-import net.minecraftforge.network.simple.SimpleChannel;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
+import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 
+@EventBusSubscriber(modid = FTBIColorConstants.MOD_ID)
 public final class FTBIColorNetwork {
-	private static final String PROTOCOL = "1";
-
-	public static final SimpleChannel CHANNEL = NetworkRegistry.newSimpleChannel(
-			FTBIColorConstants.modResource("main"),
-			() -> PROTOCOL,
-			PROTOCOL::equals,
-			PROTOCOL::equals
-	);
-
 	private FTBIColorNetwork() {
 	}
 
-	public static void register() {
-		CHANNEL.messageBuilder(FTBIColorSetSprayPaintKitColorPacket.class, 0)
-				.encoder(FTBIColorSetSprayPaintKitColorPacket::encode)
-				.decoder(FTBIColorSetSprayPaintKitColorPacket::decode)
-				.consumer(FTBIColorSetSprayPaintKitColorPacket::handle)
-				.add();
+	@SubscribeEvent
+	public static void register(RegisterPayloadHandlersEvent event) {
+		event.registrar(FTBIColorConstants.MOD_ID).playToServer(
+				FTBIColorSetSprayPaintKitColorPacket.TYPE,
+				FTBIColorSetSprayPaintKitColorPacket.STREAM_CODEC,
+				FTBIColorSetSprayPaintKitColorPacket::handle
+		);
+	}
+
+	public static void sendToServer(CustomPacketPayload payload) {
+		ClientPacketDistributor.sendToServer(payload);
 	}
 }

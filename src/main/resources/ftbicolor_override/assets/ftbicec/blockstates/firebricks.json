@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "color=white": {
+      "model": "ftbicec:block/firebricks/white"
+    },
+    "color=orange": {
+      "model": "ftbicec:block/firebricks/orange"
+    },
+    "color=magenta": {
+      "model": "ftbicec:block/firebricks/magenta"
+    },
+    "color=light_blue": {
+      "model": "ftbicec:block/firebricks/light_blue"
+    },
+    "color=yellow": {
+      "model": "ftbicec:block/firebricks/yellow"
+    },
+    "color=lime": {
+      "model": "ftbicec:block/firebricks/lime"
+    },
+    "color=pink": {
+      "model": "ftbicec:block/firebricks/pink"
+    },
+    "color=gray": {
+      "model": "ftbicec:block/firebricks"
+    },
+    "color=light_gray": {
+      "model": "ftbicec:block/firebricks/light_gray"
+    },
+    "color=cyan": {
+      "model": "ftbicec:block/firebricks/cyan"
+    },
+    "color=purple": {
+      "model": "ftbicec:block/firebricks/purple"
+    },
+    "color=blue": {
+      "model": "ftbicec:block/firebricks/blue"
+    },
+    "color=brown": {
+      "model": "ftbicec:block/firebricks/brown"
+    },
+    "color=green": {
+      "model": "ftbicec:block/firebricks/green"
+    },
+    "color=red": {
+      "model": "ftbicec:block/firebricks/red"
+    },
+    "color=black": {
+      "model": "ftbicec:block/firebricks/black"
+    }
+  }
+}

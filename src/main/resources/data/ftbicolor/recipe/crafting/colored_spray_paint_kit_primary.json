@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "LOM",
+    "YQB",
+    "PIG"
+  ],
+  "key": {
+    "L": "ftbic:light_spray_paint_can",
+    "O": "ftbicolor:orange_spray_paint_can",
+    "M": "ftbicolor:magenta_spray_paint_can",
+    "Y": "ftbicolor:yellow_spray_paint_can",
+    "B": "ftbicolor:light_blue_spray_paint_can",
+    "Q": "ftbic:quad_uranium_fuel_rod",
+    "P": "ftbicolor:pink_spray_paint_can",
+    "I": "ftbicolor:lime_spray_paint_can",
+    "G": "ftbicolor:gray_spray_paint_can"
+  },
+  "result": {
+    "id": "ftbicolor:colored_spray_paint_kit_primary",
+    "count": 1
+  }
+}
