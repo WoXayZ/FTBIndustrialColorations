@@ -15,5 +15,13 @@
   "item.ftbicolor.gray_spray_paint_can": "喷漆罐（灰色）",
   "item.ftbicolor.light_gray_spray_paint_can": "喷漆罐（淡灰色）",
   "block.ftbicolor.colored_machine_block": "涂装机器方块",
-  "block.ftbicolor.colored_advanced_machine_block": "涂装高级机器方块"
+  "block.ftbicolor.colored_advanced_machine_block": "涂装高级机器方块",
+  "curios.identifier.spray_paint": "喷漆",
+  "key.ftbicolor.spray_paint_wheel": "打开喷漆轮盘",
+  "key.ftbicolor.spray_paint_wheel_persistent": "打开固定喷漆轮盘",
+  "key.ftbicolor.spray_paint_wheel_persistent.binding": "Ctrl + 左Shift + 右键",
+  "item.ftbicolor.spray_paint_kit.curio_active": "饰品喷漆：开启",
+  "item.ftbicolor.spray_paint_kit.curio_inactive": "饰品喷漆：关闭",
+  "item.ftbicolor.spray_paint_kit.curio_toggle": "右键饰品槽以切换",
+  "item.ftbicolor.picked_color": "颜色：%s"
 }

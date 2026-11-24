@@ -6,9 +6,11 @@ import net.minecraft.world.entity.EquipmentSlot;
 public final class FTBIColorConstants {
 	public static final String MOD_ID = "ftbicolor";
 	public static final String FTBIC_MOD_ID = "ftbic";
+	public static final String CURIOS_SLOT = "spray_paint";
 
 	public static final String ARMOR_COLOR_NBT = "Color";
 	public static final String SPRAY_KIT_SELECTED_COLOR_NBT = "SelectedColor";
+	public static final String SPRAY_KIT_CURIO_ACTIVE_NBT = "CurioActive";
 	public static final String PLAYER_USED_SPRAY_CANS_NBT = MOD_ID + ":used_spray_cans";
 
 	public static final String ITEM_PROPERTY_COLOR = "color";

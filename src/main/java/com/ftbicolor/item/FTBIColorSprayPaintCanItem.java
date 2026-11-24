@@ -1,9 +1,9 @@
 package com.ftbicolor.item;
 
-import dev.ftb.mods.ftbic.FTBIC;
+import com.ftbicolor.platform.FTBIColorItemSettings;
+import com.ftbicolor.platform.FTBIColorText;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ClickAction;
@@ -24,7 +24,7 @@ public class FTBIColorSprayPaintCanItem extends Item {
 	public final DyeColor color;
 
 	public FTBIColorSprayPaintCanItem(DyeColor color) {
-		super(new Properties().stacksTo(1).tab(FTBIC.TAB));
+		super(FTBIColorItemSettings.singleStack());
 		this.color = color;
 	}
 
@@ -41,6 +41,6 @@ public class FTBIColorSprayPaintCanItem extends Item {
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> list, TooltipFlag flag) {
-		list.add(new TranslatableComponent("item.ftbic.spray_paint_can.tooltip").withStyle(ChatFormatting.GRAY));
+		list.add(FTBIColorText.translatable("item.ftbic.spray_paint_can.tooltip").withStyle(ChatFormatting.GRAY));
 	}
 }

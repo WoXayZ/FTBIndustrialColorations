@@ -1,0 +1,1306 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "painted": "false"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/black/lv_cable_base"
+      }
+    },
+    {
+      "when": {
+        "painted": "false",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/black/lv_cable_connection"
+      }
+    },
+    {
+      "when": {
+        "painted": "false",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/black/lv_cable_connection",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "false",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/black/lv_cable_connection",
+        "x": 90,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "false",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/black/lv_cable_connection",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "false",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/black/lv_cable_connection",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "false",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/black/lv_cable_connection",
+        "x": 90,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "white"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/white/lv_cable_base"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "white",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/white/lv_cable_connection"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "white",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/white/lv_cable_connection",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "white",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/white/lv_cable_connection",
+        "x": 90,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "white",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/white/lv_cable_connection",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "white",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/white/lv_cable_connection",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "white",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/white/lv_cable_connection",
+        "x": 90,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "orange"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/orange/lv_cable_base"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "orange",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/orange/lv_cable_connection"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "orange",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/orange/lv_cable_connection",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "orange",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/orange/lv_cable_connection",
+        "x": 90,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "orange",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/orange/lv_cable_connection",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "orange",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/orange/lv_cable_connection",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "orange",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/orange/lv_cable_connection",
+        "x": 90,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "magenta"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/magenta/lv_cable_base"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "magenta",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/magenta/lv_cable_connection"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "magenta",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/magenta/lv_cable_connection",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "magenta",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/magenta/lv_cable_connection",
+        "x": 90,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "magenta",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/magenta/lv_cable_connection",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "magenta",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/magenta/lv_cable_connection",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "magenta",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/magenta/lv_cable_connection",
+        "x": 90,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "light_blue"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/light_blue/lv_cable_base"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "light_blue",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/light_blue/lv_cable_connection"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "light_blue",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/light_blue/lv_cable_connection",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "light_blue",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/light_blue/lv_cable_connection",
+        "x": 90,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "light_blue",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/light_blue/lv_cable_connection",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "light_blue",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/light_blue/lv_cable_connection",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "light_blue",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/light_blue/lv_cable_connection",
+        "x": 90,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "yellow"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/yellow/lv_cable_base"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "yellow",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/yellow/lv_cable_connection"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "yellow",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/yellow/lv_cable_connection",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "yellow",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/yellow/lv_cable_connection",
+        "x": 90,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "yellow",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/yellow/lv_cable_connection",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "yellow",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/yellow/lv_cable_connection",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "yellow",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/yellow/lv_cable_connection",
+        "x": 90,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "lime"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/lime/lv_cable_base"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "lime",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/lime/lv_cable_connection"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "lime",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/lime/lv_cable_connection",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "lime",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/lime/lv_cable_connection",
+        "x": 90,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "lime",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/lime/lv_cable_connection",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "lime",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/lime/lv_cable_connection",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "lime",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/lime/lv_cable_connection",
+        "x": 90,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "pink"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/pink/lv_cable_base"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "pink",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/pink/lv_cable_connection"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "pink",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/pink/lv_cable_connection",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "pink",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/pink/lv_cable_connection",
+        "x": 90,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "pink",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/pink/lv_cable_connection",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "pink",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/pink/lv_cable_connection",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "pink",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/pink/lv_cable_connection",
+        "x": 90,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "gray"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/gray/lv_cable_base"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "gray",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/gray/lv_cable_connection"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "gray",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/gray/lv_cable_connection",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "gray",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/gray/lv_cable_connection",
+        "x": 90,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "gray",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/gray/lv_cable_connection",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "gray",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/gray/lv_cable_connection",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "gray",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/gray/lv_cable_connection",
+        "x": 90,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "light_gray"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/light_gray/lv_cable_base"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "light_gray",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/light_gray/lv_cable_connection"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "light_gray",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/light_gray/lv_cable_connection",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "light_gray",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/light_gray/lv_cable_connection",
+        "x": 90,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "light_gray",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/light_gray/lv_cable_connection",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "light_gray",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/light_gray/lv_cable_connection",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "light_gray",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/light_gray/lv_cable_connection",
+        "x": 90,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "cyan"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/cyan/lv_cable_base"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "cyan",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/cyan/lv_cable_connection"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "cyan",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/cyan/lv_cable_connection",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "cyan",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/cyan/lv_cable_connection",
+        "x": 90,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "cyan",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/cyan/lv_cable_connection",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "cyan",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/cyan/lv_cable_connection",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "cyan",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/cyan/lv_cable_connection",
+        "x": 90,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "purple"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/purple/lv_cable_base"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "purple",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/purple/lv_cable_connection"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "purple",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/purple/lv_cable_connection",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "purple",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/purple/lv_cable_connection",
+        "x": 90,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "purple",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/purple/lv_cable_connection",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "purple",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/purple/lv_cable_connection",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "purple",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/purple/lv_cable_connection",
+        "x": 90,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "blue"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/blue/lv_cable_base"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "blue",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/blue/lv_cable_connection"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "blue",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/blue/lv_cable_connection",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "blue",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/blue/lv_cable_connection",
+        "x": 90,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "blue",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/blue/lv_cable_connection",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "blue",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/blue/lv_cable_connection",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "blue",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/blue/lv_cable_connection",
+        "x": 90,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "brown"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/brown/lv_cable_base"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "brown",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/brown/lv_cable_connection"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "brown",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/brown/lv_cable_connection",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "brown",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/brown/lv_cable_connection",
+        "x": 90,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "brown",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/brown/lv_cable_connection",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "brown",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/brown/lv_cable_connection",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "brown",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/brown/lv_cable_connection",
+        "x": 90,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "green"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/green/lv_cable_base"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "green",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/green/lv_cable_connection"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "green",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/green/lv_cable_connection",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "green",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/green/lv_cable_connection",
+        "x": 90,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "green",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/green/lv_cable_connection",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "green",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/green/lv_cable_connection",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "green",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/green/lv_cable_connection",
+        "x": 90,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "red"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/red/lv_cable_base"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "red",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/red/lv_cable_connection"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "red",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/red/lv_cable_connection",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "red",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/red/lv_cable_connection",
+        "x": 90,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "red",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/red/lv_cable_connection",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "red",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/red/lv_cable_connection",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "red",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/red/lv_cable_connection",
+        "x": 90,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "black"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/black/lv_cable_base"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "black",
+        "down": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/black/lv_cable_connection"
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "black",
+        "up": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/black/lv_cable_connection",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "black",
+        "north": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/black/lv_cable_connection",
+        "x": 90,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "black",
+        "south": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/black/lv_cable_connection",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "black",
+        "west": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/black/lv_cable_connection",
+        "x": 90,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "painted": "true",
+        "color": "black",
+        "east": "true"
+      },
+      "apply": {
+        "model": "ftbic:block/cable/black/lv_cable_connection",
+        "x": 90,
+        "y": 270
+      }
+    }
+  ]
+}

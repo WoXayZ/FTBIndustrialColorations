@@ -1,6 +1,6 @@
 package com.ftbicolor.mixin;
 
-import com.ftbicolor.FTBIColor;
+import com.ftbicolor.block.FTBIColorBlockStates;
 import dev.ftb.mods.ftbic.block.IronFurnaceBlock;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
@@ -21,11 +21,11 @@ public abstract class IronFurnaceBlockMixin extends FurnaceBlock {
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		super.createBlockStateDefinition(builder);
-		builder.add(FTBIColor.COLOR);
+		FTBIColorBlockStates.defineColor(builder);
 	}
 
 	@Inject(method = "<init>", at = @At("RETURN"))
 	private void ftbicolor$setDefaultColor(CallbackInfo ci) {
-		this.registerDefaultState(this.defaultBlockState().setValue(FTBIColor.COLOR, DyeColor.WHITE));
+		this.registerDefaultState(FTBIColorBlockStates.withColor(this.defaultBlockState(), DyeColor.WHITE));
 	}
 }

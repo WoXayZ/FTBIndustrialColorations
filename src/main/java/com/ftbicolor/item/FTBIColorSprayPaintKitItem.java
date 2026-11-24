@@ -1,10 +1,10 @@
 package com.ftbicolor.item;
 
-import com.ftbicolor.client.FTBIColorSprayPaintKitTooltips;
-import dev.ftb.mods.ftbic.FTBIC;
+import com.ftbicolor.platform.FTBIColorClientHooks;
+import com.ftbicolor.platform.FTBIColorItemSettings;
+import com.ftbicolor.platform.FTBIColorText;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
@@ -19,7 +19,7 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.fml.DistExecutor;
+import net.minecraftforge.fml.ModList;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -28,7 +28,7 @@ public class FTBIColorSprayPaintKitItem extends Item {
 	public final FTBIColorSprayPaintKitType kitType;
 
 	public FTBIColorSprayPaintKitItem(FTBIColorSprayPaintKitType kitType) {
-		super(new Properties().stacksTo(1).tab(FTBIC.TAB));
+		super(FTBIColorItemSettings.singleStack());
 		this.kitType = kitType;
 	}
 
@@ -60,15 +60,20 @@ public class FTBIColorSprayPaintKitItem extends Item {
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> list, TooltipFlag flag) {
-		list.add(new TranslatableComponent("item.ftbic.spray_paint_can.tooltip").withStyle(ChatFormatting.GRAY));
-		list.add(new TranslatableComponent(
+		list.add(FTBIColorText.translatable("item.ftbic.spray_paint_can.tooltip").withStyle(ChatFormatting.GRAY));
+		list.add(FTBIColorText.translatable(
 				"item.ftbicolor.spray_paint_kit.selected",
 				FTBIColorSprayPaintKitColor.selectedColorName(stack)
 		).withStyle(ChatFormatting.DARK_GRAY));
-		Component wheelHint = DistExecutor.safeCallWhenOn(
-				Dist.CLIENT,
-				() -> FTBIColorSprayPaintKitTooltips::openWheelHint
-		);
+		if (ModList.get().isLoaded("curios")) {
+			boolean active = FTBIColorSprayPaintKitColor.isCurioActive(stack);
+			list.add(FTBIColorText.translatable(active
+					? "item.ftbicolor.spray_paint_kit.curio_active"
+					: "item.ftbicolor.spray_paint_kit.curio_inactive"
+			).withStyle(active ? ChatFormatting.GREEN : ChatFormatting.RED));
+			list.add(FTBIColorText.translatable("item.ftbicolor.spray_paint_kit.curio_toggle").withStyle(ChatFormatting.DARK_GRAY));
+		}
+		Component wheelHint = FTBIColorClientHooks.wheelHint();
 		if (wheelHint != null) {
 			list.add(wheelHint.copy().withStyle(ChatFormatting.DARK_GRAY));
 		}

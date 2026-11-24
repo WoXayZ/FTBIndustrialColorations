@@ -5,7 +5,6 @@ import com.ftbicolor.item.FTBIColorArmorUtil;
 import com.ftbicolor.item.FTBIColorItems;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementProgress;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
@@ -35,11 +34,13 @@ public final class FTBIColorAdvancements {
 		award(player, FTBIColorConstants.ADVANCEMENT_COLORFUL_WORLD, color.getName());
 	}
 
-	public static void markFtbicSprayPaintUsed(ServerPlayer player, boolean dark) {
-		markSprayPaintUsed(player, dark ? DyeColor.BLACK : DyeColor.WHITE);
-	}
-
 	public static void checkRecipeUnlocks(ServerPlayer player) {
+		if (isAdvancementDone(player, FTBIColorConstants.ADVANCEMENT_UNLOCK_KITS)
+				&& isAdvancementDone(player, FTBIColorConstants.ADVANCEMENT_UNLOCK_SELECTOR)
+				&& isAdvancementDone(player, FTBIColorConstants.ADVANCEMENT_SO_MANY_COLORS)) {
+			return;
+		}
+
 		if (canUnlockKitRecipes(player)) {
 			if (!isAdvancementDone(player, FTBIColorConstants.ADVANCEMENT_UNLOCK_KITS)) {
 				award(player, FTBIColorConstants.ADVANCEMENT_UNLOCK_KITS, "has_colored_spray_paint_can");
@@ -70,12 +71,7 @@ public final class FTBIColorAdvancements {
 	private static boolean hasFullColoredQuantumSet(Player player) {
 		for (var slot : FTBIColorConstants.ARMOR_EQUIPMENT_SLOTS) {
 			ItemStack stack = player.getItemBySlot(slot);
-			if (!FTBIColorArmorUtil.isQuantumArmor(stack) || !stack.hasTag()) {
-				return false;
-			}
-
-			CompoundTag tag = stack.getTag();
-			if (tag == null || !tag.contains(FTBIColorConstants.ARMOR_COLOR_NBT)) {
+			if (!FTBIColorArmorUtil.isQuantumArmor(stack) || !FTBIColorArmorUtil.hasExplicitColor(stack)) {
 				return false;
 			}
 		}
@@ -96,6 +92,10 @@ public final class FTBIColorAdvancements {
 	}
 
 	private static boolean hasColoredSprayPaintCan(Player player) {
+		if (isColoredSprayPaintCan(player.getOffhandItem())) {
+			return true;
+		}
+
 		for (ItemStack stack : player.getInventory().items) {
 			if (isColoredSprayPaintCan(stack)) {
 				return true;
@@ -117,6 +117,10 @@ public final class FTBIColorAdvancements {
 	}
 
 	private static boolean hasItem(Player player, Item item) {
+		if (player.getOffhandItem().is(item)) {
+			return true;
+		}
+
 		for (ItemStack stack : player.getInventory().items) {
 			if (stack.is(item)) {
 				return true;

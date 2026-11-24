@@ -2,15 +2,14 @@ package com.ftbicolor.client;
 
 import com.ftbicolor.item.FTBIColorSprayPaintKitType;
 import com.ftbicolor.network.FTBIColorSetSprayPaintKitColorPacket;
+import com.ftbicolor.platform.FTBIColorText;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.util.Mth;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import org.lwjgl.glfw.GLFW;
@@ -22,19 +21,18 @@ public class FTBIColorSprayPaintWheelScreen extends Screen {
 	private static final int OUTER_RADIUS = 110;
 
 	private final Player player;
-	private final InteractionHand hand;
+	private final int source;
 	private final FTBIColorSprayPaintKitType kitType;
 	private final List<DyeColor> colors;
 	private final boolean holdMode;
 
 	private int hoveredIndex = -1;
-	private boolean closingFromSelection;
 	private boolean keyConfirmHandled;
 
-	public FTBIColorSprayPaintWheelScreen(Player player, InteractionHand hand, FTBIColorSprayPaintKitType kitType, boolean holdMode) {
-		super(net.minecraft.network.chat.TextComponent.EMPTY);
+	public FTBIColorSprayPaintWheelScreen(Player player, int source, FTBIColorSprayPaintKitType kitType, boolean holdMode) {
+		super(FTBIColorText.empty());
 		this.player = player;
-		this.hand = hand;
+		this.source = source;
 		this.kitType = kitType;
 		this.colors = kitType.colors();
 		this.holdMode = holdMode;
@@ -53,7 +51,7 @@ public class FTBIColorSprayPaintWheelScreen extends Screen {
 		if (hoveredIndex >= 0) {
 			selectColor(colors.get(hoveredIndex));
 		} else {
-			closeWithDeselect();
+			Minecraft.getInstance().setScreen(null);
 		}
 	}
 
@@ -86,13 +84,13 @@ public class FTBIColorSprayPaintWheelScreen extends Screen {
 		}
 
 		if (hoveredIndex >= 0) {
-			Component label = new TranslatableComponent("color.minecraft." + colors.get(hoveredIndex).getName());
+			Component label = FTBIColorText.translatable("color.minecraft." + colors.get(hoveredIndex).getName());
 			drawCenteredString(poseStack, font, label, centerX, centerY - 4, 0xFFFFFF);
 		} else {
 			drawCenteredString(
 					poseStack,
 					font,
-					new TranslatableComponent("screen.ftbicolor.spray_paint_wheel.title"),
+					FTBIColorText.translatable("screen.ftbicolor.spray_paint_wheel.title"),
 					centerX,
 					centerY - 4,
 					0xAAAAAA
@@ -104,9 +102,18 @@ public class FTBIColorSprayPaintWheelScreen extends Screen {
 
 	@Override
 	public boolean mouseClicked(double mouseX, double mouseY, int button) {
-		if (button == 0 && hoveredIndex >= 0) {
-			selectColor(colors.get(hoveredIndex));
-			return true;
+		if (button == 0) {
+			int index = segmentAt((int) mouseX, (int) mouseY);
+			if (index >= 0) {
+				selectColor(colors.get(index));
+				return true;
+			}
+
+			if (isCenter(mouseX, mouseY)) {
+				FTBIColorSetSprayPaintKitColorPacket.sendDeselect(source, kitType);
+				Minecraft.getInstance().setScreen(null);
+				return true;
+			}
 		}
 
 		return super.mouseClicked(mouseX, mouseY, button);
@@ -129,30 +136,22 @@ public class FTBIColorSprayPaintWheelScreen extends Screen {
 		}
 
 		if (keyCode == GLFW.GLFW_KEY_ESCAPE) {
-			closeWithDeselect();
+			Minecraft.getInstance().setScreen(null);
 			return true;
 		}
 
 		return super.keyPressed(keyCode, scanCode, modifiers);
 	}
 
-	@Override
-	public void onClose() {
-		if (!closingFromSelection) {
-			FTBIColorSetSprayPaintKitColorPacket.sendDeselect(hand, kitType);
-		}
-
-		super.onClose();
-	}
-
 	private void selectColor(DyeColor color) {
-		closingFromSelection = true;
-		FTBIColorSetSprayPaintKitColorPacket.sendSelect(hand, kitType, color);
+		FTBIColorSetSprayPaintKitColorPacket.sendSelect(source, kitType, color);
 		Minecraft.getInstance().setScreen(null);
 	}
 
-	private void closeWithDeselect() {
-		Minecraft.getInstance().setScreen(null);
+	private boolean isCenter(double mouseX, double mouseY) {
+		double dx = mouseX - width / 2.0;
+		double dy = mouseY - height / 2.0;
+		return dx * dx + dy * dy < (double) INNER_RADIUS * INNER_RADIUS;
 	}
 
 	private int segmentAt(int mouseX, int mouseY) {

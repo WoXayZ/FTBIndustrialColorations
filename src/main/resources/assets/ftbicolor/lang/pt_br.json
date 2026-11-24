@@ -15,5 +15,13 @@
   "item.ftbicolor.gray_spray_paint_can": "Lata de spray de pintura (Cinza)",
   "item.ftbicolor.light_gray_spray_paint_can": "Lata de spray de pintura (Cinza-claro)",
   "block.ftbicolor.colored_machine_block": "Bloco de máquina pintado",
-  "block.ftbicolor.colored_advanced_machine_block": "Bloco de máquina avançada pintado"
+  "block.ftbicolor.colored_advanced_machine_block": "Bloco de máquina avançada pintado",
+  "curios.identifier.spray_paint": "Tinta spray",
+  "key.ftbicolor.spray_paint_wheel": "Abrir roda de tinta",
+  "key.ftbicolor.spray_paint_wheel_persistent": "Abrir roda de tinta persistente",
+  "key.ftbicolor.spray_paint_wheel_persistent.binding": "Ctrl + Shift esquerdo + Botão direito",
+  "item.ftbicolor.spray_paint_kit.curio_active": "Pintura do curio: ligada",
+  "item.ftbicolor.spray_paint_kit.curio_inactive": "Pintura do curio: desligada",
+  "item.ftbicolor.spray_paint_kit.curio_toggle": "Clique direito no slot do curio para alternar",
+  "item.ftbicolor.picked_color": "Cor: %s"
 }

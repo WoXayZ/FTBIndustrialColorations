@@ -15,5 +15,13 @@
   "item.ftbicolor.gray_spray_paint_can": "Баллончик с аэрозольной краской (серый)",
   "item.ftbicolor.light_gray_spray_paint_can": "Баллончик с аэрозольной краской (светло-серый)",
   "block.ftbicolor.colored_machine_block": "Окрашенный блок машины",
-  "block.ftbicolor.colored_advanced_machine_block": "Окрашенный блок продвинутой машины"
+  "block.ftbicolor.colored_advanced_machine_block": "Окрашенный блок продвинутой машины",
+  "curios.identifier.spray_paint": "Аэрозольная краска",
+  "key.ftbicolor.spray_paint_wheel": "Открыть колесо покраски",
+  "key.ftbicolor.spray_paint_wheel_persistent": "Открыть постоянное колесо покраски",
+  "key.ftbicolor.spray_paint_wheel_persistent.binding": "Ctrl + Левый Shift + Правая кнопка",
+  "item.ftbicolor.spray_paint_kit.curio_active": "Покраска аксессуара: включена",
+  "item.ftbicolor.spray_paint_kit.curio_inactive": "Покраска аксессуара: выключена",
+  "item.ftbicolor.spray_paint_kit.curio_toggle": "ПКМ по слоту аксессуара, чтобы переключить",
+  "item.ftbicolor.picked_color": "Цвет: %s"
 }

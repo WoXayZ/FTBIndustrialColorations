@@ -1,7 +1,7 @@
 package com.ftbicolor.item;
 
 import com.ftbicolor.FTBIColorConstants;
-import net.minecraft.nbt.CompoundTag;
+import com.ftbicolor.platform.FTBIColorStackData;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.DyeColor;
@@ -32,16 +32,11 @@ public final class FTBIColorArmorUtil {
 	}
 
 	public static DyeColor getColor(ItemStack stack) {
-		if (!stack.hasTag()) {
+		if (!FTBIColorStackData.has(stack, FTBIColorConstants.ARMOR_COLOR_NBT)) {
 			return DyeColor.WHITE;
 		}
 
-		CompoundTag tag = stack.getTag();
-		if (tag != null && tag.contains(FTBIColorConstants.ARMOR_COLOR_NBT)) {
-			return DyeColor.byId(tag.getInt(FTBIColorConstants.ARMOR_COLOR_NBT));
-		}
-
-		return DyeColor.WHITE;
+		return DyeColor.byId(FTBIColorStackData.getInt(stack, FTBIColorConstants.ARMOR_COLOR_NBT, DyeColor.WHITE.getId()));
 	}
 
 	public static boolean setColor(ItemStack stack, DyeColor color) {
@@ -53,8 +48,12 @@ public final class FTBIColorArmorUtil {
 			return false;
 		}
 
-		stack.getOrCreateTag().putInt(FTBIColorConstants.ARMOR_COLOR_NBT, color.getId());
+		FTBIColorStackData.putInt(stack, FTBIColorConstants.ARMOR_COLOR_NBT, color.getId());
 		return true;
+	}
+
+	public static boolean hasExplicitColor(ItemStack stack) {
+		return FTBIColorStackData.has(stack, FTBIColorConstants.ARMOR_COLOR_NBT);
 	}
 
 	public static float getColorProperty(ItemStack stack) {

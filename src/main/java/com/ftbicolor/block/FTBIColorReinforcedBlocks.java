@@ -1,10 +1,8 @@
 package com.ftbicolor.block;
 
-import com.ftbicolor.FTBIColor;
 import dev.ftb.mods.ftbic.block.FTBICBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -24,19 +22,18 @@ public final class FTBIColorReinforcedBlocks {
 		public Stone(Properties properties, Supplier<? extends Block> originalBlock) {
 			super(properties);
 			this.originalBlock = originalBlock;
-			this.registerDefaultState(this.defaultBlockState().setValue(FTBIColor.COLOR, DyeColor.GRAY));
+			this.registerDefaultState(FTBIColorBlockStates.withColor(this.defaultBlockState(), DyeColor.GRAY));
 		}
 
 		@Override
 		protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 			super.createBlockStateDefinition(builder);
-			builder.add(FTBIColor.COLOR);
+			FTBIColorBlockStates.defineColor(builder);
 		}
 
 		@Override
 		public ItemStack getCloneItemStack(BlockGetter level, BlockPos pos, BlockState state) {
-			Item item = originalBlock.get().asItem();
-			return item == null ? ItemStack.EMPTY : new ItemStack(item);
+			return FTBIColorBlockStates.ctrlPickedStack(FTBIColorBlockStates.originalStack(originalBlock), state);
 		}
 	}
 
@@ -46,19 +43,18 @@ public final class FTBIColorReinforcedBlocks {
 		public Glass(Properties properties, Supplier<? extends Block> originalBlock) {
 			super(properties);
 			this.originalBlock = originalBlock;
-			this.registerDefaultState(this.defaultBlockState().setValue(FTBIColor.COLOR, DyeColor.GRAY));
+			this.registerDefaultState(FTBIColorBlockStates.withColor(this.defaultBlockState(), DyeColor.GRAY));
 		}
 
 		@Override
 		protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 			super.createBlockStateDefinition(builder);
-			builder.add(FTBIColor.COLOR);
+			FTBIColorBlockStates.defineColor(builder);
 		}
 
 		@Override
 		public ItemStack getCloneItemStack(BlockGetter level, BlockPos pos, BlockState state) {
-			Item item = originalBlock.get().asItem();
-			return item == null ? ItemStack.EMPTY : new ItemStack(item);
+			return FTBIColorBlockStates.ctrlPickedStack(FTBIColorBlockStates.originalStack(originalBlock), state);
 		}
 	}
 

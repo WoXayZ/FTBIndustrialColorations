@@ -1,6 +1,6 @@
 package com.ftbicolor;
 
-import net.minecraft.network.chat.TextComponent;
+import com.ftbicolor.platform.FTBIColorText;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.metadata.pack.PackMetadataSection;
 import net.minecraft.server.packs.repository.Pack;
@@ -42,7 +42,7 @@ public final class FTBIColorResourcePack {
 			event.addRepositorySource((packConsumer, packConstructor) ->
 					packConsumer.accept(packConstructor.create(
 							PACK_ID,
-							new TextComponent("FTB Industrial Colorations Overrides"),
+							FTBIColorText.literal("FTB Industrial Colorations Overrides"),
 							true,
 							() -> pack,
 							metadata,

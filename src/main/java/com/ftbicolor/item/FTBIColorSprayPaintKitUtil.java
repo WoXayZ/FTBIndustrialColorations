@@ -9,10 +9,6 @@ public final class FTBIColorSprayPaintKitUtil {
 	private FTBIColorSprayPaintKitUtil() {
 	}
 
-	public static boolean shouldOpenWheel(@Nullable Player player, ItemStack stack, boolean controlDown) {
-		return player != null && player.isShiftKeyDown() && controlDown;
-	}
-
 	public static void applyColor(Player player, ItemStack stack, FTBIColorSprayPaintKitType kitType, @Nullable DyeColor color) {
 		if (color != null && !kitType.supports(color)) {
 			return;

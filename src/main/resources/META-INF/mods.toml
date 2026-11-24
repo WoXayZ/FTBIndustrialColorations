@@ -1,17 +1,17 @@
 modLoader = "javafml"
 loaderVersion = "[${forgeshortversion},)"
-license = "All rights reserved"
-issueTrackerURL = "https://github.com/cdaguenet/FTBIndustrialColorations/issues"
+license = "MIT"
+issueTrackerURL = "https://github.com/WoXayZ/FTBIndustrialColorations/issues"
 
 [[mods]]
 modId = "ftbicolor"
 version = "${version}"
 displayName = "FTB Industrial Colorations"
-authors = "cdaguenet"
+authors = "WoXayZ"
 description = '''
-Extends FTB Industrial Contraptions' spray paint cans to all 14 Minecraft dye colors,
-for a total of 16 machine variants. Recolors only the white/light gray body of each
-machine while preserving accents, indicators, solar cells and structural details.
+Adds the other 14 dye colors to FTB Industrial Contraptions spray paint.
+Recolors machine casings without touching their details, and paints Quantum Armor.
+Includes spray paint kits, a selector, and advancements.
 '''
 
 [[dependencies.ftbicolor]]
@@ -32,5 +32,12 @@ side = "BOTH"
 modId = "ftbic"
 mandatory = true
 versionRange = "[1802.1.6,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.ftbicolor]]
+modId = "curios"
+mandatory = false
+versionRange = "[1,)"
 ordering = "AFTER"
 side = "BOTH"

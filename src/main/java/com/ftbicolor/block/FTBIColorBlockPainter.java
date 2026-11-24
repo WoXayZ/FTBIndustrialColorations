@@ -64,6 +64,11 @@ public final class FTBIColorBlockPainter {
 			changed = true;
 		}
 
+		if (target.hasProperty(FTBIColor.PAINTED) && !target.getValue(FTBIColor.PAINTED)) {
+			target = target.setValue(FTBIColor.PAINTED, true);
+			changed = true;
+		}
+
 		if (changed) {
 			level.setBlock(pos, target, 3);
 		}

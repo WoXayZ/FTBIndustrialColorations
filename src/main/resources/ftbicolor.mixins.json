@@ -9,10 +9,17 @@
     "IronFurnaceBlockMixin",
     "NuclearReactorChamberBlockMixin",
     "SprayPaintCanItemMixin",
-    "ItemMixin"
+    "ItemMixin",
+    "AbstractContainerMenuMixin",
+    "BaseCableBlockMixin",
+    "CableBlockMixin",
+    "BlockMixin",
+    "BlockItemMixin"
   ],
   "client": [
-    "client.ForgeHooksClientMixin"
+    "client.MinecraftMixin",
+    "client.ForgeHooksClientMixin",
+    "client.DiggingBlockRendererMixin"
   ],
   "server": [],
   "injectors": {
