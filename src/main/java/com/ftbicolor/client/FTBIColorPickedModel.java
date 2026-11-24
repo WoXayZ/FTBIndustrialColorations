@@ -18,10 +18,9 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.util.RandomSource;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.Random;
 
 public final class FTBIColorPickedModel implements BakedModel {
 	private final BakedModel original;
@@ -86,7 +85,7 @@ public final class FTBIColorPickedModel implements BakedModel {
 	}
 
 	@Override
-	public java.util.List<net.minecraft.client.renderer.block.model.BakedQuad> getQuads(@Nullable BlockState state, @Nullable Direction side, Random random) {
+	public java.util.List<net.minecraft.client.renderer.block.model.BakedQuad> getQuads(@Nullable BlockState state, @Nullable Direction side, RandomSource random) {
 		return original.getQuads(state, side, random);
 	}
 

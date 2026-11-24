@@ -65,7 +65,7 @@ public final class FTBIColorCurios {
 			return;
 		}
 
-		ItemStack kit = findKit(event.getPlayer());
+		ItemStack kit = findKit(event.getEntity());
 		if (!(kit.getItem() instanceof FTBIColorSprayPaintKitItem)) {
 			return;
 		}
@@ -77,7 +77,7 @@ public final class FTBIColorCurios {
 
 		InteractionResult result = FTBIColorSprayPaintActions.paintBlock(
 				kit,
-				new UseOnContext(event.getPlayer(), event.getHand(), event.getHitVec()),
+				new UseOnContext(event.getEntity(), event.getHand(), event.getHitVec()),
 				color
 		);
 		if (result == InteractionResult.PASS) {

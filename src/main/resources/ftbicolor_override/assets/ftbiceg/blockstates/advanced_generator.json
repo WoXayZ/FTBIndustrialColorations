@@ -1,0 +1,484 @@
+{
+  "variants": {
+    "active=false,color=white,facing=north": {
+      "model": "ftbiceg:block/electric/light/advanced_generator_off"
+    },
+    "active=false,color=orange,facing=north": {
+      "model": "ftbiceg:block/electric/orange/advanced_generator_off"
+    },
+    "active=false,color=magenta,facing=north": {
+      "model": "ftbiceg:block/electric/magenta/advanced_generator_off"
+    },
+    "active=false,color=light_blue,facing=north": {
+      "model": "ftbiceg:block/electric/light_blue/advanced_generator_off"
+    },
+    "active=false,color=yellow,facing=north": {
+      "model": "ftbiceg:block/electric/yellow/advanced_generator_off"
+    },
+    "active=false,color=lime,facing=north": {
+      "model": "ftbiceg:block/electric/lime/advanced_generator_off"
+    },
+    "active=false,color=pink,facing=north": {
+      "model": "ftbiceg:block/electric/pink/advanced_generator_off"
+    },
+    "active=false,color=gray,facing=north": {
+      "model": "ftbiceg:block/electric/gray/advanced_generator_off"
+    },
+    "active=false,color=light_gray,facing=north": {
+      "model": "ftbiceg:block/electric/light_gray/advanced_generator_off"
+    },
+    "active=false,color=cyan,facing=north": {
+      "model": "ftbiceg:block/electric/cyan/advanced_generator_off"
+    },
+    "active=false,color=purple,facing=north": {
+      "model": "ftbiceg:block/electric/purple/advanced_generator_off"
+    },
+    "active=false,color=blue,facing=north": {
+      "model": "ftbiceg:block/electric/blue/advanced_generator_off"
+    },
+    "active=false,color=brown,facing=north": {
+      "model": "ftbiceg:block/electric/brown/advanced_generator_off"
+    },
+    "active=false,color=green,facing=north": {
+      "model": "ftbiceg:block/electric/green/advanced_generator_off"
+    },
+    "active=false,color=red,facing=north": {
+      "model": "ftbiceg:block/electric/red/advanced_generator_off"
+    },
+    "active=false,color=black,facing=north": {
+      "model": "ftbiceg:block/electric/dark/advanced_generator_off"
+    },
+    "active=true,color=white,facing=north": {
+      "model": "ftbiceg:block/electric/light/advanced_generator_on"
+    },
+    "active=true,color=orange,facing=north": {
+      "model": "ftbiceg:block/electric/orange/advanced_generator_on"
+    },
+    "active=true,color=magenta,facing=north": {
+      "model": "ftbiceg:block/electric/magenta/advanced_generator_on"
+    },
+    "active=true,color=light_blue,facing=north": {
+      "model": "ftbiceg:block/electric/light_blue/advanced_generator_on"
+    },
+    "active=true,color=yellow,facing=north": {
+      "model": "ftbiceg:block/electric/yellow/advanced_generator_on"
+    },
+    "active=true,color=lime,facing=north": {
+      "model": "ftbiceg:block/electric/lime/advanced_generator_on"
+    },
+    "active=true,color=pink,facing=north": {
+      "model": "ftbiceg:block/electric/pink/advanced_generator_on"
+    },
+    "active=true,color=gray,facing=north": {
+      "model": "ftbiceg:block/electric/gray/advanced_generator_on"
+    },
+    "active=true,color=light_gray,facing=north": {
+      "model": "ftbiceg:block/electric/light_gray/advanced_generator_on"
+    },
+    "active=true,color=cyan,facing=north": {
+      "model": "ftbiceg:block/electric/cyan/advanced_generator_on"
+    },
+    "active=true,color=purple,facing=north": {
+      "model": "ftbiceg:block/electric/purple/advanced_generator_on"
+    },
+    "active=true,color=blue,facing=north": {
+      "model": "ftbiceg:block/electric/blue/advanced_generator_on"
+    },
+    "active=true,color=brown,facing=north": {
+      "model": "ftbiceg:block/electric/brown/advanced_generator_on"
+    },
+    "active=true,color=green,facing=north": {
+      "model": "ftbiceg:block/electric/green/advanced_generator_on"
+    },
+    "active=true,color=red,facing=north": {
+      "model": "ftbiceg:block/electric/red/advanced_generator_on"
+    },
+    "active=true,color=black,facing=north": {
+      "model": "ftbiceg:block/electric/dark/advanced_generator_on"
+    },
+    "active=false,color=white,facing=south": {
+      "model": "ftbiceg:block/electric/light/advanced_generator_off",
+      "y": 180
+    },
+    "active=false,color=orange,facing=south": {
+      "model": "ftbiceg:block/electric/orange/advanced_generator_off",
+      "y": 180
+    },
+    "active=false,color=magenta,facing=south": {
+      "model": "ftbiceg:block/electric/magenta/advanced_generator_off",
+      "y": 180
+    },
+    "active=false,color=light_blue,facing=south": {
+      "model": "ftbiceg:block/electric/light_blue/advanced_generator_off",
+      "y": 180
+    },
+    "active=false,color=yellow,facing=south": {
+      "model": "ftbiceg:block/electric/yellow/advanced_generator_off",
+      "y": 180
+    },
+    "active=false,color=lime,facing=south": {
+      "model": "ftbiceg:block/electric/lime/advanced_generator_off",
+      "y": 180
+    },
+    "active=false,color=pink,facing=south": {
+      "model": "ftbiceg:block/electric/pink/advanced_generator_off",
+      "y": 180
+    },
+    "active=false,color=gray,facing=south": {
+      "model": "ftbiceg:block/electric/gray/advanced_generator_off",
+      "y": 180
+    },
+    "active=false,color=light_gray,facing=south": {
+      "model": "ftbiceg:block/electric/light_gray/advanced_generator_off",
+      "y": 180
+    },
+    "active=false,color=cyan,facing=south": {
+      "model": "ftbiceg:block/electric/cyan/advanced_generator_off",
+      "y": 180
+    },
+    "active=false,color=purple,facing=south": {
+      "model": "ftbiceg:block/electric/purple/advanced_generator_off",
+      "y": 180
+    },
+    "active=false,color=blue,facing=south": {
+      "model": "ftbiceg:block/electric/blue/advanced_generator_off",
+      "y": 180
+    },
+    "active=false,color=brown,facing=south": {
+      "model": "ftbiceg:block/electric/brown/advanced_generator_off",
+      "y": 180
+    },
+    "active=false,color=green,facing=south": {
+      "model": "ftbiceg:block/electric/green/advanced_generator_off",
+      "y": 180
+    },
+    "active=false,color=red,facing=south": {
+      "model": "ftbiceg:block/electric/red/advanced_generator_off",
+      "y": 180
+    },
+    "active=false,color=black,facing=south": {
+      "model": "ftbiceg:block/electric/dark/advanced_generator_off",
+      "y": 180
+    },
+    "active=true,color=white,facing=south": {
+      "model": "ftbiceg:block/electric/light/advanced_generator_on",
+      "y": 180
+    },
+    "active=true,color=orange,facing=south": {
+      "model": "ftbiceg:block/electric/orange/advanced_generator_on",
+      "y": 180
+    },
+    "active=true,color=magenta,facing=south": {
+      "model": "ftbiceg:block/electric/magenta/advanced_generator_on",
+      "y": 180
+    },
+    "active=true,color=light_blue,facing=south": {
+      "model": "ftbiceg:block/electric/light_blue/advanced_generator_on",
+      "y": 180
+    },
+    "active=true,color=yellow,facing=south": {
+      "model": "ftbiceg:block/electric/yellow/advanced_generator_on",
+      "y": 180
+    },
+    "active=true,color=lime,facing=south": {
+      "model": "ftbiceg:block/electric/lime/advanced_generator_on",
+      "y": 180
+    },
+    "active=true,color=pink,facing=south": {
+      "model": "ftbiceg:block/electric/pink/advanced_generator_on",
+      "y": 180
+    },
+    "active=true,color=gray,facing=south": {
+      "model": "ftbiceg:block/electric/gray/advanced_generator_on",
+      "y": 180
+    },
+    "active=true,color=light_gray,facing=south": {
+      "model": "ftbiceg:block/electric/light_gray/advanced_generator_on",
+      "y": 180
+    },
+    "active=true,color=cyan,facing=south": {
+      "model": "ftbiceg:block/electric/cyan/advanced_generator_on",
+      "y": 180
+    },
+    "active=true,color=purple,facing=south": {
+      "model": "ftbiceg:block/electric/purple/advanced_generator_on",
+      "y": 180
+    },
+    "active=true,color=blue,facing=south": {
+      "model": "ftbiceg:block/electric/blue/advanced_generator_on",
+      "y": 180
+    },
+    "active=true,color=brown,facing=south": {
+      "model": "ftbiceg:block/electric/brown/advanced_generator_on",
+      "y": 180
+    },
+    "active=true,color=green,facing=south": {
+      "model": "ftbiceg:block/electric/green/advanced_generator_on",
+      "y": 180
+    },
+    "active=true,color=red,facing=south": {
+      "model": "ftbiceg:block/electric/red/advanced_generator_on",
+      "y": 180
+    },
+    "active=true,color=black,facing=south": {
+      "model": "ftbiceg:block/electric/dark/advanced_generator_on",
+      "y": 180
+    },
+    "active=false,color=white,facing=west": {
+      "model": "ftbiceg:block/electric/light/advanced_generator_off",
+      "y": 270
+    },
+    "active=false,color=orange,facing=west": {
+      "model": "ftbiceg:block/electric/orange/advanced_generator_off",
+      "y": 270
+    },
+    "active=false,color=magenta,facing=west": {
+      "model": "ftbiceg:block/electric/magenta/advanced_generator_off",
+      "y": 270
+    },
+    "active=false,color=light_blue,facing=west": {
+      "model": "ftbiceg:block/electric/light_blue/advanced_generator_off",
+      "y": 270
+    },
+    "active=false,color=yellow,facing=west": {
+      "model": "ftbiceg:block/electric/yellow/advanced_generator_off",
+      "y": 270
+    },
+    "active=false,color=lime,facing=west": {
+      "model": "ftbiceg:block/electric/lime/advanced_generator_off",
+      "y": 270
+    },
+    "active=false,color=pink,facing=west": {
+      "model": "ftbiceg:block/electric/pink/advanced_generator_off",
+      "y": 270
+    },
+    "active=false,color=gray,facing=west": {
+      "model": "ftbiceg:block/electric/gray/advanced_generator_off",
+      "y": 270
+    },
+    "active=false,color=light_gray,facing=west": {
+      "model": "ftbiceg:block/electric/light_gray/advanced_generator_off",
+      "y": 270
+    },
+    "active=false,color=cyan,facing=west": {
+      "model": "ftbiceg:block/electric/cyan/advanced_generator_off",
+      "y": 270
+    },
+    "active=false,color=purple,facing=west": {
+      "model": "ftbiceg:block/electric/purple/advanced_generator_off",
+      "y": 270
+    },
+    "active=false,color=blue,facing=west": {
+      "model": "ftbiceg:block/electric/blue/advanced_generator_off",
+      "y": 270
+    },
+    "active=false,color=brown,facing=west": {
+      "model": "ftbiceg:block/electric/brown/advanced_generator_off",
+      "y": 270
+    },
+    "active=false,color=green,facing=west": {
+      "model": "ftbiceg:block/electric/green/advanced_generator_off",
+      "y": 270
+    },
+    "active=false,color=red,facing=west": {
+      "model": "ftbiceg:block/electric/red/advanced_generator_off",
+      "y": 270
+    },
+    "active=false,color=black,facing=west": {
+      "model": "ftbiceg:block/electric/dark/advanced_generator_off",
+      "y": 270
+    },
+    "active=true,color=white,facing=west": {
+      "model": "ftbiceg:block/electric/light/advanced_generator_on",
+      "y": 270
+    },
+    "active=true,color=orange,facing=west": {
+      "model": "ftbiceg:block/electric/orange/advanced_generator_on",
+      "y": 270
+    },
+    "active=true,color=magenta,facing=west": {
+      "model": "ftbiceg:block/electric/magenta/advanced_generator_on",
+      "y": 270
+    },
+    "active=true,color=light_blue,facing=west": {
+      "model": "ftbiceg:block/electric/light_blue/advanced_generator_on",
+      "y": 270
+    },
+    "active=true,color=yellow,facing=west": {
+      "model": "ftbiceg:block/electric/yellow/advanced_generator_on",
+      "y": 270
+    },
+    "active=true,color=lime,facing=west": {
+      "model": "ftbiceg:block/electric/lime/advanced_generator_on",
+      "y": 270
+    },
+    "active=true,color=pink,facing=west": {
+      "model": "ftbiceg:block/electric/pink/advanced_generator_on",
+      "y": 270
+    },
+    "active=true,color=gray,facing=west": {
+      "model": "ftbiceg:block/electric/gray/advanced_generator_on",
+      "y": 270
+    },
+    "active=true,color=light_gray,facing=west": {
+      "model": "ftbiceg:block/electric/light_gray/advanced_generator_on",
+      "y": 270
+    },
+    "active=true,color=cyan,facing=west": {
+      "model": "ftbiceg:block/electric/cyan/advanced_generator_on",
+      "y": 270
+    },
+    "active=true,color=purple,facing=west": {
+      "model": "ftbiceg:block/electric/purple/advanced_generator_on",
+      "y": 270
+    },
+    "active=true,color=blue,facing=west": {
+      "model": "ftbiceg:block/electric/blue/advanced_generator_on",
+      "y": 270
+    },
+    "active=true,color=brown,facing=west": {
+      "model": "ftbiceg:block/electric/brown/advanced_generator_on",
+      "y": 270
+    },
+    "active=true,color=green,facing=west": {
+      "model": "ftbiceg:block/electric/green/advanced_generator_on",
+      "y": 270
+    },
+    "active=true,color=red,facing=west": {
+      "model": "ftbiceg:block/electric/red/advanced_generator_on",
+      "y": 270
+    },
+    "active=true,color=black,facing=west": {
+      "model": "ftbiceg:block/electric/dark/advanced_generator_on",
+      "y": 270
+    },
+    "active=false,color=white,facing=east": {
+      "model": "ftbiceg:block/electric/light/advanced_generator_off",
+      "y": 90
+    },
+    "active=false,color=orange,facing=east": {
+      "model": "ftbiceg:block/electric/orange/advanced_generator_off",
+      "y": 90
+    },
+    "active=false,color=magenta,facing=east": {
+      "model": "ftbiceg:block/electric/magenta/advanced_generator_off",
+      "y": 90
+    },
+    "active=false,color=light_blue,facing=east": {
+      "model": "ftbiceg:block/electric/light_blue/advanced_generator_off",
+      "y": 90
+    },
+    "active=false,color=yellow,facing=east": {
+      "model": "ftbiceg:block/electric/yellow/advanced_generator_off",
+      "y": 90
+    },
+    "active=false,color=lime,facing=east": {
+      "model": "ftbiceg:block/electric/lime/advanced_generator_off",
+      "y": 90
+    },
+    "active=false,color=pink,facing=east": {
+      "model": "ftbiceg:block/electric/pink/advanced_generator_off",
+      "y": 90
+    },
+    "active=false,color=gray,facing=east": {
+      "model": "ftbiceg:block/electric/gray/advanced_generator_off",
+      "y": 90
+    },
+    "active=false,color=light_gray,facing=east": {
+      "model": "ftbiceg:block/electric/light_gray/advanced_generator_off",
+      "y": 90
+    },
+    "active=false,color=cyan,facing=east": {
+      "model": "ftbiceg:block/electric/cyan/advanced_generator_off",
+      "y": 90
+    },
+    "active=false,color=purple,facing=east": {
+      "model": "ftbiceg:block/electric/purple/advanced_generator_off",
+      "y": 90
+    },
+    "active=false,color=blue,facing=east": {
+      "model": "ftbiceg:block/electric/blue/advanced_generator_off",
+      "y": 90
+    },
+    "active=false,color=brown,facing=east": {
+      "model": "ftbiceg:block/electric/brown/advanced_generator_off",
+      "y": 90
+    },
+    "active=false,color=green,facing=east": {
+      "model": "ftbiceg:block/electric/green/advanced_generator_off",
+      "y": 90
+    },
+    "active=false,color=red,facing=east": {
+      "model": "ftbiceg:block/electric/red/advanced_generator_off",
+      "y": 90
+    },
+    "active=false,color=black,facing=east": {
+      "model": "ftbiceg:block/electric/dark/advanced_generator_off",
+      "y": 90
+    },
+    "active=true,color=white,facing=east": {
+      "model": "ftbiceg:block/electric/light/advanced_generator_on",
+      "y": 90
+    },
+    "active=true,color=orange,facing=east": {
+      "model": "ftbiceg:block/electric/orange/advanced_generator_on",
+      "y": 90
+    },
+    "active=true,color=magenta,facing=east": {
+      "model": "ftbiceg:block/electric/magenta/advanced_generator_on",
+      "y": 90
+    },
+    "active=true,color=light_blue,facing=east": {
+      "model": "ftbiceg:block/electric/light_blue/advanced_generator_on",
+      "y": 90
+    },
+    "active=true,color=yellow,facing=east": {
+      "model": "ftbiceg:block/electric/yellow/advanced_generator_on",
+      "y": 90
+    },
+    "active=true,color=lime,facing=east": {
+      "model": "ftbiceg:block/electric/lime/advanced_generator_on",
+      "y": 90
+    },
+    "active=true,color=pink,facing=east": {
+      "model": "ftbiceg:block/electric/pink/advanced_generator_on",
+      "y": 90
+    },
+    "active=true,color=gray,facing=east": {
+      "model": "ftbiceg:block/electric/gray/advanced_generator_on",
+      "y": 90
+    },
+    "active=true,color=light_gray,facing=east": {
+      "model": "ftbiceg:block/electric/light_gray/advanced_generator_on",
+      "y": 90
+    },
+    "active=true,color=cyan,facing=east": {
+      "model": "ftbiceg:block/electric/cyan/advanced_generator_on",
+      "y": 90
+    },
+    "active=true,color=purple,facing=east": {
+      "model": "ftbiceg:block/electric/purple/advanced_generator_on",
+      "y": 90
+    },
+    "active=true,color=blue,facing=east": {
+      "model": "ftbiceg:block/electric/blue/advanced_generator_on",
+      "y": 90
+    },
+    "active=true,color=brown,facing=east": {
+      "model": "ftbiceg:block/electric/brown/advanced_generator_on",
+      "y": 90
+    },
+    "active=true,color=green,facing=east": {
+      "model": "ftbiceg:block/electric/green/advanced_generator_on",
+      "y": 90
+    },
+    "active=true,color=red,facing=east": {
+      "model": "ftbiceg:block/electric/red/advanced_generator_on",
+      "y": 90
+    },
+    "active=true,color=black,facing=east": {
+      "model": "ftbiceg:block/electric/dark/advanced_generator_on",
+      "y": 90
+    }
+  }
+}

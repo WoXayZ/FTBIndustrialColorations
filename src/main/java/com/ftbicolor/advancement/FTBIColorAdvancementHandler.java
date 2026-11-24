@@ -16,21 +16,21 @@ public final class FTBIColorAdvancementHandler {
 
 	@SubscribeEvent
 	public static void onPlayerLogin(PlayerEvent.PlayerLoggedInEvent event) {
-		if (event.getPlayer() instanceof ServerPlayer player) {
+		if (event.getEntity() instanceof ServerPlayer player) {
 			FTBIColorAdvancements.checkRecipeUnlocks(player);
 		}
 	}
 
 	@SubscribeEvent
 	public static void onItemCrafted(PlayerEvent.ItemCraftedEvent event) {
-		if (event.getPlayer() instanceof ServerPlayer player) {
+		if (event.getEntity() instanceof ServerPlayer player) {
 			FTBIColorAdvancements.checkRecipeUnlocks(player);
 		}
 	}
 
 	@SubscribeEvent
 	public static void onItemPickup(EntityItemPickupEvent event) {
-		if (event.getPlayer() instanceof ServerPlayer player) {
+		if (event.getEntity() instanceof ServerPlayer player) {
 			FTBIColorAdvancements.checkRecipeUnlocks(player);
 		}
 	}

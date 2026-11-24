@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/orientable_vertical",
+  "textures": {
+    "front": "zapsconverter:block/light_blue/converter_in",
+    "side": "zapsconverter:block/light_blue/converter_out"
+  }
+}

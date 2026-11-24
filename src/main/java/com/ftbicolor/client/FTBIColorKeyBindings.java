@@ -22,19 +22,7 @@ public final class FTBIColorKeyBindings {
 
 	public static final KeyMapping SPRAY_PAINT_WHEEL_PERSISTENT = new PersistentWheelKey();
 
-	private static boolean registered;
-
 	private FTBIColorKeyBindings() {
-	}
-
-	public static void registerWithClient() {
-		if (registered) {
-			return;
-		}
-
-		net.minecraftforge.client.ClientRegistry.registerKeyBinding(SPRAY_PAINT_WHEEL);
-		net.minecraftforge.client.ClientRegistry.registerKeyBinding(SPRAY_PAINT_WHEEL_PERSISTENT);
-		registered = true;
 	}
 
 	private static final class PersistentWheelKey extends KeyMapping {

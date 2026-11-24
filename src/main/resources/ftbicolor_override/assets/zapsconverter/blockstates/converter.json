@@ -1,0 +1,356 @@
+{
+  "variants": {
+    "color=white,facing=down": {
+      "model": "zapsconverter:block/converter_vertical",
+      "x": 180
+    },
+    "color=orange,facing=down": {
+      "model": "zapsconverter:block/orange/converter_vertical",
+      "x": 180
+    },
+    "color=magenta,facing=down": {
+      "model": "zapsconverter:block/magenta/converter_vertical",
+      "x": 180
+    },
+    "color=light_blue,facing=down": {
+      "model": "zapsconverter:block/light_blue/converter_vertical",
+      "x": 180
+    },
+    "color=yellow,facing=down": {
+      "model": "zapsconverter:block/yellow/converter_vertical",
+      "x": 180
+    },
+    "color=lime,facing=down": {
+      "model": "zapsconverter:block/lime/converter_vertical",
+      "x": 180
+    },
+    "color=pink,facing=down": {
+      "model": "zapsconverter:block/pink/converter_vertical",
+      "x": 180
+    },
+    "color=gray,facing=down": {
+      "model": "zapsconverter:block/gray/converter_vertical",
+      "x": 180
+    },
+    "color=light_gray,facing=down": {
+      "model": "zapsconverter:block/light_gray/converter_vertical",
+      "x": 180
+    },
+    "color=cyan,facing=down": {
+      "model": "zapsconverter:block/cyan/converter_vertical",
+      "x": 180
+    },
+    "color=purple,facing=down": {
+      "model": "zapsconverter:block/purple/converter_vertical",
+      "x": 180
+    },
+    "color=blue,facing=down": {
+      "model": "zapsconverter:block/blue/converter_vertical",
+      "x": 180
+    },
+    "color=brown,facing=down": {
+      "model": "zapsconverter:block/brown/converter_vertical",
+      "x": 180
+    },
+    "color=green,facing=down": {
+      "model": "zapsconverter:block/green/converter_vertical",
+      "x": 180
+    },
+    "color=red,facing=down": {
+      "model": "zapsconverter:block/red/converter_vertical",
+      "x": 180
+    },
+    "color=black,facing=down": {
+      "model": "zapsconverter:block/converter_vertical_dark",
+      "x": 180
+    },
+    "color=white,facing=east": {
+      "model": "zapsconverter:block/converter",
+      "y": 90
+    },
+    "color=orange,facing=east": {
+      "model": "zapsconverter:block/orange/converter",
+      "y": 90
+    },
+    "color=magenta,facing=east": {
+      "model": "zapsconverter:block/magenta/converter",
+      "y": 90
+    },
+    "color=light_blue,facing=east": {
+      "model": "zapsconverter:block/light_blue/converter",
+      "y": 90
+    },
+    "color=yellow,facing=east": {
+      "model": "zapsconverter:block/yellow/converter",
+      "y": 90
+    },
+    "color=lime,facing=east": {
+      "model": "zapsconverter:block/lime/converter",
+      "y": 90
+    },
+    "color=pink,facing=east": {
+      "model": "zapsconverter:block/pink/converter",
+      "y": 90
+    },
+    "color=gray,facing=east": {
+      "model": "zapsconverter:block/gray/converter",
+      "y": 90
+    },
+    "color=light_gray,facing=east": {
+      "model": "zapsconverter:block/light_gray/converter",
+      "y": 90
+    },
+    "color=cyan,facing=east": {
+      "model": "zapsconverter:block/cyan/converter",
+      "y": 90
+    },
+    "color=purple,facing=east": {
+      "model": "zapsconverter:block/purple/converter",
+      "y": 90
+    },
+    "color=blue,facing=east": {
+      "model": "zapsconverter:block/blue/converter",
+      "y": 90
+    },
+    "color=brown,facing=east": {
+      "model": "zapsconverter:block/brown/converter",
+      "y": 90
+    },
+    "color=green,facing=east": {
+      "model": "zapsconverter:block/green/converter",
+      "y": 90
+    },
+    "color=red,facing=east": {
+      "model": "zapsconverter:block/red/converter",
+      "y": 90
+    },
+    "color=black,facing=east": {
+      "model": "zapsconverter:block/converter_dark",
+      "y": 90
+    },
+    "color=white,facing=north": {
+      "model": "zapsconverter:block/converter"
+    },
+    "color=orange,facing=north": {
+      "model": "zapsconverter:block/orange/converter"
+    },
+    "color=magenta,facing=north": {
+      "model": "zapsconverter:block/magenta/converter"
+    },
+    "color=light_blue,facing=north": {
+      "model": "zapsconverter:block/light_blue/converter"
+    },
+    "color=yellow,facing=north": {
+      "model": "zapsconverter:block/yellow/converter"
+    },
+    "color=lime,facing=north": {
+      "model": "zapsconverter:block/lime/converter"
+    },
+    "color=pink,facing=north": {
+      "model": "zapsconverter:block/pink/converter"
+    },
+    "color=gray,facing=north": {
+      "model": "zapsconverter:block/gray/converter"
+    },
+    "color=light_gray,facing=north": {
+      "model": "zapsconverter:block/light_gray/converter"
+    },
+    "color=cyan,facing=north": {
+      "model": "zapsconverter:block/cyan/converter"
+    },
+    "color=purple,facing=north": {
+      "model": "zapsconverter:block/purple/converter"
+    },
+    "color=blue,facing=north": {
+      "model": "zapsconverter:block/blue/converter"
+    },
+    "color=brown,facing=north": {
+      "model": "zapsconverter:block/brown/converter"
+    },
+    "color=green,facing=north": {
+      "model": "zapsconverter:block/green/converter"
+    },
+    "color=red,facing=north": {
+      "model": "zapsconverter:block/red/converter"
+    },
+    "color=black,facing=north": {
+      "model": "zapsconverter:block/converter_dark"
+    },
+    "color=white,facing=south": {
+      "model": "zapsconverter:block/converter",
+      "y": 180
+    },
+    "color=orange,facing=south": {
+      "model": "zapsconverter:block/orange/converter",
+      "y": 180
+    },
+    "color=magenta,facing=south": {
+      "model": "zapsconverter:block/magenta/converter",
+      "y": 180
+    },
+    "color=light_blue,facing=south": {
+      "model": "zapsconverter:block/light_blue/converter",
+      "y": 180
+    },
+    "color=yellow,facing=south": {
+      "model": "zapsconverter:block/yellow/converter",
+      "y": 180
+    },
+    "color=lime,facing=south": {
+      "model": "zapsconverter:block/lime/converter",
+      "y": 180
+    },
+    "color=pink,facing=south": {
+      "model": "zapsconverter:block/pink/converter",
+      "y": 180
+    },
+    "color=gray,facing=south": {
+      "model": "zapsconverter:block/gray/converter",
+      "y": 180
+    },
+    "color=light_gray,facing=south": {
+      "model": "zapsconverter:block/light_gray/converter",
+      "y": 180
+    },
+    "color=cyan,facing=south": {
+      "model": "zapsconverter:block/cyan/converter",
+      "y": 180
+    },
+    "color=purple,facing=south": {
+      "model": "zapsconverter:block/purple/converter",
+      "y": 180
+    },
+    "color=blue,facing=south": {
+      "model": "zapsconverter:block/blue/converter",
+      "y": 180
+    },
+    "color=brown,facing=south": {
+      "model": "zapsconverter:block/brown/converter",
+      "y": 180
+    },
+    "color=green,facing=south": {
+      "model": "zapsconverter:block/green/converter",
+      "y": 180
+    },
+    "color=red,facing=south": {
+      "model": "zapsconverter:block/red/converter",
+      "y": 180
+    },
+    "color=black,facing=south": {
+      "model": "zapsconverter:block/converter_dark",
+      "y": 180
+    },
+    "color=white,facing=up": {
+      "model": "zapsconverter:block/converter_vertical"
+    },
+    "color=orange,facing=up": {
+      "model": "zapsconverter:block/orange/converter_vertical"
+    },
+    "color=magenta,facing=up": {
+      "model": "zapsconverter:block/magenta/converter_vertical"
+    },
+    "color=light_blue,facing=up": {
+      "model": "zapsconverter:block/light_blue/converter_vertical"
+    },
+    "color=yellow,facing=up": {
+      "model": "zapsconverter:block/yellow/converter_vertical"
+    },
+    "color=lime,facing=up": {
+      "model": "zapsconverter:block/lime/converter_vertical"
+    },
+    "color=pink,facing=up": {
+      "model": "zapsconverter:block/pink/converter_vertical"
+    },
+    "color=gray,facing=up": {
+      "model": "zapsconverter:block/gray/converter_vertical"
+    },
+    "color=light_gray,facing=up": {
+      "model": "zapsconverter:block/light_gray/converter_vertical"
+    },
+    "color=cyan,facing=up": {
+      "model": "zapsconverter:block/cyan/converter_vertical"
+    },
+    "color=purple,facing=up": {
+      "model": "zapsconverter:block/purple/converter_vertical"
+    },
+    "color=blue,facing=up": {
+      "model": "zapsconverter:block/blue/converter_vertical"
+    },
+    "color=brown,facing=up": {
+      "model": "zapsconverter:block/brown/converter_vertical"
+    },
+    "color=green,facing=up": {
+      "model": "zapsconverter:block/green/converter_vertical"
+    },
+    "color=red,facing=up": {
+      "model": "zapsconverter:block/red/converter_vertical"
+    },
+    "color=black,facing=up": {
+      "model": "zapsconverter:block/converter_vertical_dark"
+    },
+    "color=white,facing=west": {
+      "model": "zapsconverter:block/converter",
+      "y": 270
+    },
+    "color=orange,facing=west": {
+      "model": "zapsconverter:block/orange/converter",
+      "y": 270
+    },
+    "color=magenta,facing=west": {
+      "model": "zapsconverter:block/magenta/converter",
+      "y": 270
+    },
+    "color=light_blue,facing=west": {
+      "model": "zapsconverter:block/light_blue/converter",
+      "y": 270
+    },
+    "color=yellow,facing=west": {
+      "model": "zapsconverter:block/yellow/converter",
+      "y": 270
+    },
+    "color=lime,facing=west": {
+      "model": "zapsconverter:block/lime/converter",
+      "y": 270
+    },
+    "color=pink,facing=west": {
+      "model": "zapsconverter:block/pink/converter",
+      "y": 270
+    },
+    "color=gray,facing=west": {
+      "model": "zapsconverter:block/gray/converter",
+      "y": 270
+    },
+    "color=light_gray,facing=west": {
+      "model": "zapsconverter:block/light_gray/converter",
+      "y": 270
+    },
+    "color=cyan,facing=west": {
+      "model": "zapsconverter:block/cyan/converter",
+      "y": 270
+    },
+    "color=purple,facing=west": {
+      "model": "zapsconverter:block/purple/converter",
+      "y": 270
+    },
+    "color=blue,facing=west": {
+      "model": "zapsconverter:block/blue/converter",
+      "y": 270
+    },
+    "color=brown,facing=west": {
+      "model": "zapsconverter:block/brown/converter",
+      "y": 270
+    },
+    "color=green,facing=west": {
+      "model": "zapsconverter:block/green/converter",
+      "y": 270
+    },
+    "color=red,facing=west": {
+      "model": "zapsconverter:block/red/converter",
+      "y": 270
+    },
+    "color=black,facing=west": {
+      "model": "zapsconverter:block/converter_dark",
+      "y": 270
+    }
+  }
+}

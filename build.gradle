@@ -1,5 +1,5 @@
 plugins {
-	id "dev.architectury.loom" version "0.12.0-SNAPSHOT"
+	id "dev.architectury.loom" version "1.1-SNAPSHOT"
 }
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = 17
@@ -53,7 +53,7 @@ dependencies {
 
 	mappings loom.layered() {
 		officialMojangMappings()
-		parchment("org.parchmentmc.data:parchment-1.18.2:2022.07.03")
+		parchment("org.parchmentmc.data:parchment-1.19.2:2022.11.27@zip")
 	}
 
 	forge "net.minecraftforge:forge:${project.minecraft_version}-${project.forge_version}"
@@ -62,9 +62,14 @@ dependencies {
 
 	modRuntimeOnly("curse.maven:architectury-api-419699:${rootProject.architectury_curse_file_id}") { transitive = false }
 	modRuntimeOnly("curse.maven:ftb-library-forge-404465:${rootProject.ftblibrary_curse_file_id}") { transitive = false }
+	modCompileOnly("curse.maven:industrial-contraptions-expansion-core-857669:${rootProject.ice_core_curse_file_id}") { transitive = false }
+	modRuntimeOnly("curse.maven:industrial-contraptions-expansion-core-857669:${rootProject.ice_core_curse_file_id}") { transitive = false }
+	modCompileOnly("curse.maven:ic-expansion-generators-857250:${rootProject.iceg_curse_file_id}") { transitive = false }
+	modRuntimeOnly("curse.maven:ic-expansion-generators-857250:${rootProject.iceg_curse_file_id}") { transitive = false }
+	modCompileOnly("curse.maven:zaps-converter-849935:${rootProject.zaps_curse_file_id}") { transitive = false }
+	modRuntimeOnly("curse.maven:zaps-converter-849935:${rootProject.zaps_curse_file_id}") { transitive = false }
 
-	modRuntimeOnly "mezz.jei:jei-${project.minecraft_version}-forge:${project.jei_version}"
-	runtimeOnly "mezz.jei:jei-${project.minecraft_version}-common:${project.jei_version}"
+	modRuntimeOnly("curse.maven:jei-238222:${rootProject.jei_curse_file_id}") { transitive = false }
 
 	modCompileOnly "top.theillusivec4.curios:curios-forge:${project.curios_version}"
 	modRuntimeOnly "top.theillusivec4.curios:curios-forge:${project.curios_version}"

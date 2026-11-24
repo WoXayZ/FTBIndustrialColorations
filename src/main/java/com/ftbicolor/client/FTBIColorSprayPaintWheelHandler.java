@@ -74,12 +74,12 @@ public final class FTBIColorSprayPaintWheelHandler {
 
 	@SubscribeEvent
 	public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
-		tryOpenWheel(event.getPlayer(), event);
+		tryOpenWheel(event.getEntity(), event);
 	}
 
 	@SubscribeEvent
 	public static void onRightClickItem(PlayerInteractEvent.RightClickItem event) {
-		tryOpenWheel(event.getPlayer(), event);
+		tryOpenWheel(event.getEntity(), event);
 	}
 
 	private static void tryOpenWheel(Player player, Event event) {

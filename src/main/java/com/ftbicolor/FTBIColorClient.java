@@ -22,10 +22,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.ColorHandlerEvent;
-import net.minecraftforge.client.event.ModelBakeEvent;
-import net.minecraftforge.client.event.ModelRegistryEvent;
-import net.minecraftforge.client.model.ForgeModelBakery;
+import net.minecraftforge.client.event.ModelEvent;
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
+import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -42,19 +41,23 @@ public final class FTBIColorClient {
 
 	@SubscribeEvent
 	public static void registerRenderLayers(FMLClientSetupEvent event) {
-		event.enqueueWork(() -> {
-			FTBIColorKeyBindings.registerWithClient();
-			ItemBlockRenderTypes.setRenderLayer(FTBIColorBlocks.COLORED_REINFORCED_GLASS.get(), RenderType.cutout());
-		});
+		event.enqueueWork(() ->
+				ItemBlockRenderTypes.setRenderLayer(FTBIColorBlocks.COLORED_REINFORCED_GLASS.get(), RenderType.cutout()));
 	}
 
 	@SubscribeEvent
-	public static void registerItemColors(ColorHandlerEvent.Item event) {
-		event.getItemColors().register(FTBIColorClient::kitTintColor, kitItems());
+	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
+		event.register(FTBIColorKeyBindings.SPRAY_PAINT_WHEEL);
+		event.register(FTBIColorKeyBindings.SPRAY_PAINT_WHEEL_PERSISTENT);
 	}
 
 	@SubscribeEvent
-	public static void registerItemProperties(ModelRegistryEvent event) {
+	public static void registerItemColors(RegisterColorHandlersEvent.Item event) {
+		event.register(FTBIColorClient::kitTintColor, kitItems());
+	}
+
+	@SubscribeEvent
+	public static void registerItemProperties(ModelEvent.RegisterAdditional event) {
 		for (var quantumId : FTBIColorConstants.QUANTUM_ARMOR_ITEMS) {
 			Item item = ForgeRegistries.ITEMS.getValue(quantumId);
 			if (item != null) {
@@ -70,14 +73,14 @@ public final class FTBIColorClient {
 
 		for (String cable : new String[] {"lv_cable", "mv_cable", "hv_cable", "ev_cable", "iv_cable"}) {
 			for (DyeColor color : DyeColor.values()) {
-				ForgeModelBakery.addSpecialModel(new ResourceLocation("ftbic", "item/cable/" + color.getSerializedName() + "/" + cable));
+				event.register(new ResourceLocation("ftbic", "item/cable/" + color.getSerializedName() + "/" + cable));
 			}
 		}
 	}
 
 	@SubscribeEvent
-	public static void bakePickedColorModels(ModelBakeEvent event) {
-		var registry = event.getModelRegistry();
+	public static void bakePickedColorModels(ModelEvent.BakingCompleted event) {
+		var registry = event.getModels();
 		for (Item item : ForgeRegistries.ITEMS) {
 			if (!(item instanceof BlockItem blockItem)) {
 				continue;
@@ -87,7 +90,7 @@ public final class FTBIColorClient {
 				continue;
 			}
 			ResourceLocation id = ForgeRegistries.ITEMS.getKey(item);
-			if (id == null || !FTBIColorConstants.FTBIC_MOD_ID.equals(id.getNamespace())) {
+			if (id == null || !isPickedColorNamespace(id.getNamespace())) {
 				continue;
 			}
 			ModelResourceLocation inventory = new ModelResourceLocation(id, "inventory");
@@ -96,6 +99,12 @@ public final class FTBIColorClient {
 				registry.put(inventory, new FTBIColorPickedModel(model));
 			}
 		}
+	}
+
+	private static boolean isPickedColorNamespace(String namespace) {
+		return FTBIColorConstants.FTBIC_MOD_ID.equals(namespace)
+				|| FTBIColorConstants.ICEG_MOD_ID.equals(namespace)
+				|| FTBIColorConstants.ZAPS_MOD_ID.equals(namespace);
 	}
 
 	private static Item[] kitItems() {
